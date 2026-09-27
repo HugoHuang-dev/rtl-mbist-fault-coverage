@@ -1,0 +1,6 @@
+fault_type,target_instances,confirmed_detected,not_activated,activated_undetected,simulation_invalid,simulation_failed,tool_disagreement,target_coverage_pct
+SA0,512,512,0,0,0,0,0,100.00
+SA1,512,512,0,0,0,0,0,100.00
+Rising_TF,512,512,0,0,0,0,0,100.00
+Falling_TF,512,512,0,0,0,0,0,100.00
+TOTAL,2048,2048,0,0,0,0,0,100.00

@@ -1,0 +1,7 @@
+CASE_BEGIN id=1023 type=2 addr=63 bit=7
+FAULT_ACTIVATE type=2 addr=63 bit=7 count=1
+FAULT_ACTIVATE type=2 addr=63 bit=7 count=2
+FAULT_ACTIVATE type=2 addr=63 bit=7 count=3
+CHECKER_PASS run=1 requests=640 cycles=960 errors=3
+CASE_RESULT id=1023 type=2 addr=63 bit=7 activated=1 activations=3 detected=1 errors=3 first_phase=1 first_addr=63 first_expected=00 first_actual=80 requests=640 cycles=960
+CAMPAIGN_DONE start=0 count=1

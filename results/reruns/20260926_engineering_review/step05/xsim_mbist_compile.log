@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/address_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module address_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/data_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module data_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/memory_interface.v" into library work
+INFO: [VRFC 10-311] analyzing module memory_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/response_checker.v" into library work
+INFO: [VRFC 10-311] analyzing module response_checker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/march_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module march_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/mbist_top.v" into library work
+INFO: [VRFC 10-311] analyzing module mbist_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/fault_injector.sv" into library work
+INFO: [VRFC 10-311] analyzing module fault_injector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/faulty_memory.sv" into library work
+INFO: [VRFC 10-311] analyzing module faulty_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/fault_reference_monitor.sv" into library work
+INFO: [VRFC 10-311] analyzing module fault_reference_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/march_transaction_checker.sv" into library work
+INFO: [VRFC 10-311] analyzing module march_transaction_checker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_step05_mbist.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_step05_mbist

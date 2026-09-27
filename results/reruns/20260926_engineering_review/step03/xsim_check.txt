@@ -1,0 +1,1 @@
+TRACE_CHECK_PASS log=xsim_2.log runs=2 requests=1280 csv_rows=640 normal_cycles=961 injected_cycles=961

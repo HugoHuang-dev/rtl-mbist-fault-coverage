@@ -1,0 +1,24 @@
+[
+  [
+    "C:\\Xilinx\\Vivado\\2018.3\\bin\\vivado.bat",
+    "-mode",
+    "batch",
+    "-source",
+    "C:\\Users\\32035\\Desktop\\FPGA\\ProjectIII\\fpga\\create_board_project.tcl",
+    "-log",
+    "C:\\Users\\32035\\Desktop\\FPGA\\ProjectIII\\results\\reruns\\20260926_review_final\\step08\\build_logs_fault\\create_board_project.log",
+    "-journal",
+    "C:\\Users\\32035\\Desktop\\FPGA\\ProjectIII\\results\\reruns\\20260926_review_final\\step08\\build_logs_fault\\create_board_project.jou"
+  ],
+  [
+    "C:\\Xilinx\\Vivado\\2018.3\\bin\\vivado.bat",
+    "-mode",
+    "batch",
+    "-source",
+    "C:\\Users\\32035\\Desktop\\FPGA\\ProjectIII\\fpga\\build_ila.tcl",
+    "-log",
+    "C:\\Users\\32035\\Desktop\\FPGA\\ProjectIII\\results\\reruns\\20260926_review_final\\step08\\build_logs_fault\\build_ila.log",
+    "-journal",
+    "C:\\Users\\32035\\Desktop\\FPGA\\ProjectIII\\results\\reruns\\20260926_review_final\\step08\\build_logs_fault\\build_ila.jou"
+  ]
+]

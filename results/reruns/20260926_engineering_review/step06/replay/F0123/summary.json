@@ -1,0 +1,17 @@
+{
+  "mode": "replay/F0123",
+  "target_fault_instances": 1,
+  "tools": [
+    "icarus",
+    "xsim"
+  ],
+  "records": 2,
+  "invalid_records": 0,
+  "tool_disagreements": 0,
+  "status_counts": {
+    "valid": 2
+  },
+  "outcome_counts": {
+    "activated_detected": 2
+  }
+}

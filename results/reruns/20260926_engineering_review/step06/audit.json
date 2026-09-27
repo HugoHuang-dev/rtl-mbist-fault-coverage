@@ -1,0 +1,22 @@
+{
+  "source_fingerprints_checked": 21,
+  "manifest_instances": 2048,
+  "pilot": {
+    "instances": 32,
+    "records": 64,
+    "raw_logs": 2,
+    "invalid": 0,
+    "outcomes": {
+      "activated_detected": 64
+    }
+  },
+  "full": {
+    "instances": 2048,
+    "records": 4096,
+    "raw_logs": 64,
+    "invalid": 0,
+    "outcomes": {
+      "activated_detected": 4096
+    }
+  }
+}

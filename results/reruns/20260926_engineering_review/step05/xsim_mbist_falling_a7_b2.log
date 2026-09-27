@@ -1,0 +1,19 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/step05_snapshot/xsim_script.tcl
+# xsim {step05_snapshot} -testplusarg "FAULT_TYPE=4" -testplusarg "FAULT_ADDR=7" -testplusarg "FAULT_BIT=2" -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+FAULT_ACTIVATE type=4 addr=7 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=7 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+FAULT_CASE_RESULT type=4 addr=7 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=7 first_expected=00 first_actual=04
+FAULT_MBIST_PASS type=4
+$finish called at time : 19300 ns : File "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_step05_mbist.sv" Line 140
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 20:37:09 2026...

@@ -1,0 +1,1 @@
+reset_meta_reg ASYNC_REG=1

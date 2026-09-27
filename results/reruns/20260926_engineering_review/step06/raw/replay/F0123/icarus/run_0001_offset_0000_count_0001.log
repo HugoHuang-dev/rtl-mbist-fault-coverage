@@ -1,0 +1,6 @@
+CASE_BEGIN id=123 type=1 addr=15 bit=3
+FAULT_ACTIVATE type=1 addr=15 bit=3 count=1
+FAULT_ACTIVATE type=1 addr=15 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=123 type=1 addr=15 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=2 first_addr=15 first_expected=ff first_actual=f7 requests=640 cycles=960
+CAMPAIGN_DONE start=0 count=1

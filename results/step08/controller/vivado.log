@@ -1,0 +1,330 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep 26 10:52:11 2026
+# Process ID: 23700
+# Current directory: <PROJECT_ROOT>
+# Command line: vivado.exe -mode batch -source fpga/synthesize_controller.tcl -log results/step08/controller/vivado.log -journal results/step08/controller/vivado.jou
+# Log file: <PROJECT_ROOT>/results/step08/controller/vivado.log
+# Journal file: <PROJECT_ROOT>\results/step08/controller/vivado.jou
+#-----------------------------------------------------------
+source fpga/synthesize_controller.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set evidence [file join $root results step08 controller]
+# file mkdir $evidence
+# foreach name {address_generator.v data_generator.v memory_interface.v response_checker.v march_controller.v mbist_top.v} {
+#     read_verilog [file join $root rtl $name]
+# }
+# synth_design -top mbist_top -part xc7a35tfgg484-2 -no_iobuf
+Command: synth_design -top mbist_top -part xc7a35tfgg484-2 -no_iobuf
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15832 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 363.848 ; gain = 101.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mbist_top' [<PROJECT_ROOT>/rtl/mbist_top.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'march_controller' [<PROJECT_ROOT>/rtl/march_controller.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter ISSUE bound to: 3'b001 
+	Parameter WAIT_READ bound to: 3'b010 
+	Parameter WRITE_AFTER_READ bound to: 3'b011 
+	Parameter DONE bound to: 3'b100 
+	Parameter LAST_ADDR bound to: 6'b111111 
+INFO: [Synth 8-6155] done synthesizing module 'march_controller' (1#1) [<PROJECT_ROOT>/rtl/march_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'address_generator' [<PROJECT_ROOT>/rtl/address_generator.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'address_generator' (2#1) [<PROJECT_ROOT>/rtl/address_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'data_generator' [<PROJECT_ROOT>/rtl/data_generator.v:3]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'data_generator' (3#1) [<PROJECT_ROOT>/rtl/data_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'memory_interface' [<PROJECT_ROOT>/rtl/memory_interface.v:5]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'memory_interface' (4#1) [<PROJECT_ROOT>/rtl/memory_interface.v:5]
+INFO: [Synth 8-6157] synthesizing module 'response_checker' [<PROJECT_ROOT>/rtl/response_checker.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'response_checker' (5#1) [<PROJECT_ROOT>/rtl/response_checker.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mbist_top' (6#1) [<PROJECT_ROOT>/rtl/mbist_top.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 419.449 ; gain = 157.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 419.449 ; gain = 157.270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 419.449 ; gain = 157.270
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5544] ROM "phase" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [<PROJECT_ROOT>/rtl/address_generator.v:20]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 419.449 ; gain = 157.270
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 9     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module march_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 5     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 8     
+	   4 Input      1 Bit        Muxes := 1     
+Module address_generator 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module response_checker 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "u_controller/state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_controller/state" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "u_controller/phase" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[0]' (FDRE) to 'u_checker/first_fail_expected_reg[1]'
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[1]' (FDRE) to 'u_checker/first_fail_expected_reg[2]'
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[2]' (FDRE) to 'u_checker/first_fail_expected_reg[3]'
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[3]' (FDRE) to 'u_checker/first_fail_expected_reg[4]'
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[4]' (FDRE) to 'u_checker/first_fail_expected_reg[5]'
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[5]' (FDRE) to 'u_checker/first_fail_expected_reg[6]'
+INFO: [Synth 8-3886] merging instance 'u_checker/first_fail_expected_reg[6]' (FDRE) to 'u_checker/first_fail_expected_reg[7]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.430 ; gain = 298.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.430 ; gain = 298.250
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     6|
+|3     |LUT3 |     9|
+|4     |LUT4 |    12|
+|5     |LUT5 |    11|
+|6     |LUT6 |    22|
+|7     |FDRE |    40|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------+------------------+------+
+|      |Instance       |Module            |Cells |
++------+---------------+------------------+------+
+|1     |top            |                  |   101|
+|2     |  u_address    |address_generator |    13|
+|3     |  u_checker    |response_checker  |    44|
+|4     |  u_controller |march_controller  |    44|
++------+---------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 560.820 ; gain = 298.641
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 560.820 ; gain = 298.641
+Synthesis Optimization Complete : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 560.820 ; gain = 298.641
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 668.645 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 668.645 ; gain = 419.527
+# set_operating_conditions -grade Industrial
+# report_operating_conditions -grade -file [file join $evidence operating_conditions.rpt]
+# report_utilization -file [file join $evidence utilization.rpt]
+# report_timing_summary -file [file join $evidence timing_summary.rpt]
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+# write_checkpoint -force [file join $evidence controller_synth.dcp]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1175.195 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1189.684 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint '<PROJECT_ROOT>/results/step08/controller/controller_synth.dcp' has been generated.
+# puts "STEP08_CONTROLLER_SYNTH_PASS"
+STEP08_CONTROLLER_SYNTH_PASS
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 10:52:25 2026...

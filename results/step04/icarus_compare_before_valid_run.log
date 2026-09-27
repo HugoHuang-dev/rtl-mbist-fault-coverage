@@ -1,0 +1,3 @@
+CHECKER_FAIL code=4 run=1 request=193 cycle=257
+FATAL: <PROJECT_ROOT>\tb\march_transaction_checker.sv:50: Independent checker rejected DUT
+       Time: 5231000 Scope: tb_step04_independent.u_checker.reject

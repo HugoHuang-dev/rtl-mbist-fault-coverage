@@ -1,0 +1,6 @@
+capture,mode,restart_from_done,requests,reads,writes,done_sample,final_pass,final_fail,final_error_count,status
+08_normal_ila_round1.ila,normal,False,640,320,320,961,1,0,0,pass
+10_normal_ila_round2.ila,normal,True,640,320,320,961,1,0,0,pass
+11_normal_ila_after_reset.ila,normal,False,640,320,320,961,1,0,0,pass
+15_fault_ila_round1.ila,fault,False,640,320,320,961,0,1,1,pass
+16_fault_ila_round2.ila,fault,True,640,320,320,961,0,1,1,pass

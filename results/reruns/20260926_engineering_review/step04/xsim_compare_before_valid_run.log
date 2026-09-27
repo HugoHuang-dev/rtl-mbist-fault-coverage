@@ -1,0 +1,17 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/step04_snapshot/xsim_script.tcl
+# xsim {step04_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CHECKER_FAIL code=4 run=1 request=193 cycle=257
+Fatal: Independent checker rejected DUT
+Time: 5231 ns  Iteration: 0  Process: /tb_step04_independent/u_checker/reject  File: C:/Users/32035/Desktop/FPGA/ProjectIII/tb/march_transaction_checker.sv
+$finish called at time : 5231 ns
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 20:31:48 2026...

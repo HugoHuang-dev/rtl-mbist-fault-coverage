@@ -1,0 +1,21 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_step06_campaign -s step06_snapshot 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.march_controller_default
+Compiling module work.address_generator
+Compiling module work.data_generator
+Compiling module work.memory_interface
+Compiling module work.response_checker
+Compiling module work.mbist_top
+Compiling module work.fault_injector
+Compiling module work.faulty_memory
+Compiling module work.march_transaction_checker
+Compiling module work.fault_reference_monitor
+Compiling module work.tb_step06_campaign
+Built simulation snapshot step06_snapshot

@@ -1,0 +1,27 @@
+{
+  "theoretical_operations": 640,
+  "theoretical_reads": 320,
+  "theoretical_writes": 320,
+  "stage_operations": {
+    "M0": 64,
+    "M1": 128,
+    "M2": 128,
+    "M3": 128,
+    "M4": 128,
+    "M5": 64
+  },
+  "valid_tool_records": 4096,
+  "observed_request_counts": [
+    640
+  ],
+  "observed_cycle_counts": [
+    960
+  ],
+  "cycle_definition": "Step 6 testbench: negedge iterations after start is deasserted until DONE is observed",
+  "observed_requests": 640,
+  "observed_cycles": 960,
+  "extra_cycles_vs_operation_count": 320,
+  "cycles_per_request": 1.5,
+  "requests_per_cycle": 0.6666666666666666,
+  "nominal_duration_us_at_50mhz": 19.2
+}

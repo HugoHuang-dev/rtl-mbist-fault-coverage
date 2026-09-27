@@ -1,0 +1,7 @@
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+BOARD_CASE_PASS round=1 requests=640 led=0011
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+BOARD_CASE_PASS round=2 requests=640 led=0011
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+BOARD_CASE_PASS round=3 requests=640 led=0011
+BOARD_TB_PASS rounds=3 inject=0 busy_start=ignored active_reset=pass

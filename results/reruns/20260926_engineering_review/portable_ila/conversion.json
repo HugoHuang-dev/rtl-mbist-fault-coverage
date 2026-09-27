@@ -1,0 +1,43 @@
+{
+  "original": "results/step08/hardware/ila_capture/2026-09-26_march_c_minus_64x8_full_run.ila",
+  "original_sha256": "230b2d5d79facf0c6b9df0e8f37be3198965cac455f3870adc8535eae622fec7",
+  "portable_sha256": "00d3c780730d02a7d8471c3422e56e2a2b8fe9c6fd2ab7ca3a6e2a3d9dab5b2d",
+  "entries": [
+    {
+      "entry": "hw_ila_data_1.wcfg",
+      "changed": true,
+      "original_sha256": "382e7091eb875d9224aa4302fee105f2f93676d2b4f82091d9dc9efd19824089",
+      "portable_sha256": "c892d448ba7565ad67802167afc484bd154d16698aef3e3398b025cbeb01e733"
+    },
+    {
+      "entry": "hw_ila_data_1.wdb",
+      "changed": false,
+      "original_sha256": "14370c0238969a91f9692ee020c79d97390939ff96ec0f349f0c8ce50f21a1db",
+      "portable_sha256": "14370c0238969a91f9692ee020c79d97390939ff96ec0f349f0c8ce50f21a1db"
+    },
+    {
+      "entry": "probes.ltx",
+      "changed": false,
+      "original_sha256": "24c2199f47de8d8458c1d3d14e0e29aa0de4f277d8541fe4aa01e3f5f9548624",
+      "portable_sha256": "24c2199f47de8d8458c1d3d14e0e29aa0de4f277d8541fe4aa01e3f5f9548624"
+    },
+    {
+      "entry": "waveform.csv",
+      "changed": false,
+      "original_sha256": "a8fc2e17c511f8a5dad0c4d85d4b74e707fbca884dbf0bd152f1fe13c4bfae83",
+      "portable_sha256": "a8fc2e17c511f8a5dad0c4d85d4b74e707fbca884dbf0bd152f1fe13c4bfae83"
+    },
+    {
+      "entry": "waveform.dmp",
+      "changed": false,
+      "original_sha256": "c189d1044ea2ecab03f4bbbdcccb35bef07382bde2965a41b7869b6fb4956169",
+      "portable_sha256": "c189d1044ea2ecab03f4bbbdcccb35bef07382bde2965a41b7869b6fb4956169"
+    },
+    {
+      "entry": "waveform.vcd",
+      "changed": false,
+      "original_sha256": "47451ecd6f4182f86686df1d2cf016556449ef04f49a30cf414a6797bda300f0",
+      "portable_sha256": "47451ecd6f4182f86686df1d2cf016556449ef04f49a30cf414a6797bda300f0"
+    }
+  ]
+}

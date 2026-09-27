@@ -1,0 +1,142 @@
+[
+  {
+    "engine": "icarus",
+    "variant": "baseline",
+    "dut_outcome": "accepted",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": null,
+    "run_log": "icarus_baseline_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "icarus",
+    "variant": "address_order",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 1,
+    "run_log": "icarus_address_order_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "icarus",
+    "variant": "operation_order",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 2,
+    "run_log": "icarus_operation_order_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "icarus",
+    "variant": "write_data",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 3,
+    "run_log": "icarus_write_data_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "icarus",
+    "variant": "compare_before_valid",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 4,
+    "run_log": "icarus_compare_before_valid_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "icarus",
+    "variant": "early_done",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 5,
+    "run_log": "icarus_early_done_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "icarus",
+    "variant": "wrong_first_diagnostic",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 6,
+    "run_log": "icarus_wrong_first_diagnostic_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "baseline",
+    "dut_outcome": "accepted",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": null,
+    "run_log": "xsim_baseline_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "address_order",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 1,
+    "run_log": "xsim_address_order_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "operation_order",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 2,
+    "run_log": "xsim_operation_order_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "write_data",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 3,
+    "run_log": "xsim_write_data_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "compare_before_valid",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 4,
+    "run_log": "xsim_compare_before_valid_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "early_done",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 5,
+    "run_log": "xsim_early_done_run.log",
+    "detail": ""
+  },
+  {
+    "engine": "xsim",
+    "variant": "wrong_first_diagnostic",
+    "dut_outcome": "rejected",
+    "regression_status": "PASS",
+    "sim_exit": 0,
+    "detected_code": 6,
+    "run_log": "xsim_wrong_first_diagnostic_run.log",
+    "detail": ""
+  }
+]

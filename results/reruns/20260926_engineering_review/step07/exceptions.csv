@@ -1,0 +1,1 @@
+fault_id,fault_type,fault_name,fault_addr,fault_bit,confirmed_detected,not_activated,activated_undetected,simulation_invalid,simulation_failed,tool_disagreement,first_fail_stage,first_fail_addr,icarus_status,xsim_status,icarus_reason,xsim_reason,disagree_fields,icarus_log,xsim_log

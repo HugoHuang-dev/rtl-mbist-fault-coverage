@@ -1,0 +1,335 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/step06_snapshot/xsim_script.tcl
+# xsim {step06_snapshot} -testplusarg "START_INDEX=1664" -testplusarg "CASE_COUNT=64" -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CASE_BEGIN id=1664 type=4 addr=16 bit=0
+FAULT_ACTIVATE type=4 addr=16 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1664 type=4 addr=16 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1665 type=4 addr=16 bit=1
+FAULT_ACTIVATE type=4 addr=16 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1665 type=4 addr=16 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1666 type=4 addr=16 bit=2
+FAULT_ACTIVATE type=4 addr=16 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1666 type=4 addr=16 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1667 type=4 addr=16 bit=3
+FAULT_ACTIVATE type=4 addr=16 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1667 type=4 addr=16 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1668 type=4 addr=16 bit=4
+FAULT_ACTIVATE type=4 addr=16 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1668 type=4 addr=16 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1669 type=4 addr=16 bit=5
+FAULT_ACTIVATE type=4 addr=16 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1669 type=4 addr=16 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1670 type=4 addr=16 bit=6
+FAULT_ACTIVATE type=4 addr=16 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1670 type=4 addr=16 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1671 type=4 addr=16 bit=7
+FAULT_ACTIVATE type=4 addr=16 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=16 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1671 type=4 addr=16 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=16 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1672 type=4 addr=17 bit=0
+FAULT_ACTIVATE type=4 addr=17 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1672 type=4 addr=17 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1673 type=4 addr=17 bit=1
+FAULT_ACTIVATE type=4 addr=17 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1673 type=4 addr=17 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1674 type=4 addr=17 bit=2
+FAULT_ACTIVATE type=4 addr=17 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1674 type=4 addr=17 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1675 type=4 addr=17 bit=3
+FAULT_ACTIVATE type=4 addr=17 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1675 type=4 addr=17 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1676 type=4 addr=17 bit=4
+FAULT_ACTIVATE type=4 addr=17 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1676 type=4 addr=17 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1677 type=4 addr=17 bit=5
+FAULT_ACTIVATE type=4 addr=17 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1677 type=4 addr=17 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1678 type=4 addr=17 bit=6
+FAULT_ACTIVATE type=4 addr=17 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1678 type=4 addr=17 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1679 type=4 addr=17 bit=7
+FAULT_ACTIVATE type=4 addr=17 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=17 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1679 type=4 addr=17 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=17 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1680 type=4 addr=18 bit=0
+FAULT_ACTIVATE type=4 addr=18 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1680 type=4 addr=18 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1681 type=4 addr=18 bit=1
+FAULT_ACTIVATE type=4 addr=18 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1681 type=4 addr=18 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1682 type=4 addr=18 bit=2
+FAULT_ACTIVATE type=4 addr=18 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1682 type=4 addr=18 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1683 type=4 addr=18 bit=3
+FAULT_ACTIVATE type=4 addr=18 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1683 type=4 addr=18 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1684 type=4 addr=18 bit=4
+FAULT_ACTIVATE type=4 addr=18 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1684 type=4 addr=18 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1685 type=4 addr=18 bit=5
+FAULT_ACTIVATE type=4 addr=18 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1685 type=4 addr=18 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1686 type=4 addr=18 bit=6
+FAULT_ACTIVATE type=4 addr=18 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1686 type=4 addr=18 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1687 type=4 addr=18 bit=7
+FAULT_ACTIVATE type=4 addr=18 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=18 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1687 type=4 addr=18 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=18 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1688 type=4 addr=19 bit=0
+FAULT_ACTIVATE type=4 addr=19 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1688 type=4 addr=19 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1689 type=4 addr=19 bit=1
+FAULT_ACTIVATE type=4 addr=19 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1689 type=4 addr=19 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1690 type=4 addr=19 bit=2
+FAULT_ACTIVATE type=4 addr=19 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1690 type=4 addr=19 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1691 type=4 addr=19 bit=3
+FAULT_ACTIVATE type=4 addr=19 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1691 type=4 addr=19 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1692 type=4 addr=19 bit=4
+FAULT_ACTIVATE type=4 addr=19 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1692 type=4 addr=19 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1693 type=4 addr=19 bit=5
+FAULT_ACTIVATE type=4 addr=19 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1693 type=4 addr=19 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1694 type=4 addr=19 bit=6
+FAULT_ACTIVATE type=4 addr=19 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1694 type=4 addr=19 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1695 type=4 addr=19 bit=7
+FAULT_ACTIVATE type=4 addr=19 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=19 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1695 type=4 addr=19 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=19 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1696 type=4 addr=20 bit=0
+FAULT_ACTIVATE type=4 addr=20 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1696 type=4 addr=20 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1697 type=4 addr=20 bit=1
+FAULT_ACTIVATE type=4 addr=20 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1697 type=4 addr=20 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1698 type=4 addr=20 bit=2
+FAULT_ACTIVATE type=4 addr=20 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1698 type=4 addr=20 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1699 type=4 addr=20 bit=3
+FAULT_ACTIVATE type=4 addr=20 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1699 type=4 addr=20 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1700 type=4 addr=20 bit=4
+FAULT_ACTIVATE type=4 addr=20 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1700 type=4 addr=20 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1701 type=4 addr=20 bit=5
+FAULT_ACTIVATE type=4 addr=20 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1701 type=4 addr=20 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1702 type=4 addr=20 bit=6
+FAULT_ACTIVATE type=4 addr=20 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1702 type=4 addr=20 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1703 type=4 addr=20 bit=7
+FAULT_ACTIVATE type=4 addr=20 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=20 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1703 type=4 addr=20 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=20 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1704 type=4 addr=21 bit=0
+FAULT_ACTIVATE type=4 addr=21 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1704 type=4 addr=21 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1705 type=4 addr=21 bit=1
+FAULT_ACTIVATE type=4 addr=21 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1705 type=4 addr=21 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1706 type=4 addr=21 bit=2
+FAULT_ACTIVATE type=4 addr=21 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1706 type=4 addr=21 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1707 type=4 addr=21 bit=3
+FAULT_ACTIVATE type=4 addr=21 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1707 type=4 addr=21 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1708 type=4 addr=21 bit=4
+FAULT_ACTIVATE type=4 addr=21 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1708 type=4 addr=21 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1709 type=4 addr=21 bit=5
+FAULT_ACTIVATE type=4 addr=21 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1709 type=4 addr=21 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1710 type=4 addr=21 bit=6
+FAULT_ACTIVATE type=4 addr=21 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1710 type=4 addr=21 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1711 type=4 addr=21 bit=7
+FAULT_ACTIVATE type=4 addr=21 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=21 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1711 type=4 addr=21 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=21 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1712 type=4 addr=22 bit=0
+FAULT_ACTIVATE type=4 addr=22 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1712 type=4 addr=22 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1713 type=4 addr=22 bit=1
+FAULT_ACTIVATE type=4 addr=22 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1713 type=4 addr=22 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1714 type=4 addr=22 bit=2
+FAULT_ACTIVATE type=4 addr=22 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1714 type=4 addr=22 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1715 type=4 addr=22 bit=3
+FAULT_ACTIVATE type=4 addr=22 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1715 type=4 addr=22 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1716 type=4 addr=22 bit=4
+FAULT_ACTIVATE type=4 addr=22 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1716 type=4 addr=22 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1717 type=4 addr=22 bit=5
+FAULT_ACTIVATE type=4 addr=22 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1717 type=4 addr=22 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1718 type=4 addr=22 bit=6
+FAULT_ACTIVATE type=4 addr=22 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1718 type=4 addr=22 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1719 type=4 addr=22 bit=7
+FAULT_ACTIVATE type=4 addr=22 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=22 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1719 type=4 addr=22 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=22 first_expected=00 first_actual=80 requests=640 cycles=960
+CASE_BEGIN id=1720 type=4 addr=23 bit=0
+FAULT_ACTIVATE type=4 addr=23 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1720 type=4 addr=23 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=01 requests=640 cycles=960
+CASE_BEGIN id=1721 type=4 addr=23 bit=1
+FAULT_ACTIVATE type=4 addr=23 bit=1 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=1 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1721 type=4 addr=23 bit=1 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=02 requests=640 cycles=960
+CASE_BEGIN id=1722 type=4 addr=23 bit=2
+FAULT_ACTIVATE type=4 addr=23 bit=2 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=2 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1722 type=4 addr=23 bit=2 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=04 requests=640 cycles=960
+CASE_BEGIN id=1723 type=4 addr=23 bit=3
+FAULT_ACTIVATE type=4 addr=23 bit=3 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1723 type=4 addr=23 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=08 requests=640 cycles=960
+CASE_BEGIN id=1724 type=4 addr=23 bit=4
+FAULT_ACTIVATE type=4 addr=23 bit=4 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=4 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1724 type=4 addr=23 bit=4 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=10 requests=640 cycles=960
+CASE_BEGIN id=1725 type=4 addr=23 bit=5
+FAULT_ACTIVATE type=4 addr=23 bit=5 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=5 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1725 type=4 addr=23 bit=5 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=20 requests=640 cycles=960
+CASE_BEGIN id=1726 type=4 addr=23 bit=6
+FAULT_ACTIVATE type=4 addr=23 bit=6 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=6 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1726 type=4 addr=23 bit=6 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=40 requests=640 cycles=960
+CASE_BEGIN id=1727 type=4 addr=23 bit=7
+FAULT_ACTIVATE type=4 addr=23 bit=7 count=1
+FAULT_ACTIVATE type=4 addr=23 bit=7 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=1727 type=4 addr=23 bit=7 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=23 first_expected=00 first_actual=80 requests=640 cycles=960
+CAMPAIGN_DONE start=1664 count=64
+$finish called at time : 1235200 ns : File "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_step06_campaign.sv" Line 134
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 20:35:29 2026...

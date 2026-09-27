@@ -1,0 +1,6 @@
+FAULT_ACTIVATE type=2 addr=7 bit=2 count=1
+FAULT_ACTIVATE type=2 addr=7 bit=2 count=2
+FAULT_ACTIVATE type=2 addr=7 bit=2 count=3
+CHECKER_PASS run=1 requests=640 cycles=960 errors=3
+FAULT_CASE_RESULT type=2 addr=7 bit=2 activated=1 activations=3 detected=1 errors=3 first_phase=1 first_addr=7 first_expected=00 first_actual=04
+FAULT_MBIST_PASS type=2

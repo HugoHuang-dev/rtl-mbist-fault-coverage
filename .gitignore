@@ -1,0 +1,32 @@
+# Local build and simulation workspaces
+.build/
+**/.build*/
+**/.Xil/
+**/xsim.dir/
+**/__pycache__/
+*.pyc
+*.vvp
+*.dcp
+*.pb
+*.jou
+**/*.cache/
+**/*.runs/
+**/*.srcs/
+**/*.gen/
+**/*.ip_user_files/
+**/*.hw/
+**/*.sim/
+*.xpr
+
+# Machine-specific configuration and session output
+toolchain.local.json
+/vivado*.log
+/webtalk*.log
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Archived results/**/*.log and evidence/**/*.log are intentionally tracked.
+# Native ILA data and the portable WDB/WCFG pair are also retained.

@@ -1,0 +1,27 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Sep 26 20:33:16 2026
+| Host         : Hugo running 64-bit major release  (build 9200)
+| Command      : report_cdc -details -file C:/Users/32035/Desktop/FPGA/ProjectIII/results/reruns/20260926_engineering_review/step08/base_fault/cdc.rpt
+| Design       : board_top
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID     Severity  Count  Description
+-----  --------  -----  ------------------------------------------
+CDC-3  Info          1  1-bit synchronized with ASYNC_REG property
+CDC-7  Critical      1  Asynchronous reset unknown CDC circuitry
+
+Source Clock: input port clock
+Destination Clock: sys_clk
+CDC Type: No Common Primary Clock
+
+Row  ID     Severity  Description                                 Depth  Exception   Source (From)  Destination (To)
+---  -----  --------  ------------------------------------------  -----  ----------  -------------  ------------------
+  1  CDC-3  Info      1-bit synchronized with ASYNC_REG property      2  False Path  key0           key_sync_reg[0]/D
+  2  CDC-7  Critical  Asynchronous reset unknown CDC circuitry        2  False Path  sys_rst_n      reset_meta_reg/CLR
+

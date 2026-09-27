@@ -1,0 +1,118 @@
+{
+  "target_unique_faults": 2048,
+  "simulator_records": 4096,
+  "raw_logs_checked": 64,
+  "step06_source_fingerprints_checked": 21,
+  "coverage": [
+    {
+      "fault_type": "SA0",
+      "target_instances": 512,
+      "confirmed_detected": 512,
+      "not_activated": 0,
+      "activated_undetected": 0,
+      "simulation_invalid": 0,
+      "simulation_failed": 0,
+      "tool_disagreement": 0,
+      "target_coverage_pct": "100.00"
+    },
+    {
+      "fault_type": "SA1",
+      "target_instances": 512,
+      "confirmed_detected": 512,
+      "not_activated": 0,
+      "activated_undetected": 0,
+      "simulation_invalid": 0,
+      "simulation_failed": 0,
+      "tool_disagreement": 0,
+      "target_coverage_pct": "100.00"
+    },
+    {
+      "fault_type": "Rising_TF",
+      "target_instances": 512,
+      "confirmed_detected": 512,
+      "not_activated": 0,
+      "activated_undetected": 0,
+      "simulation_invalid": 0,
+      "simulation_failed": 0,
+      "tool_disagreement": 0,
+      "target_coverage_pct": "100.00"
+    },
+    {
+      "fault_type": "Falling_TF",
+      "target_instances": 512,
+      "confirmed_detected": 512,
+      "not_activated": 0,
+      "activated_undetected": 0,
+      "simulation_invalid": 0,
+      "simulation_failed": 0,
+      "tool_disagreement": 0,
+      "target_coverage_pct": "100.00"
+    },
+    {
+      "target_instances": 2048,
+      "confirmed_detected": 2048,
+      "not_activated": 0,
+      "activated_undetected": 0,
+      "simulation_invalid": 0,
+      "simulation_failed": 0,
+      "tool_disagreement": 0,
+      "fault_type": "TOTAL",
+      "target_coverage_pct": "100.00"
+    }
+  ],
+  "detection_stage_matrix": [
+    {
+      "fault_type": "SA0",
+      "M0": 0,
+      "M1": 0,
+      "M2": 512,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "confirmed_detected": 512
+    },
+    {
+      "fault_type": "SA1",
+      "M0": 0,
+      "M1": 512,
+      "M2": 0,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "confirmed_detected": 512
+    },
+    {
+      "fault_type": "Rising_TF",
+      "M0": 0,
+      "M1": 0,
+      "M2": 512,
+      "M3": 0,
+      "M4": 0,
+      "M5": 0,
+      "confirmed_detected": 512
+    },
+    {
+      "fault_type": "Falling_TF",
+      "M0": 0,
+      "M1": 0,
+      "M2": 0,
+      "M3": 512,
+      "M4": 0,
+      "M5": 0,
+      "confirmed_detected": 512
+    },
+    {
+      "fault_type": "TOTAL",
+      "M0": 0,
+      "M1": 512,
+      "M2": 1024,
+      "M3": 512,
+      "M4": 0,
+      "M5": 0,
+      "confirmed_detected": 2048
+    }
+  ],
+  "exceptions": 0,
+  "step06_summary_and_audit_match": true,
+  "first_fail_address_matches_fault_address": 2048
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "case": "counter",
+    "result": "rejected",
+    "reason": "Counter mismatch at sample 1023"
+  },
+  {
+    "case": "diagnostic",
+    "result": "rejected",
+    "reason": "Diagnostic differs: first_fail_addr[5:0], sample 280"
+  },
+  {
+    "case": "read_latency",
+    "result": "rejected",
+    "reason": "Missing one-cycle response"
+  },
+  {
+    "case": "early_done",
+    "result": "rejected",
+    "reason": "DONE timing differs at sample 950"
+  },
+  {
+    "case": "restart_clear",
+    "result": "rejected",
+    "reason": "FAIL timing differs at sample 1"
+  },
+  {
+    "case": "request_order",
+    "result": "rejected",
+    "reason": "Address/phase differs at request 0"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "markdown_documents": 40,
+  "local_links_checked": 401,
+  "missing_or_untracked_link_targets": [],
+  "source_and_release_hashes_verified": 59,
+  "git_publishable_files": 823,
+  "ignored_local_files": [
+    "results/reruns/20260926_engineering_review/portable_ila/xsim.dir/hw_ila_data_1.wdb/xsimSettings.ini",
+    "results/reruns/20260926_engineering_review/portable_ila/xsim.dir/portable_capture.wdb/xsimSettings.ini"
+  ],
+  "largest_file": {
+    "path": "results/step08/hardware_final/photos/17_fault_ila_board_leds.jpg",
+    "bytes": 7179502
+  },
+  "offline_audits": {
+    "fault_campaign": "STEP06_AUDIT_PASS manifest=2048 pilot_records=64 full_records=4096 tool_pairs=2048",
+    "coverage": "STEP07_EVALUATION_PASS unique=2048 records=4096 confirmed=2048 invalid=0 unactivated=0 undetected=0 disagreements=0",
+    "hardware": "FINAL_HARDWARE_AUDIT_PASS captures=5 normal=3 controlled_fail=2 requests_per_run=640",
+    "implementation": "BOARD_REVISION_AUDIT_PASS builds=4 setup=met hold=met hardware=pass"
+  },
+  "publication": "local repository prepared; no remote configured or upload performed"
+}

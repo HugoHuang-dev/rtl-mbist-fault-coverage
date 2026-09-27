@@ -1,0 +1,20 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/step06_snapshot/xsim_script.tcl
+# xsim {step06_snapshot} -testplusarg "START_INDEX=0" -testplusarg "CASE_COUNT=1" -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CASE_BEGIN id=123 type=1 addr=15 bit=3
+FAULT_ACTIVATE type=1 addr=15 bit=3 count=1
+FAULT_ACTIVATE type=1 addr=15 bit=3 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+CASE_RESULT id=123 type=1 addr=15 bit=3 activated=1 activations=2 detected=1 errors=2 first_phase=2 first_addr=15 first_expected=ff first_actual=f7 requests=640 cycles=960
+CAMPAIGN_DONE start=0 count=1
+$finish called at time : 19300 ns : File "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_step06_campaign.sv" Line 134
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 20:36:50 2026...

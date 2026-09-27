@@ -1,0 +1,3 @@
+CHECKER_FAIL code=4 run=1 request=65 cycle=66
+FATAL: C:\Users\32035\Desktop\FPGA\ProjectIII\tb\march_transaction_checker.sv:58: Independent checker rejected DUT
+       Time: 1671000 Scope: tb_board_fault.test.u_checker.reject

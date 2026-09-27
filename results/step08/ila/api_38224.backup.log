@@ -1,0 +1,256 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep 26 10:59:14 2026
+# Process ID: 38224
+# Current directory: <PROJECT_ROOT>
+# Command line: vivado.exe -mode batch -source fpga/inspect_ila_api.tcl -log results/step08/ila/api.log -journal results/step08/ila/api.jou
+# Log file: <PROJECT_ROOT>/results/step08/ila/api.log
+# Journal file: <PROJECT_ROOT>\results/step08/ila/api.jou
+#-----------------------------------------------------------
+source fpga/inspect_ila_api.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# open_project [file join $root fpga vivado mbist_board.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is '<PROJECT_ROOT>/fpga/vivado'
+Scanning sources...
+Finished scanning sources
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [<PROJECT_ROOT>/fpga/board_pins.xdc]
+Finished Parsing XDC File [<PROJECT_ROOT>/fpga/board_pins.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 578.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 582.727 ; gain = 312.641
+# create_debug_core u_ila ila
+# puts "ILA_PROPERTIES [list_property [get_debug_cores u_ila]]"
+ILA_PROPERTIES ALL_PROBE_SAME_MU ALL_PROBE_SAME_MU_CNT CLASS C_ADV_TRIGGER C_DATA_DEPTH C_EN_STRG_QUAL C_INPUT_PIPE_STAGES C_TRIGIN_EN C_TRIGOUT_EN NAME UUID
+# puts "ILA_PORTS [get_debug_ports u_ila/*]"
+ILA_PORTS u_ila/clk u_ila/probe0
+# puts "HELP_CREATE_PORT [help create_debug_port]"
+HELP_CREATE_PORT create_debug_port
+
+Description: 
+Create a new debug port
+
+Syntax: 
+create_debug_port  [-quiet] [-verbose] <name> <type>
+
+Returns: 
+new debug_port object
+
+Usage: 
+  Name        Description
+  -----------------------
+  [-quiet]    Ignore command errors
+  [-verbose]  Suspend message limits during command execution
+  <name>      Name of the debug core instance
+  <type>      Type of the new debug port
+
+Categories: 
+Debug, XDC
+
+Description:
+
+  Defines a new port to be added to an existing Vivado ILA debug core that
+  was added to the design using the create_debug_core command. The port
+  provides connection points on an ILA core to attach nets from the design
+  for debugging.
+
+  When a new debug core is created using the create_debug_core command, it
+  includes a clk and probe port by default. However, you can add trigger
+  input/output port types as well. Refer to the Vivado Design Suite User
+  Guide: Programming and Debugging (UG908) for more information on port types
+  and purpose.
+
+  A port can have one or more connection points to support one or more nets
+  to debug. As a default new ports are defined as having a width of 1,
+  allowing only one net to be attached. You can change the port width of
+  probe ports to support multiple signals using the set_property port_width
+  command (see Examples).
+
+  Note: clk, trig_in, trig_in_ack, trig_out, and trig_out_ack ports can only
+  have a width of 1.
+
+  You can connect signals to ports using the connect_debug_port command,
+  modify existing probe connections using modify_debug_ports, and disconnect
+  signals with the disconnect_debug_port command.
+
+Arguments:
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <name> - (Required) The name of the ILA debug core to add the new port to.
+  The debug core must already exist in the project having been created with
+  create_debug_core.
+
+  <type> - (Required) The type of debug port to insert. The supported port
+  types are:
+
+   *  clk - Defines the clock port for connecting the ILA debug core to a
+      clock domain. Each debug core can only have one clk port, and each clk
+      port can only connect to one clock domain. Therefore you must use
+      multiple ILA cores to probe signals from different clock domains.
+
+      Note: Ensure that the connected clocks are free-running clocks. Failure
+      to do so could result in an inability to communicate with the debug
+      core when the design is loaded onto the device.
+
+   *  probe - Provides probe points to connect to signals that are marked for
+      debugging with the MARK_DEBUG property. The ILA debug core can contain
+      multiple probe ports, which are automatically numbered by the Vivado
+      tool when the port is added to the core. Each probe port can contain
+      one or more channels, or connection points, as defined by the
+      PORT_WIDTH property.
+
+   *  trig_in/trig_in_ack, and trig_out/trig_out_ack - The ILA probe trigger
+      comparators used to detect specific comparison conditions on the probe
+      inputs to the ILA core. trig_in and trig_in_ack, and trig_out and
+      trig_out_ack should be added to the debug core as port pairs when used.
+      Refer to the Vivado Design Suite User Guide: Programming and Debugging
+      (UG908) for more information.
+
+Examples:
+
+  The following example creates a new debug core, and then adds an additional
+  probe port to the core, then sets the width of that new port to 8, and
+  connects signals to the probe port:
+
+    create_debug_core myCore ila  
+    create_debug_port myCore probe  
+    set_property PORT_WIDTH 8 myCore/probe1   
+    connect_debug_port -channel_start_index 1 myCore/probe1 \  
+    {m1_cyc_i m1_ack_o m1_err_o m1_rty_o} 
+    
+
+  Note: Recall that the ILA core is created with a clk and probe port by
+  default, so the new probe port is automatically numbered as probe1.
+
+See Also:
+
+   *  connect_debug_port
+   *  create_debug_core
+   *  disconnect_debug_port
+   *  set_property
+
+# puts "HELP_CONNECT [help connect_debug_port]"
+HELP_CONNECT connect_debug_port
+
+Description: 
+Connect nets and pins to debug port channels
+
+Syntax: 
+connect_debug_port  [-channel_start_index <arg>] [-quiet] [-verbose] <port>
+                    <nets>...
+
+Usage: 
+  Name                    Description
+  -----------------------------------
+  [-channel_start_index]  Connect nets starting at channel index
+  [-quiet]                Ignore command errors
+  [-verbose]              Suspend message limits during command execution
+  <port>                  Debug port name
+  <nets>                  List of nets or pins
+
+Categories: 
+Debug, XDC
+
+Description:
+
+  Connects a signal from the netlist design to a port on an ILA debug core
+  that was added to the design using the create_debug_core command. The
+  signal can either be connected to a specific channel index on the port, or
+  simply connected to an available channel on the port.
+
+  If you try to connect too many signals to a port, or there are not enough
+  channels to support the connection, the tool will return an error.
+
+  Additional ports can be added to a debug core through the use of the
+  create_debug_port command, and you can increase the available channels on
+  an existing port with the set_property port_width command. See the examples
+  below.
+
+  You can disconnect signals from ports using the disconnect_debug_port
+  command.
+
+  When the debug core has been defined and connected, you can implement the
+  debug core as a block for inclusion in the netlist design. Use the
+  implement_debug_core command to implement the core.
+
+Arguments:
+
+  -channel_start_index <arg> - (Optional) The channel index to use for the
+  connection. If more than one signal has been specified, this is the channel
+  index where connections will start to be added. Channel indexes are
+  numbered starting at 0.
+
+  Note: If this argument is not specified, the tool will place connections on
+  the first available channel index.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <port> - (Required) The name of the port to connect signals to. The port
+  must be referenced by the core_name/port_name.
+
+  <nets> - (Required) A list of one or more net names from the netlist design
+  to connect to the specified debug port.
+
+Examples:
+
+  The following example creates a new PROBE port on the myCore debug core,
+  increases the PORT_WIDTH property of the port in order to prepare it to
+  receive the number of signals to be connected, and connects signals to the
+  port starting at the third channel position (index 2).
+
+    create_debug_port myCore PROBE  
+    set_property PORT_WIDTH 8 [get_debug_ports myCore/PROBE1]  
+    connect_debug_port myCore/PROBE1 [get_nets [list m0_ack_o m0_cyc_i \  
+       m0_err_o m0_rty_o m0_stb_i m0_we_i ]] -channel_start_index 2 
+    
+
+  Note: If you specify too many nets to connect to the available channels on
+  the port, the tool will return an error and will not connect the ports.
+
+See Also:
+
+   *  create_debug_core
+   *  create_debug_port
+   *  disconnect_debug_port
+   *  get_debug_ports
+   *  get_nets
+   *  implement_debug_core
+   *  set_property
+
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 10:59:22 2026...

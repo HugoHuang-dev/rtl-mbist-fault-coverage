@@ -1,0 +1,21 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/board_snapshot/xsim_script.tcl
+# xsim {board_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+BOARD_CASE_PASS round=1 requests=640 led=0011
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+BOARD_CASE_PASS round=2 requests=640 led=0011
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+BOARD_CASE_PASS round=3 requests=640 led=0011
+BOARD_TB_PASS rounds=3 inject=0 busy_start=ignored active_reset=pass
+$finish called at time : 59480 ns : File "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_board_top.sv" Line 98
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 20:31:09 2026...

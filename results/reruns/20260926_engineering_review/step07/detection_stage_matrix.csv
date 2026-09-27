@@ -1,0 +1,6 @@
+fault_type,M0,M1,M2,M3,M4,M5,confirmed_detected
+SA0,0,0,512,0,0,0,512
+SA1,0,512,0,0,0,0,512
+Rising_TF,0,0,512,0,0,0,512
+Falling_TF,0,0,0,512,0,0,512
+TOTAL,0,512,1024,512,0,0,2048

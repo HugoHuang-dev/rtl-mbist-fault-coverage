@@ -1,0 +1,646 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Sep 26 20:38:28 2026
+| Host         : Hugo running 64-bit major release  (build 9200)
+| Command      : report_timing -delay_type max -max_paths 10 -sort_by group -file C:/Users/32035/Desktop/FPGA/ProjectIII/results/reruns/20260926_review_final/step08/base_fault/critical_paths.rpt
+| Design       : board_top
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             15.085ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[0]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.684ns  (logic 1.437ns (30.679%)  route 3.247ns (69.321%))
+  Logic Levels:           5  (LUT2=2 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.279     8.651    u_mbist/u_address/load
+    SLICE_X58Y40         LUT2 (Prop_lut2_I0_O)        0.267     8.918 r  u_mbist/u_address/addr[5]_i_2/O
+                         net (fo=6, routed)           0.405     9.323    u_mbist/u_address/addr[5]_i_2_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[0]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_CE)      -0.168    24.407    u_mbist/u_address/addr_reg[0]
+  -------------------------------------------------------------------
+                         required time                         24.407    
+                         arrival time                          -9.323    
+  -------------------------------------------------------------------
+                         slack                                 15.085    
+
+Slack (MET) :             15.085ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.684ns  (logic 1.437ns (30.679%)  route 3.247ns (69.321%))
+  Logic Levels:           5  (LUT2=2 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.279     8.651    u_mbist/u_address/load
+    SLICE_X58Y40         LUT2 (Prop_lut2_I0_O)        0.267     8.918 r  u_mbist/u_address/addr[5]_i_2/O
+                         net (fo=6, routed)           0.405     9.323    u_mbist/u_address/addr[5]_i_2_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[1]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_CE)      -0.168    24.407    u_mbist/u_address/addr_reg[1]
+  -------------------------------------------------------------------
+                         required time                         24.407    
+                         arrival time                          -9.323    
+  -------------------------------------------------------------------
+                         slack                                 15.085    
+
+Slack (MET) :             15.085ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[4]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.684ns  (logic 1.437ns (30.679%)  route 3.247ns (69.321%))
+  Logic Levels:           5  (LUT2=2 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.279     8.651    u_mbist/u_address/load
+    SLICE_X58Y40         LUT2 (Prop_lut2_I0_O)        0.267     8.918 r  u_mbist/u_address/addr[5]_i_2/O
+                         net (fo=6, routed)           0.405     9.323    u_mbist/u_address/addr[5]_i_2_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[4]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_CE)      -0.168    24.407    u_mbist/u_address/addr_reg[4]
+  -------------------------------------------------------------------
+                         required time                         24.407    
+                         arrival time                          -9.323    
+  -------------------------------------------------------------------
+                         slack                                 15.085    
+
+Slack (MET) :             15.085ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[5]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.684ns  (logic 1.437ns (30.679%)  route 3.247ns (69.321%))
+  Logic Levels:           5  (LUT2=2 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.279     8.651    u_mbist/u_address/load
+    SLICE_X58Y40         LUT2 (Prop_lut2_I0_O)        0.267     8.918 r  u_mbist/u_address/addr[5]_i_2/O
+                         net (fo=6, routed)           0.405     9.323    u_mbist/u_address/addr[5]_i_2_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[5]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[5]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_CE)      -0.168    24.407    u_mbist/u_address/addr_reg[5]
+  -------------------------------------------------------------------
+                         required time                         24.407    
+                         arrival time                          -9.323    
+  -------------------------------------------------------------------
+                         slack                                 15.085    
+
+Slack (MET) :             15.227ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[3]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.541ns  (logic 1.437ns (31.642%)  route 3.104ns (68.358%))
+  Logic Levels:           5  (LUT2=2 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.279     8.651    u_mbist/u_address/load
+    SLICE_X58Y40         LUT2 (Prop_lut2_I0_O)        0.267     8.918 r  u_mbist/u_address/addr[5]_i_2/O
+                         net (fo=6, routed)           0.262     9.180    u_mbist/u_address/addr[5]_i_2_n_0
+    SLICE_X58Y39         FDRE                                         r  u_mbist/u_address/addr_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X58Y39         FDRE                                         r  u_mbist/u_address/addr_reg[3]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X58Y39         FDRE (Setup_fdre_C_CE)      -0.168    24.407    u_mbist/u_address/addr_reg[3]
+  -------------------------------------------------------------------
+                         required time                         24.407    
+                         arrival time                          -9.180    
+  -------------------------------------------------------------------
+                         slack                                 15.227    
+
+Slack (MET) :             15.295ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.674ns  (logic 1.437ns (30.744%)  route 3.237ns (69.256%))
+  Logic Levels:           5  (LUT2=1 LUT3=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.674     9.046    u_mbist/u_address/load
+    SLICE_X58Y39         LUT5 (Prop_lut5_I1_O)        0.267     9.313 r  u_mbist/u_address/addr[3]_i_1/O
+                         net (fo=1, routed)           0.000     9.313    u_mbist/u_address/addr[3]_i_1_n_0
+    SLICE_X58Y39         FDRE                                         r  u_mbist/u_address/addr_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X58Y39         FDRE                                         r  u_mbist/u_address/addr_reg[3]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X58Y39         FDRE (Setup_fdre_C_D)        0.032    24.607    u_mbist/u_address/addr_reg[3]
+  -------------------------------------------------------------------
+                         required time                         24.607    
+                         arrival time                          -9.313    
+  -------------------------------------------------------------------
+                         slack                                 15.295    
+
+Slack (MET) :             15.336ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[2]/CE
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.434ns  (logic 1.437ns (32.412%)  route 2.997ns (67.588%))
+  Logic Levels:           5  (LUT2=2 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.371ns = ( 24.371 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.279     8.651    u_mbist/u_address/load
+    SLICE_X58Y40         LUT2 (Prop_lut2_I0_O)        0.267     8.918 r  u_mbist/u_address/addr[5]_i_2/O
+                         net (fo=6, routed)           0.154     9.072    u_mbist/u_address/addr[5]_i_2_n_0
+    SLICE_X58Y40         FDRE                                         r  u_mbist/u_address/addr_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.329    24.371    u_mbist/u_address/clk
+    SLICE_X58Y40         FDRE                                         r  u_mbist/u_address/addr_reg[2]/C
+                         clock pessimism              0.241    24.612    
+                         clock uncertainty           -0.035    24.576    
+    SLICE_X58Y40         FDRE (Setup_fdre_C_CE)      -0.168    24.408    u_mbist/u_address/addr_reg[2]
+  -------------------------------------------------------------------
+                         required time                         24.408    
+                         arrival time                          -9.072    
+  -------------------------------------------------------------------
+                         slack                                 15.336    
+
+Slack (MET) :             15.349ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.618ns  (logic 1.437ns (31.117%)  route 3.181ns (68.883%))
+  Logic Levels:           5  (LUT2=1 LUT3=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.618     8.990    u_mbist/u_address/load
+    SLICE_X59Y39         LUT3 (Prop_lut3_I1_O)        0.267     9.257 r  u_mbist/u_address/addr[0]_i_1/O
+                         net (fo=1, routed)           0.000     9.257    u_mbist/u_address/addr[0]_i_1_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[0]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_D)        0.030    24.605    u_mbist/u_address/addr_reg[0]
+  -------------------------------------------------------------------
+                         required time                         24.605    
+                         arrival time                          -9.257    
+  -------------------------------------------------------------------
+                         slack                                 15.349    
+
+Slack (MET) :             15.367ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.639ns  (logic 1.458ns (31.429%)  route 3.181ns (68.571%))
+  Logic Levels:           5  (LUT2=1 LUT3=1 LUT5=2 LUT6=1)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.618     8.990    u_mbist/u_address/load
+    SLICE_X59Y39         LUT5 (Prop_lut5_I1_O)        0.288     9.278 r  u_mbist/u_address/addr[1]_i_1/O
+                         net (fo=1, routed)           0.000     9.278    u_mbist/u_address/addr[1]_i_1_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[1]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_D)        0.069    24.644    u_mbist/u_address/addr_reg[1]
+  -------------------------------------------------------------------
+                         required time                         24.644    
+                         arrival time                          -9.278    
+  -------------------------------------------------------------------
+                         slack                                 15.367    
+
+Slack (MET) :             15.414ns  (required time - arrival time)
+  Source:                 u_mbist/u_controller/phase_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            u_mbist/u_address/addr_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (sys_clk rise@20.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        4.555ns  (logic 1.437ns (31.547%)  route 3.118ns (68.453%))
+  Logic Levels:           5  (LUT2=1 LUT3=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.028ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.370ns = ( 24.370 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.639ns
+    Clock Pessimism Removal (CPR):    0.241ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+    R4                                                0.000     0.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000     0.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.432     1.432 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.689     3.121    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     3.202 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.437     4.639    u_mbist/u_controller/clk
+    SLICE_X61Y41         FDRE                                         r  u_mbist/u_controller/phase_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y41         FDRE (Prop_fdre_C_Q)         0.379     5.018 r  u_mbist/u_controller/phase_reg[2]/Q
+                         net (fo=14, routed)          0.881     5.899    u_mbist/u_controller/phase[2]
+    SLICE_X58Y40         LUT3 (Prop_lut3_I2_O)        0.119     6.018 f  u_mbist/u_controller/addr_step_INST_0_i_4/O
+                         net (fo=2, routed)           0.661     6.679    u_mbist/u_controller/addr_step_INST_0_i_4_n_0
+    SLICE_X60Y40         LUT6 (Prop_lut6_I5_O)        0.275     6.954 r  u_mbist/u_controller/addr_step_INST_0_i_1/O
+                         net (fo=3, routed)           0.668     7.622    u_mbist/u_controller/addr_step_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT2 (Prop_lut2_I1_O)        0.119     7.741 f  u_mbist/u_controller/addr_load_INST_0_i_1/O
+                         net (fo=6, routed)           0.353     8.094    u_mbist/u_controller/addr_load_INST_0_i_1_n_0
+    SLICE_X59Y40         LUT5 (Prop_lut5_I0_O)        0.278     8.372 r  u_mbist/u_controller/addr_load_INST_0/O
+                         net (fo=7, routed)           0.555     8.927    u_mbist/u_address/load
+    SLICE_X59Y39         LUT6 (Prop_lut6_I1_O)        0.267     9.194 r  u_mbist/u_address/addr[5]_i_3/O
+                         net (fo=1, routed)           0.000     9.194    u_mbist/u_address/addr[5]_i_3_n_0
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   20.000    20.000 r  
+    R4                                                0.000    20.000 r  sys_clk (IN)
+                         net (fo=0)                   0.000    20.000    sys_clk
+    R4                   IBUF (Prop_ibuf_I_O)         1.366    21.366 r  sys_clk_IBUF_inst/O
+                         net (fo=1, routed)           1.599    22.965    sys_clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077    23.042 r  sys_clk_IBUF_BUFG_inst/O
+                         net (fo=74, routed)          1.328    24.370    u_mbist/u_address/clk
+    SLICE_X59Y39         FDRE                                         r  u_mbist/u_address/addr_reg[5]/C
+                         clock pessimism              0.241    24.611    
+                         clock uncertainty           -0.035    24.575    
+    SLICE_X59Y39         FDRE (Setup_fdre_C_D)        0.032    24.607    u_mbist/u_address/addr_reg[5]
+  -------------------------------------------------------------------
+                         required time                         24.607    
+                         arrival time                          -9.194    
+  -------------------------------------------------------------------
+                         slack                                 15.414    
+
+
+
+

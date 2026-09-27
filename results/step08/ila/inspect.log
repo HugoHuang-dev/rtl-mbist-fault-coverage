@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep 26 10:57:53 2026
+# Process ID: 38980
+# Current directory: <PROJECT_ROOT>
+# Command line: vivado.exe -mode batch -source fpga/inspect_debug_nets.tcl -log results/step08/ila/inspect.log -journal results/step08/ila/inspect.jou
+# Log file: <PROJECT_ROOT>/results/step08/ila/inspect.log
+# Journal file: <PROJECT_ROOT>\results/step08/ila/inspect.jou
+#-----------------------------------------------------------
+source fpga/inspect_debug_nets.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# open_project [file join $root fpga vivado mbist_board.xpr]
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is '<PROJECT_ROOT>/fpga/vivado'
+Scanning sources...
+Finished scanning sources
+# open_run synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tfgg484-2
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [<PROJECT_ROOT>/fpga/board_pins.xdc]
+Finished Parsing XDC File [<PROJECT_ROOT>/fpga/board_pins.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 579.602 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+# foreach pattern {start_pulse phase req_valid req_write req_addr req_wdata rd_valid rd_data done pass fail error_count first_fail accepted_count sys_clk} {
+#     set matches [get_nets -hier -quiet -filter "NAME =~ *$pattern*"]
+#     puts "DEBUG_NET pattern=$pattern count=[llength $matches] names=$matches"
+# }
+DEBUG_NET pattern=start_pulse count=3 names=start_pulse start_pulse_i_1_n_0 start_pulse_i_2_n_0
+DEBUG_NET pattern=phase count=25 names=first_fail_phase[0] first_fail_phase[1] first_fail_phase[2] u_mbist/first_fail_phase[0] u_mbist/first_fail_phase[1] u_mbist/first_fail_phase[2] u_mbist/phase[0] u_mbist/phase[1] u_mbist/phase[2] u_mbist/u_checker/first_fail_phase[0] u_mbist/u_checker/first_fail_phase[1] u_mbist/u_checker/first_fail_phase[2] u_mbist/u_checker/first_fail_phase[2]_i_1_n_0 u_mbist/u_checker/phase[0] u_mbist/u_checker/phase[1] u_mbist/u_checker/phase[2] u_mbist/u_controller/phase[0] u_mbist/u_controller/phase[0]_i_1_n_0 u_mbist/u_controller/phase[1] u_mbist/u_controller/phase[1]_i_1_n_0 u_mbist/u_controller/phase[2] u_mbist/u_controller/phase[2]_i_1_n_0 u_mbist/u_data/phase[0] u_mbist/u_data/phase[1] u_mbist/u_data/phase[2]
+DEBUG_NET pattern=req_valid count=3 names=req_valid u_bram/req_valid u_mbist/req_valid
+DEBUG_NET pattern=req_write count=3 names=req_write u_bram/req_write u_mbist/req_write
+DEBUG_NET pattern=req_addr count=18 names=req_addr[0] req_addr[1] req_addr[2] req_addr[3] req_addr[4] req_addr[5] u_bram/req_addr[0] u_bram/req_addr[1] u_bram/req_addr[2] u_bram/req_addr[3] u_bram/req_addr[4] u_bram/req_addr[5] u_mbist/req_addr[0] u_mbist/req_addr[1] u_mbist/req_addr[2] u_mbist/req_addr[3] u_mbist/req_addr[4] u_mbist/req_addr[5]
+DEBUG_NET pattern=req_wdata count=17 names=req_wdata[0] req_wdata[1] req_wdata[2] req_wdata[3] req_wdata[4] req_wdata[5] req_wdata[6] req_wdata[7] u_bram/req_wdata[0] u_bram/req_wdata[1] u_bram/req_wdata[2] u_bram/req_wdata[3] u_bram/req_wdata[4] u_bram/req_wdata[5] u_bram/req_wdata[6] u_bram/req_wdata[7] u_mbist/req_wdata[0]
+DEBUG_NET pattern=rd_valid count=5 names=rd_valid u_bram/rd_valid u_bram/rd_valid_i_1_n_0 u_mbist/rd_valid u_mbist/u_controller/rd_valid
+DEBUG_NET pattern=rd_data count=33 names=rd_data[0] rd_data[1] rd_data[2] rd_data[3] rd_data[4] rd_data[5] rd_data[6] rd_data[7] u_bram/rd_data1 u_bram/rd_data[0] u_bram/rd_data[1] u_bram/rd_data[2] u_bram/rd_data[3] u_bram/rd_data[4] u_bram/rd_data[5] u_bram/rd_data[6] u_bram/rd_data[7] u_mbist/rd_data[0] u_mbist/rd_data[1] u_mbist/rd_data[2] u_mbist/rd_data[3] u_mbist/rd_data[4] u_mbist/rd_data[5] u_mbist/rd_data[6] u_mbist/rd_data[7] u_mbist/u_checker/rd_data[0] u_mbist/u_checker/rd_data[1] u_mbist/u_checker/rd_data[2] u_mbist/u_checker/rd_data[3] u_mbist/u_checker/rd_data[4] u_mbist/u_checker/rd_data[5] u_mbist/u_checker/rd_data[6] u_mbist/u_checker/rd_data[7]
+DEBUG_NET pattern=done count=3 names=done u_mbist/done u_mbist/u_controller/done
+DEBUG_NET pattern=pass count=2 names=pass u_mbist/pass
+DEBUG_NET pattern=fail count=70 names=fail first_fail_actual[0] first_fail_actual[1] first_fail_actual[2] first_fail_actual[3] first_fail_actual[4] first_fail_actual[5] first_fail_actual[6] first_fail_actual[7] first_fail_addr[0] first_fail_addr[1] first_fail_addr[2] first_fail_addr[3] first_fail_addr[4] first_fail_addr[5] first_fail_expected[0] first_fail_expected[1] first_fail_expected[2] first_fail_expected[3] first_fail_expected[4] first_fail_expected[5] first_fail_expected[6] first_fail_expected[7] first_fail_phase[0] first_fail_phase[1] first_fail_phase[2] u_mbist/fail u_mbist/first_fail_actual[0] u_mbist/first_fail_actual[1] u_mbist/first_fail_actual[2] u_mbist/first_fail_actual[3] u_mbist/first_fail_actual[4] u_mbist/first_fail_actual[5] u_mbist/first_fail_actual[6] u_mbist/first_fail_actual[7] u_mbist/first_fail_addr[0] u_mbist/first_fail_addr[1] u_mbist/first_fail_addr[2] u_mbist/first_fail_addr[3] u_mbist/first_fail_addr[4] u_mbist/first_fail_addr[5] u_mbist/first_fail_expected[0] u_mbist/first_fail_phase[0] u_mbist/first_fail_phase[1] u_mbist/first_fail_phase[2] u_mbist/u_checker/fail u_mbist/u_checker/fail_i_1_n_0 u_mbist/u_checker/fail_i_2_n_0 u_mbist/u_checker/fail_i_3_n_0 u_mbist/u_checker/fail_i_4_n_0 u_mbist/u_checker/fail_i_5_n_0 u_mbist/u_checker/first_fail_actual[0] u_mbist/u_checker/first_fail_actual[1] u_mbist/u_checker/first_fail_actual[2] u_mbist/u_checker/first_fail_actual[3] u_mbist/u_checker/first_fail_actual[4] u_mbist/u_checker/first_fail_actual[5] u_mbist/u_checker/first_fail_actual[6] u_mbist/u_checker/first_fail_actual[7] u_mbist/u_checker/first_fail_addr[0] u_mbist/u_checker/first_fail_addr[1] u_mbist/u_checker/first_fail_addr[2] u_mbist/u_checker/first_fail_addr[3] u_mbist/u_checker/first_fail_addr[4] u_mbist/u_checker/first_fail_addr[5] u_mbist/u_checker/first_fail_expected[7] u_mbist/u_checker/first_fail_phase[0] u_mbist/u_checker/first_fail_phase[1] u_mbist/u_checker/first_fail_phase[2] u_mbist/u_checker/first_fail_phase[2]_i_1_n_0
+DEBUG_NET pattern=error_count count=37 names=error_count[0] error_count[1] error_count[2] error_count[3] error_count[4] error_count[5] error_count[6] error_count[7] error_count[8] u_mbist/error_count[0] u_mbist/error_count[1] u_mbist/error_count[2] u_mbist/error_count[3] u_mbist/error_count[4] u_mbist/error_count[5] u_mbist/error_count[6] u_mbist/error_count[7] u_mbist/error_count[8] u_mbist/u_checker/error_count[0] u_mbist/u_checker/error_count[0]_i_1_n_0 u_mbist/u_checker/error_count[1] u_mbist/u_checker/error_count[1]_i_1_n_0 u_mbist/u_checker/error_count[2] u_mbist/u_checker/error_count[2]_i_1_n_0 u_mbist/u_checker/error_count[3] u_mbist/u_checker/error_count[3]_i_1_n_0 u_mbist/u_checker/error_count[4] u_mbist/u_checker/error_count[4]_i_1_n_0 u_mbist/u_checker/error_count[5] u_mbist/u_checker/error_count[5]_i_1_n_0 u_mbist/u_checker/error_count[6] u_mbist/u_checker/error_count[6]_i_1_n_0 u_mbist/u_checker/error_count[7] u_mbist/u_checker/error_count[7]_i_1_n_0 u_mbist/u_checker/error_count[8] u_mbist/u_checker/error_count[8]_i_1_n_0 u_mbist/u_checker/error_count[8]_i_2_n_0
+DEBUG_NET pattern=first_fail count=62 names=first_fail_actual[0] first_fail_actual[1] first_fail_actual[2] first_fail_actual[3] first_fail_actual[4] first_fail_actual[5] first_fail_actual[6] first_fail_actual[7] first_fail_addr[0] first_fail_addr[1] first_fail_addr[2] first_fail_addr[3] first_fail_addr[4] first_fail_addr[5] first_fail_expected[0] first_fail_expected[1] first_fail_expected[2] first_fail_expected[3] first_fail_expected[4] first_fail_expected[5] first_fail_expected[6] first_fail_expected[7] first_fail_phase[0] first_fail_phase[1] first_fail_phase[2] u_mbist/first_fail_actual[0] u_mbist/first_fail_actual[1] u_mbist/first_fail_actual[2] u_mbist/first_fail_actual[3] u_mbist/first_fail_actual[4] u_mbist/first_fail_actual[5] u_mbist/first_fail_actual[6] u_mbist/first_fail_actual[7] u_mbist/first_fail_addr[0] u_mbist/first_fail_addr[1] u_mbist/first_fail_addr[2] u_mbist/first_fail_addr[3] u_mbist/first_fail_addr[4] u_mbist/first_fail_addr[5] u_mbist/first_fail_expected[0] u_mbist/first_fail_phase[0] u_mbist/first_fail_phase[1] u_mbist/first_fail_phase[2] u_mbist/u_checker/first_fail_actual[0] u_mbist/u_checker/first_fail_actual[1] u_mbist/u_checker/first_fail_actual[2] u_mbist/u_checker/first_fail_actual[3] u_mbist/u_checker/first_fail_actual[4] u_mbist/u_checker/first_fail_actual[5] u_mbist/u_checker/first_fail_actual[6] u_mbist/u_checker/first_fail_actual[7] u_mbist/u_checker/first_fail_addr[0] u_mbist/u_checker/first_fail_addr[1] u_mbist/u_checker/first_fail_addr[2] u_mbist/u_checker/first_fail_addr[3] u_mbist/u_checker/first_fail_addr[4] u_mbist/u_checker/first_fail_addr[5] u_mbist/u_checker/first_fail_expected[7] u_mbist/u_checker/first_fail_phase[0] u_mbist/u_checker/first_fail_phase[1] u_mbist/u_checker/first_fail_phase[2] u_mbist/u_checker/first_fail_phase[2]_i_1_n_0
+DEBUG_NET pattern=accepted_count count=13 names=accepted_count[0] accepted_count[1] accepted_count[2] accepted_count[3] accepted_count[4] accepted_count[5] accepted_count[6] accepted_count[7] accepted_count[8] accepted_count[9] accepted_count[9]_i_1_n_0 accepted_count[9]_i_4_n_0 accepted_count_reg0
+DEBUG_NET pattern=sys_clk count=3 names=sys_clk sys_clk_IBUF sys_clk_IBUF_BUFG
+# puts "DEBUG_CELL_BUFG [get_cells -hier -filter {REF_NAME == BUFG}]"
+DEBUG_CELL_BUFG sys_clk_IBUF_BUFG_inst
+# puts "DEBUG_HELP_CREATE"
+DEBUG_HELP_CREATE
+# help create_debug_core
+# puts "DEBUG_HELP_CONNECT"
+DEBUG_HELP_CONNECT
+# help connect_debug_port
+# puts "DEBUG_HELP_PROBES"
+DEBUG_HELP_PROBES
+# help write_debug_probes
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 10:58:00 2026...

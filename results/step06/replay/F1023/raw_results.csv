@@ -1,0 +1,3 @@
+fault_id,fault_type,fault_name,fault_addr,fault_bit,tool,activated,activation_count,detected,error_count,first_fail_addr,first_fail_stage,first_fail_expected,first_fail_actual,request_count,cycles,simulation_status,outcome,reason,attempts,raw_log,raw_log_sha256
+F1023,2,SA1,63,7,icarus,1,3,1,3,63,M1,00,80,640,960,valid,activated_detected,,1,results/step06/raw/replay/F1023/icarus/run_0001_offset_0000_count_0001.log,8EC8408D050E761A0DB2B6DA3B7884D7C1FDBDCB50AEC744F683246ABAC53512
+F1023,2,SA1,63,7,xsim,1,3,1,3,63,M1,00,80,640,960,valid,activated_detected,,1,results/step06/raw/replay/F1023/xsim/run_0001_offset_0000_count_0001.log,761F3859D1D7860F3EF3E9A9E2CBB2A05E5E48C4C5109E52F474B58837F9B29B

@@ -1,0 +1,42 @@
+{
+  "icarus": {
+    "normal": {
+      "rounds": 3,
+      "requests_per_round": 640,
+      "led_at_done": "0011",
+      "error_count": 0,
+      "status": "pass",
+      "busy_start": "ignored",
+      "active_reset": "pass"
+    },
+    "fault": {
+      "rounds": 3,
+      "requests_per_round": 640,
+      "led_at_done": "0101",
+      "error_count": 1,
+      "status": "pass",
+      "busy_start": "ignored",
+      "active_reset": "pass"
+    }
+  },
+  "xsim": {
+    "normal": {
+      "rounds": 3,
+      "requests_per_round": 640,
+      "led_at_done": "0011",
+      "error_count": 0,
+      "status": "pass",
+      "busy_start": "ignored",
+      "active_reset": "pass"
+    },
+    "fault": {
+      "rounds": 3,
+      "requests_per_round": 640,
+      "led_at_done": "0101",
+      "error_count": 1,
+      "status": "pass",
+      "busy_start": "ignored",
+      "active_reset": "pass"
+    }
+  }
+}

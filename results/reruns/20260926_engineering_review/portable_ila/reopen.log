@@ -1,0 +1,49 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep 26 20:52:53 2026
+# Process ID: 36876
+# Current directory: C:/Users/32035/Desktop/FPGA/ProjectIII
+# Command line: vivado.exe -mode batch -source fpga/verify_portable_ila.tcl -log results/reruns/20260926_engineering_review/portable_ila/reopen.log -journal results/reruns/20260926_engineering_review/portable_ila/reopen.jou
+# Log file: C:/Users/32035/Desktop/FPGA/ProjectIII/results/reruns/20260926_engineering_review/portable_ila/reopen.log
+# Journal file: C:/Users/32035/Desktop/FPGA/ProjectIII\results/reruns/20260926_engineering_review/portable_ila/reopen.jou
+#-----------------------------------------------------------
+source fpga/verify_portable_ila.tcl
+# source [file join [file dirname [info script]] build_paths.tcl]
+## set root [file normalize [file join [file dirname [info script]] ..]]
+## set run_id [clock format [clock seconds] -format %Y%m%d_%H%M%S]
+## if {[info exists ::env(MBIST_RUN_ID)]} { set run_id $::env(MBIST_RUN_ID) }
+## if {![regexp {^[A-Za-z0-9_-]+$} $run_id]} { error "Invalid MBIST_RUN_ID" }
+## set inject 0
+## if {[info exists ::env(MBIST_INJECT_FAULT)]} { set inject $::env(MBIST_INJECT_FAULT) }
+## if {$inject ni {0 1}} { error "MBIST_INJECT_FAULT must be 0 or 1" }
+## set variant ""
+## if {$inject} { set variant "_fault" }
+## set result_root [file join $root results reruns $run_id step08]
+## set project_dir [file join $root .build $run_id vivado$variant]
+# set directory [file join $root results reruns $run_id portable_ila]
+# open_hw
+# set capture [read_hw_ila_data [file join $directory march_c_minus_64x8_portable.ila]]
+# if {[llength $capture] != 1} { error "Portable capture import failed" }
+# puts "PORTABLE_ILA_IMPORT_PASS object=$capture"
+PORTABLE_ILA_IMPORT_PASS object=march_c_minus_64x8_portable
+# open_wave_database [file join $directory portable_capture.wdb]
+open_wave_config {C:/Users/32035/Desktop/FPGA/ProjectIII/results/reruns/20260926_engineering_review/portable_ila\portable_capture.wcfg}
+WARNING: Simulation object u_mbist/phase was not found in the design.
+# open_wave_config [file join $directory portable_capture.wcfg]
+WARNING: Simulation object u_mbist/phase was not found in the design.
+# if {[lsearch -exact [get_objects -r *] {//u_mbist/phase}] < 0} { error "Phase probe missing from WDB" }
+# puts "PORTABLE_WDB_WCFG_OPEN_PASS"
+PORTABLE_WDB_WCFG_OPEN_PASS
+# close_sim
+INFO: [Simtcl 6-16] Simulation closed
+# close_hw
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/32035/Desktop/FPGA/ProjectIII/.Xil/Vivado-36876-Hugo/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Sep 26 20:52:57 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 20:52:57 2026...

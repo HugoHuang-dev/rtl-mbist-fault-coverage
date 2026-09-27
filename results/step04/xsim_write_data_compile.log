@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/single_port_sync_ram.v" into library work
+INFO: [VRFC 10-311] analyzing module single_port_sync_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/address_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module address_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<WORK_ROOT>/step04/xsim/write_data/data_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module data_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/memory_interface.v" into library work
+INFO: [VRFC 10-311] analyzing module memory_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/response_checker.v" into library work
+INFO: [VRFC 10-311] analyzing module response_checker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/march_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module march_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/mbist_top.v" into library work
+INFO: [VRFC 10-311] analyzing module mbist_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/tb/march_transaction_checker.sv" into library work
+INFO: [VRFC 10-311] analyzing module march_transaction_checker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/tb/tb_step04_independent.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_step04_independent

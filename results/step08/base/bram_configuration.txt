@@ -1,0 +1,4 @@
+cell=u_bram/mem_reg
+primitive=RAMB18E1
+DOA_REG=0
+WRITE_MODE_A=NO_CHANGE

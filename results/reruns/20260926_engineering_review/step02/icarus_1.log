@@ -1,0 +1,5 @@
+CASE_PASS boundary_addresses_and_sparse_access
+CASE_PASS all_addresses_consecutive_write_read
+CASE_PASS alternating_write_read_and_idle_hold
+CASE_PASS reset_blocks_write_and_preserves_ram
+RAM_TB_PASS checks=146 reads=70 writes=68

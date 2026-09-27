@@ -1,0 +1,43 @@
+{
+  "device_part": "xc7a35tfgg484-2",
+  "operating_grade": "Industrial",
+  "clock_mhz": 50,
+  "board_memory": "64x8",
+  "controller_only": {
+    "lut": 48,
+    "registers": 40,
+    "ramb18": 0
+  },
+  "base_complete_system": {
+    "lut": 99,
+    "registers": 62,
+    "ramb18": 1,
+    "wns_ns": 14.628
+  },
+  "ila_instrumented_system": {
+    "lut": 1928,
+    "registers": 2933,
+    "ramb18": 2,
+    "wns_ns": 14.169
+  },
+  "mut_bram_primitive": "RAMB18E1",
+  "mut_bram_doa_reg": 0,
+  "ila_depth": 1024,
+  "ila_probes": 18,
+  "board_wrapper_simulation": {
+    "icarus": {
+      "rounds": 2,
+      "requests_per_round": 640,
+      "led_at_done": "0011",
+      "status": "pass"
+    },
+    "xsim": {
+      "rounds": 2,
+      "requests_per_round": 640,
+      "led_at_done": "0011",
+      "status": "pass"
+    }
+  },
+  "hardware_pass": null,
+  "hardware_capture": "not_evaluated_by_offline_audit"
+}

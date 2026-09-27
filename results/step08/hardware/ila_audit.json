@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "capture": "results/step08/hardware/ila_capture/2026-09-26_march_c_minus_64x8_full_run.ila",
+  "capture_sha256": "230b2d5d79facf0c6b9df0e8f37be3198965cac455f3870adc8535eae622fec7",
+  "frozen_spec_sha256": "c23b52f26ccad42ca485af0fb77da0f170c0f8467bf9b80712ecd4be1a659b31",
+  "sample_count": 1024,
+  "trigger_sample": 0,
+  "request_count": 640,
+  "read_count": 320,
+  "write_count": 320,
+  "requests_by_phase": {
+    "M0": 64,
+    "M1": 128,
+    "M2": 128,
+    "M3": 128,
+    "M4": 128,
+    "M5": 64
+  },
+  "last_request_sample": 959,
+  "last_request_phase": "M5",
+  "last_request_address": 63,
+  "last_read_response_sample": 960,
+  "first_done_sample": 961,
+  "first_pass_sample": 961,
+  "final_done": 1,
+  "final_pass": 1,
+  "final_fail": 0,
+  "final_error_count": 0,
+  "final_busy": 0,
+  "final_accepted_count": 640,
+  "scope": "one normal 64x8 FPGA BRAM run; no on-board fault injection"
+}

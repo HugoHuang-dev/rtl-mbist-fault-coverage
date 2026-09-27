@@ -1,0 +1,548 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "50000000"
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "u_ila",
+                        "spec": "labtools_ila_v6",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "c30a833047ba52038dbc7e3e3214d902",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 0,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "start_pulse",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 2,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "u_mbist/phase",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "u_mbist/phase[2]"
+                                            },
+                                            {
+                                                "name": "u_mbist/phase[1]"
+                                            },
+                                            {
+                                                "name": "u_mbist/phase[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 5,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "req_addr",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "req_addr[5]"
+                                            },
+                                            {
+                                                "name": "req_addr[4]"
+                                            },
+                                            {
+                                                "name": "req_addr[3]"
+                                            },
+                                            {
+                                                "name": "req_addr[2]"
+                                            },
+                                            {
+                                                "name": "req_addr[1]"
+                                            },
+                                            {
+                                                "name": "req_addr[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "req_valid",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "req_write",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "req_wdata",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "req_wdata[7]"
+                                            },
+                                            {
+                                                "name": "req_wdata[6]"
+                                            },
+                                            {
+                                                "name": "req_wdata[5]"
+                                            },
+                                            {
+                                                "name": "req_wdata[4]"
+                                            },
+                                            {
+                                                "name": "req_wdata[3]"
+                                            },
+                                            {
+                                                "name": "req_wdata[2]"
+                                            },
+                                            {
+                                                "name": "req_wdata[1]"
+                                            },
+                                            {
+                                                "name": "req_wdata[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "rd_valid",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "rd_data",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "rd_data[7]"
+                                            },
+                                            {
+                                                "name": "rd_data[6]"
+                                            },
+                                            {
+                                                "name": "rd_data[5]"
+                                            },
+                                            {
+                                                "name": "rd_data[4]"
+                                            },
+                                            {
+                                                "name": "rd_data[3]"
+                                            },
+                                            {
+                                                "name": "rd_data[2]"
+                                            },
+                                            {
+                                                "name": "rd_data[1]"
+                                            },
+                                            {
+                                                "name": "rd_data[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "done",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "pass",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "fail",
+                                        "isBus": false
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 8,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "error_count",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "error_count[8]"
+                                            },
+                                            {
+                                                "name": "error_count[7]"
+                                            },
+                                            {
+                                                "name": "error_count[6]"
+                                            },
+                                            {
+                                                "name": "error_count[5]"
+                                            },
+                                            {
+                                                "name": "error_count[4]"
+                                            },
+                                            {
+                                                "name": "error_count[3]"
+                                            },
+                                            {
+                                                "name": "error_count[2]"
+                                            },
+                                            {
+                                                "name": "error_count[1]"
+                                            },
+                                            {
+                                                "name": "error_count[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe12",
+                                "id": 12,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 2,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "first_fail_phase",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "first_fail_phase[2]"
+                                            },
+                                            {
+                                                "name": "first_fail_phase[1]"
+                                            },
+                                            {
+                                                "name": "first_fail_phase[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe13",
+                                "id": 13,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 5,
+                                "portIndex": 13,
+                                "nets": [
+                                    {
+                                        "name": "first_fail_addr",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "first_fail_addr[5]"
+                                            },
+                                            {
+                                                "name": "first_fail_addr[4]"
+                                            },
+                                            {
+                                                "name": "first_fail_addr[3]"
+                                            },
+                                            {
+                                                "name": "first_fail_addr[2]"
+                                            },
+                                            {
+                                                "name": "first_fail_addr[1]"
+                                            },
+                                            {
+                                                "name": "first_fail_addr[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe14",
+                                "id": 14,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 14,
+                                "nets": [
+                                    {
+                                        "name": "first_fail_expected",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "first_fail_expected[7]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[6]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[5]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[4]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[3]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[2]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[1]"
+                                            },
+                                            {
+                                                "name": "first_fail_expected[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe15",
+                                "id": 15,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 7,
+                                "portIndex": 15,
+                                "nets": [
+                                    {
+                                        "name": "first_fail_actual",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "first_fail_actual[7]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[6]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[5]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[4]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[3]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[2]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[1]"
+                                            },
+                                            {
+                                                "name": "first_fail_actual[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe16",
+                                "id": 16,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 9,
+                                "portIndex": 16,
+                                "nets": [
+                                    {
+                                        "name": "accepted_count",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "accepted_count[9]"
+                                            },
+                                            {
+                                                "name": "accepted_count[8]"
+                                            },
+                                            {
+                                                "name": "accepted_count[7]"
+                                            },
+                                            {
+                                                "name": "accepted_count[6]"
+                                            },
+                                            {
+                                                "name": "accepted_count[5]"
+                                            },
+                                            {
+                                                "name": "accepted_count[4]"
+                                            },
+                                            {
+                                                "name": "accepted_count[3]"
+                                            },
+                                            {
+                                                "name": "accepted_count[2]"
+                                            },
+                                            {
+                                                "name": "accepted_count[1]"
+                                            },
+                                            {
+                                                "name": "accepted_count[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe17",
+                                "id": 17,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 17,
+                                "nets": [
+                                    {
+                                        "name": "busy",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

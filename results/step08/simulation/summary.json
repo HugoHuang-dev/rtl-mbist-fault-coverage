@@ -1,0 +1,14 @@
+{
+  "icarus": {
+    "rounds": 2,
+    "requests_per_round": 640,
+    "led_at_done": "0011",
+    "status": "pass"
+  },
+  "xsim": {
+    "rounds": 2,
+    "requests_per_round": 640,
+    "led_at_done": "0011",
+    "status": "pass"
+  }
+}

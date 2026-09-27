@@ -1,0 +1,3 @@
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+CHECKER_PASS run=2 requests=640 cycles=960 errors=1
+STEP04_PASS independent_checker_normal_and_diagnostic

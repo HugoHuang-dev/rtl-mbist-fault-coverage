@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Sep 26 10:52:32 2026
+# Process ID: 33672
+# Current directory: <PROJECT_ROOT>
+# Command line: vivado.exe -mode batch -source fpga/create_board_project.tcl -log results/step08/base/vivado.log -journal results/step08/base/vivado.jou
+# Log file: <PROJECT_ROOT>/results/step08/base/vivado.log
+# Journal file: <PROJECT_ROOT>\results/step08/base/vivado.jou
+#-----------------------------------------------------------
+source fpga/create_board_project.tcl
+# set root [file normalize [file join [file dirname [info script]] ..]]
+# set project_dir [file join $root fpga vivado]
+# set evidence [file join $root results step08 base]
+# file mkdir $evidence
+# set part xc7a35tfgg484-2
+# create_project -force mbist_board $project_dir -part $part
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is '<PROJECT_ROOT>/fpga/vivado'
+# set_property target_language Verilog [current_project]
+# set sources {}
+# foreach name {address_generator.v data_generator.v memory_interface.v response_checker.v march_controller.v mbist_top.v single_port_sync_ram.v} {
+#     lappend sources [file join $root rtl $name]
+# }
+# lappend sources [file join $root fpga board_top.v]
+# add_files -norecurse $sources
+# add_files -fileset constrs_1 -norecurse [file join $root fpga board_pins.xdc]
+# set_property top board_top [get_filesets sources_1]
+# set_property STEPS.SYNTH_DESIGN.ARGS.FLATTEN_HIERARCHY none [get_runs synth_1]
+# set_property STEPS.OPT_DESIGN.TCL.PRE [file join $root fpga set_industrial.tcl] [get_runs impl_1]
+WARNING: [Runs 36-537] File <PROJECT_ROOT>/fpga/set_industrial.tcl is not part of fileset utils_1, but has specified as a Tcl hook script for run(s) impl_1. This file will not be handled as part of the project for archive and other project based functionality.
+# update_compile_order -fileset sources_1
+# save_project
+ERROR: [Common 17-163] Missing value for option 'name', please type 'save_project_as -help' for usage info.
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 10:52:36 2026...

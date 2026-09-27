@@ -1,0 +1,9 @@
+reset_meta_reg ASYNC_REG=1
+reset_release_reg ASYNC_REG=1
+key_sync_reg[0] ASYNC_REG=1
+key_sync_reg[1] ASYNC_REG=1
+TIMED_INTERSTAGE reset_meta_reg reset_release_reg slack=19.383
+TIMED_INTERSTAGE reset_release_reg reset_sync_reg slack=18.966
+TIMED_INTERSTAGE {key_sync_reg[0]} {key_sync_reg[1]} slack=19.409
+max slack=14.474
+min slack=0.121

@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "target_fault_instances": 2048,
+  "tools": [
+    "icarus",
+    "xsim"
+  ],
+  "records": 4096,
+  "invalid_records": 0,
+  "tool_disagreements": 0,
+  "status_counts": {
+    "valid": 4096
+  },
+  "outcome_counts": {
+    "activated_detected": 4096
+  }
+}

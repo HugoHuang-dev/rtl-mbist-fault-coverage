@@ -1,0 +1,19 @@
+
+****** xsim v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ram_tb_snapshot/xsim_script.tcl
+# xsim {ram_tb_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CASE_PASS boundary_addresses_and_sparse_access
+CASE_PASS all_addresses_consecutive_write_read
+CASE_PASS alternating_write_read_and_idle_hold
+CASE_PASS reset_blocks_write_and_preserves_ram
+RAM_TB_PASS checks=146 reads=70 writes=68
+$finish called at time : 2912 ns : File "<PROJECT_ROOT>/tb/tb_single_port_sync_ram.sv" Line 164
+exit
+INFO: [Common 17-206] Exiting xsim at Sat Sep 26 02:22:28 2026...

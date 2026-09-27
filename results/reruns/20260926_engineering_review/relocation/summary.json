@@ -1,0 +1,65 @@
+{
+  "status": "pass",
+  "relocated_root": ".build/relocation check",
+  "fault_pilot": {
+    "mode": "pilot",
+    "target_fault_instances": 32,
+    "tools": [
+      "icarus",
+      "xsim"
+    ],
+    "records": 64,
+    "invalid_records": 0,
+    "tool_disagreements": 0,
+    "status_counts": {
+      "valid": 64
+    },
+    "outcome_counts": {
+      "activated_detected": 64
+    }
+  },
+  "board_sim": {
+    "icarus": {
+      "normal": {
+        "rounds": 3,
+        "requests_per_round": 640,
+        "led_at_done": "0011",
+        "error_count": 0,
+        "status": "pass",
+        "busy_start": "ignored",
+        "active_reset": "pass"
+      },
+      "fault": {
+        "rounds": 3,
+        "requests_per_round": 640,
+        "led_at_done": "0101",
+        "error_count": 1,
+        "status": "pass",
+        "busy_start": "ignored",
+        "active_reset": "pass"
+      }
+    },
+    "xsim": {
+      "normal": {
+        "rounds": 3,
+        "requests_per_round": 640,
+        "led_at_done": "0011",
+        "error_count": 0,
+        "status": "pass",
+        "busy_start": "ignored",
+        "active_reset": "pass"
+      },
+      "fault": {
+        "rounds": 3,
+        "requests_per_round": 640,
+        "led_at_done": "0101",
+        "error_count": 1,
+        "status": "pass",
+        "busy_start": "ignored",
+        "active_reset": "pass"
+      }
+    }
+  },
+  "outputs_within_relocated_root": true,
+  "archived_result_root": "project"
+}

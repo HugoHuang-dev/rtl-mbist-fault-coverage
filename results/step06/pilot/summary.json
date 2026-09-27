@@ -1,0 +1,17 @@
+{
+  "mode": "pilot",
+  "target_fault_instances": 32,
+  "tools": [
+    "icarus",
+    "xsim"
+  ],
+  "records": 64,
+  "invalid_records": 0,
+  "tool_disagreements": 0,
+  "status_counts": {
+    "valid": 64
+  },
+  "outcome_counts": {
+    "activated_detected": 64
+  }
+}

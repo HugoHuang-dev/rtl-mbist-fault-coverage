@@ -1,0 +1,19 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sat Sep 26 20:38:28 2026
+| Host         : Hugo running 64-bit major release  (build 9200)
+| Command      : report_exceptions -coverage -file C:/Users/32035/Desktop/FPGA/ProjectIII/results/reruns/20260926_review_final/step08/base_fault/exceptions.rpt
+| Design       : board_top
+| Device       : 7a35t-fgg484
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Exceptions Report
+
+Position  Type        Setup  Hold   From     Through  To       Endpoints  From (%)  Through (%)  To (%)
+--------  ----------  -----  -----  -------  -------  -------  ---------  --------  -----------  ------
+2         False Path  false  false  1 ports           1 pins   1          100.00                 100.00
+3         False Path  false  false  1 ports           2 pins   2          100.00                 100.00
+4         False Path  false  false                    4 ports  4                                 100.00
+

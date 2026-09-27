@@ -1,0 +1,18 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/single_port_sync_ram.v" into library work
+INFO: [VRFC 10-311] analyzing module single_port_sync_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/address_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module address_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/data_generator.v" into library work
+INFO: [VRFC 10-311] analyzing module data_generator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/memory_interface.v" into library work
+INFO: [VRFC 10-311] analyzing module memory_interface
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/.build/20260926_engineering_review/step04/xsim/wrong_first_diagnostic/response_checker.v" into library work
+INFO: [VRFC 10-311] analyzing module response_checker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/march_controller.v" into library work
+INFO: [VRFC 10-311] analyzing module march_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/rtl/mbist_top.v" into library work
+INFO: [VRFC 10-311] analyzing module mbist_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/march_transaction_checker.sv" into library work
+INFO: [VRFC 10-311] analyzing module march_transaction_checker
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_step04_independent.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_step04_independent

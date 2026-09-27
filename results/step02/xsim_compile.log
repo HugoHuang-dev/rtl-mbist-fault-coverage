@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/rtl/single_port_sync_ram.v" into library work
+INFO: [VRFC 10-311] analyzing module single_port_sync_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "<PROJECT_ROOT>/tb/tb_single_port_sync_ram.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_single_port_sync_ram

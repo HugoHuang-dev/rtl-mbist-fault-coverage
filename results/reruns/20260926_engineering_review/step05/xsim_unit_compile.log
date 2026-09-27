@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/fault_injector.sv" into library work
+INFO: [VRFC 10-311] analyzing module fault_injector
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/faulty_memory.sv" into library work
+INFO: [VRFC 10-311] analyzing module faulty_memory
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/32035/Desktop/FPGA/ProjectIII/tb/tb_faulty_memory_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_faulty_memory_unit
