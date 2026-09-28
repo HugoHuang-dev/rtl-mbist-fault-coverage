@@ -14,6 +14,13 @@ This project implements a 64×8 March C− memory built-in self-test controller.
 
 Tool configuration, the pinned container image, and commands are in the [reproduction guide](docs/reproduce.md).
 
+## Highlights
+
+- **RTL architecture:** Modular March C− MBIST controller for 64×8 synchronous memory, executing 640 read/write requests with first-failure diagnostics.
+- **Independent verification and fault coverage:** External transaction checker and automated XSim/Icarus campaign, detecting all 2,048 instances across four defined single-fault models.
+- **FPGA implementation and validation:** Artix-7 implementation meeting 50 MHz timing, with five ILA captures verifying complete test sequences and controlled-failure diagnostics.
+- **ASIC synthesis and verification:** Nangate45 standard-cell synthesis, dual-simulator gate-level regression, and pre-placement timing analysis; 264 cells, 483.322 µm² total cell area, and +17.3953 ns setup WNS.
+
 ## System design
 
 March C− executes `M0 ↑(w0)`, `M1 ↑(r0,w1)`, `M2 ↑(r1,w0)`, `M3 ↓(r0,w1)`, `M4 ↓(r1,w0)`, and `M5 ↑(r0)`, using data patterns `00` and `FF`. Each run comprises 640 requests: 320 reads and 320 writes. A read comparison completes before the write to the same address. The test continues after an error, counting failed comparisons and retaining the first-failure phase, address, expected value, and actual value.
