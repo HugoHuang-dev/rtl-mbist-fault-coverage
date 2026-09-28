@@ -15,6 +15,8 @@ Both simulator runs exited with code 0 and printed `RAM_TB_PASS checks=146 reads
 
 Run from the project root. Build directories are ignored by `.gitignore`. Change tool paths to match a different installation; keep the command arguments.
 
+Set environment variables as described in the [reproduction guide](../../docs/reproduce.md).
+
 ```powershell
 $project = (Get-Location).Path
 $evidence = Join-Path $project 'results\step02'
@@ -23,27 +25,27 @@ New-Item -ItemType Directory -Force -Path $evidence | Out-Null
 $xbuild = Join-Path $project 'sim\.build-xsim'
 New-Item -ItemType Directory -Force -Path $xbuild | Out-Null
 Push-Location $xbuild
-& 'C:\Xilinx\Vivado\2018.3\bin\xvlog.bat' -sv (Join-Path $project 'rtl\single_port_sync_ram.v') (Join-Path $project 'tb\tb_single_port_sync_ram.sv') *> (Join-Path $evidence 'xsim_compile.log')
+& (Join-Path $env:VIVADO_BIN 'xvlog.bat') -sv (Join-Path $project 'rtl\single_port_sync_ram.v') (Join-Path $project 'tb\tb_single_port_sync_ram.sv') *> (Join-Path $evidence 'xsim_compile.log')
 if ($LASTEXITCODE -ne 0) { throw 'xvlog failed' }
-& 'C:\Xilinx\Vivado\2018.3\bin\xelab.bat' tb_single_port_sync_ram -s ram_tb_snapshot *> (Join-Path $evidence 'xsim_elaborate.log')
+& (Join-Path $env:VIVADO_BIN 'xelab.bat') tb_single_port_sync_ram -s ram_tb_snapshot *> (Join-Path $evidence 'xsim_elaborate.log')
 if ($LASTEXITCODE -ne 0) { throw 'xelab failed' }
-& 'C:\Xilinx\Vivado\2018.3\bin\xsim.bat' ram_tb_snapshot -runall *> (Join-Path $evidence 'xsim_run.log')
+& (Join-Path $env:VIVADO_BIN 'xsim.bat') ram_tb_snapshot -runall *> (Join-Path $evidence 'xsim_run.log')
 if ($LASTEXITCODE -ne 0) { throw 'xsim failed' }
 Pop-Location
 
 $ibuild = Join-Path $project 'sim\.build-iverilog'
 New-Item -ItemType Directory -Force -Path $ibuild | Out-Null
 Push-Location $ibuild
-& 'C:\iverilog\bin\iverilog.exe' -g2012 -s tb_single_port_sync_ram -o ram_tb.vvp (Join-Path $project 'rtl\single_port_sync_ram.v') (Join-Path $project 'tb\tb_single_port_sync_ram.sv') *> (Join-Path $evidence 'icarus_compile.log')
+& (Join-Path $env:IVERILOG_BIN 'iverilog.exe') -g2012 -s tb_single_port_sync_ram -o ram_tb.vvp (Join-Path $project 'rtl\single_port_sync_ram.v') (Join-Path $project 'tb\tb_single_port_sync_ram.sv') *> (Join-Path $evidence 'icarus_compile.log')
 if ($LASTEXITCODE -ne 0) { throw 'iverilog failed' }
-& 'C:\iverilog\bin\vvp.exe' ram_tb.vvp *> (Join-Path $evidence 'icarus_run.log')
+& (Join-Path $env:IVERILOG_BIN 'vvp.exe') ram_tb.vvp *> (Join-Path $evidence 'icarus_run.log')
 if ($LASTEXITCODE -ne 0) { throw 'vvp failed' }
 Pop-Location
 
 $sbuild = Join-Path $project 'fpga\.build-ram'
 New-Item -ItemType Directory -Force -Path $sbuild | Out-Null
 Push-Location $sbuild
-& 'C:\Xilinx\Vivado\2018.3\bin\vivado.bat' -mode batch -nojournal -notrace -source (Join-Path $project 'fpga\check_ram_inference.tcl') -tclargs XC7A35TFGG484-2I *> (Join-Path $evidence 'vivado_ram_synth.log')
+& (Join-Path $env:VIVADO_BIN 'vivado.bat') -mode batch -nojournal -notrace -source (Join-Path $project 'fpga\check_ram_inference.tcl') -tclargs XC7A35TFGG484-2I *> (Join-Path $evidence 'vivado_ram_synth.log')
 if ($LASTEXITCODE -ne 0) { throw 'RAM synthesis failed' }
 Copy-Item -LiteralPath 'ram_only_utilization.rpt' -Destination (Join-Path $evidence 'ram_only_utilization.rpt') -Force
 Pop-Location

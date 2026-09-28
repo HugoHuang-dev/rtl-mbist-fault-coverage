@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "frozen_inputs": "PASS",
+  "area_audit": "PASS",
+  "timing": {
+    "setup_wns_ns": "17.3953",
+    "setup_met": true,
+    "paths": {
+      "critical": {
+        "startpoint": "rd_data[7] (input port clocked by core_clock)",
+        "endpoint": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_",
+        "arrival_ns": "2.3656",
+        "required_ns": "19.7609",
+        "slack_ns": "17.3953",
+        "external_input_delay_ns": "2.0000",
+        "controller_data_delay_ns": "0.3656"
+      },
+      "register_to_register": {
+        "startpoint": "u_mbist.u_controller.phase[1]$_SDFFE_PP0P_",
+        "endpoint": "u_mbist.u_address.addr[4]$_SDFFE_PN0P_",
+        "arrival_ns": "0.5270",
+        "required_ns": "19.7601",
+        "slack_ns": "19.2331"
+      },
+      "register_to_output": {
+        "startpoint": "u_mbist.u_controller.phase[0]$_SDFFE_PP0P_",
+        "endpoint": "req_wdata[1] (output port clocked by core_clock)",
+        "arrival_ns": "0.2888",
+        "required_ns": "17.8000",
+        "slack_ns": "17.5112"
+      }
+    }
+  },
+  "sta_reports_sha256": {
+    "setup_wns.rpt": "24c272a1ffad0da5e21b4dfb0f292ac3fa14106e43979b19c0ac605a24489984",
+    "setup_top10.rpt": "7475984ef9e00b82135263d23138382cf6e253d1864d223562bed1f6cdfa0ce7",
+    "setup_top10.json": "50eabf3ff3dc3ca06df07dc26c52c7e500d6c3cefc8c22819e2100f7800f106e",
+    "reg_to_reg.rpt": "82c6cf7e132f70dce66db3d2ac9fb9a2bc81969fcb283ee2d61029ce1895cde3",
+    "input_to_reg.rpt": "bf6f05a1f76f728bc365c6b28b377db9a356e84733a3b3dd41abdb75651e7041",
+    "reg_to_output.rpt": "284a2a1524849f326f22cb583e3679a40b4ab87041c224d1af8b695250244edb",
+    "input_to_output.rpt": "f5a05b71b72236dfdea1b7eefa9c4944bfc9eb457ec43e2f4c03f52f84f4050d",
+    "unconstrained_paths.rpt": "88561e2b5e3ba533fcca1f0bf02506089351eb165f1f0b6fc4e19290cfe8f875",
+    "unconstrained_paths.json": "eeba280313236e357f725b9ba6137e7069f1f67ff56a594440544b76aa2a14e7",
+    "check_setup.rpt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "interconnect_model": "Nangate45 Liberty 5K_hvratio_1_1, top mode; pre-placement",
+  "check_setup_diagnostics": 0,
+  "unconstrained_path_group_count": 0
+}

@@ -1,0 +1,2 @@
+COMMAND: C:\iverilog\bin\iverilog.EXE -g2012 -s tb_step04_independent -o suite.vvp .\results\asic\v12\20260927_v12_frozen\cell_model.v .\results\asic\v12\20260927_v12_frozen\orfs\results\nangate45\mbist_asic_top\base\1_2_yosys.v .\tb\march_transaction_checker.sv .\rtl\single_port_sync_ram.v .\results\asic\v12\20260927_v12_frozen\icarus\sequence\tb_step04_independent.sv
+EXIT_CODE: 0

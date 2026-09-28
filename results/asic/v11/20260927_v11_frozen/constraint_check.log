@@ -1,0 +1,487 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+V11_AUDIT_CLOCKS 1
+V11_AUDIT_INPUTS 13
+V11_AUDIT_OUTPUTS 54
+V11_CHECK_SETUP_BEGIN
+V11_CHECK_SETUP_END
+V11_MAX_PATH_BEGIN
+Startpoint: rd_data[7] (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rd_data[7] (in)
+   0.10    2.10 ^ _260_/ZN (NOR4_X1)
+   0.02    2.12 v _262_/ZN (NAND2_X1)
+   0.06    2.18 v _270_/Z (MUX2_X1)
+   0.03    2.21 v _271_/Z (BUF_X4)
+   0.03    2.24 ^ _304_/ZN (NAND3_X4)
+   0.03    2.26 ^ _305_/Z (BUF_X8)
+   0.06    2.32 v _326_/Z (MUX2_X1)
+   0.03    2.35 v _327_/ZN (AND2_X2)
+   0.00    2.35 v u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/D (DFF_X1)
+           2.35   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.35   data arrival time
+---------------------------------------------------------
+          17.41   slack (MET)
+
+
+Startpoint: rd_data[7] (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rd_data[7] (in)
+   0.10    2.10 ^ _260_/ZN (NOR4_X1)
+   0.02    2.12 v _262_/ZN (NAND2_X1)
+   0.06    2.18 v _270_/Z (MUX2_X1)
+   0.03    2.21 v _271_/Z (BUF_X4)
+   0.03    2.24 ^ _304_/ZN (NAND3_X4)
+   0.03    2.26 ^ _305_/Z (BUF_X8)
+   0.06    2.32 v _324_/Z (MUX2_X1)
+   0.03    2.35 v _325_/ZN (AND2_X2)
+   0.00    2.35 v u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_/D (DFF_X1)
+           2.35   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.35   data arrival time
+---------------------------------------------------------
+          17.41   slack (MET)
+
+
+Startpoint: rd_data[7] (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rd_data[7] (in)
+   0.10    2.10 ^ _260_/ZN (NOR4_X1)
+   0.02    2.12 v _262_/ZN (NAND2_X1)
+   0.06    2.18 v _270_/Z (MUX2_X1)
+   0.03    2.21 v _271_/Z (BUF_X4)
+   0.03    2.24 ^ _304_/ZN (NAND3_X4)
+   0.03    2.26 ^ _305_/Z (BUF_X8)
+   0.06    2.32 v _319_/Z (MUX2_X1)
+   0.03    2.35 v _320_/ZN (AND2_X2)
+   0.00    2.35 v u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_/D (DFF_X1)
+           2.35   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.35   data arrival time
+---------------------------------------------------------
+          17.41   slack (MET)
+
+
+Startpoint: rd_data[7] (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rd_data[7] (in)
+   0.10    2.10 ^ _260_/ZN (NOR4_X1)
+   0.02    2.12 v _262_/ZN (NAND2_X1)
+   0.06    2.18 v _270_/Z (MUX2_X1)
+   0.03    2.21 v _271_/Z (BUF_X4)
+   0.03    2.24 ^ _304_/ZN (NAND3_X4)
+   0.03    2.26 ^ _305_/Z (BUF_X8)
+   0.06    2.32 v _316_/Z (MUX2_X1)
+   0.03    2.35 v _317_/ZN (AND2_X2)
+   0.00    2.35 v u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_/D (DFF_X1)
+           2.35   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.35   data arrival time
+---------------------------------------------------------
+          17.41   slack (MET)
+
+
+Startpoint: rd_data[7] (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rd_data[7] (in)
+   0.10    2.10 ^ _260_/ZN (NOR4_X1)
+   0.02    2.12 v _262_/ZN (NAND2_X1)
+   0.06    2.18 v _270_/Z (MUX2_X1)
+   0.03    2.21 v _271_/Z (BUF_X4)
+   0.03    2.24 ^ _304_/ZN (NAND3_X4)
+   0.03    2.26 ^ _305_/Z (BUF_X8)
+   0.06    2.32 v _314_/Z (MUX2_X1)
+   0.03    2.35 v _315_/ZN (AND2_X2)
+   0.00    2.35 v u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_/D (DFF_X1)
+           2.35   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.35   data arrival time
+---------------------------------------------------------
+          17.41   slack (MET)
+
+
+V11_MAX_PATH_END
+V11_RESET_INPUT_PATH_BEGIN
+Startpoint: rst_n (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rst_n (in)
+   0.07    2.07 v _255_/Z (BUF_X1)
+   0.04    2.11 ^ _295_/ZN (INV_X1)
+   0.02    2.13 v _297_/ZN (NOR2_X1)
+   0.06    2.19 v _323_/Z (CLKBUF_X1)
+   0.04    2.22 v _337_/ZN (AND2_X1)
+   0.00    2.22 v u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_/D (DFF_X1)
+           2.22   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.22   data arrival time
+---------------------------------------------------------
+          17.54   slack (MET)
+
+
+V11_RESET_INPUT_PATH_END
+V11_MEMORY_RESPONSE_PATH_BEGIN
+Startpoint: rd_data[7] (input port clocked by core_clock)
+Endpoint: u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 v input external delay
+   0.00    2.00 v rd_data[7] (in)
+   0.10    2.10 ^ _260_/ZN (NOR4_X1)
+   0.02    2.12 v _262_/ZN (NAND2_X1)
+   0.06    2.18 v _270_/Z (MUX2_X1)
+   0.03    2.21 v _271_/Z (BUF_X4)
+   0.03    2.24 ^ _304_/ZN (NAND3_X4)
+   0.03    2.26 ^ _305_/Z (BUF_X8)
+   0.06    2.32 v _326_/Z (MUX2_X1)
+   0.03    2.35 v _327_/ZN (AND2_X2)
+   0.00    2.35 v u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/D (DFF_X1)
+           2.35   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.35   data arrival time
+---------------------------------------------------------
+          17.41   slack (MET)
+
+
+V11_MEMORY_RESPONSE_PATH_END
+V11_READY_INPUT_PATH_BEGIN
+Startpoint: req_ready (input port clocked by core_clock)
+Endpoint: u_mbist.u_controller.phase[0]$_SDFFE_PP0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.00    2.00 ^ req_ready (in)
+   0.02    2.02 v _365_/ZN (INV_X1)
+   0.11    2.13 ^ _368_/ZN (AOI221_X1)
+   0.05    2.18 ^ _398_/ZN (AND2_X1)
+   0.06    2.24 v _401_/Z (MUX2_X1)
+   0.03    2.27 v _402_/ZN (AND2_X1)
+   0.00    2.27 v u_mbist.u_controller.phase[0]$_SDFFE_PP0P_/D (DFF_X1)
+           2.27   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_controller.phase[0]$_SDFFE_PP0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -2.27   data arrival time
+---------------------------------------------------------
+          17.49   slack (MET)
+
+
+V11_READY_INPUT_PATH_END
+V11_VALID_INPUT_PATH_BEGIN
+Startpoint: rd_valid (input port clocked by core_clock)
+Endpoint: u_mbist.u_address.addr[0]$_SDFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.00    2.00 ^ rd_valid (in)
+   0.07    2.07 ^ _258_/ZN (AND2_X1)
+   0.03    2.10 v _345_/ZN (NAND2_X1)
+   0.04    2.14 v _346_/ZN (AND3_X1)
+   0.10    2.24 ^ _364_/ZN (AOI221_X2)
+   0.03    2.28 v _397_/ZN (AOI221_X1)
+   0.00    2.28 v u_mbist.u_address.addr[0]$_SDFFE_PN0P_/D (DFF_X1)
+           2.28   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_address.addr[0]$_SDFFE_PN0P_/CK (DFF_X1)
+  -0.05   19.75   library setup time
+          19.75   data required time
+---------------------------------------------------------
+          19.75   data required time
+          -2.28   data arrival time
+---------------------------------------------------------
+          17.48   slack (MET)
+
+
+V11_VALID_INPUT_PATH_END
+V11_START_INPUT_PATH_BEGIN
+Startpoint: start (input port clocked by core_clock)
+Endpoint: u_mbist.u_address.addr[0]$_SDFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   2.00    2.00 ^ input external delay
+   0.00    2.00 ^ start (in)
+   0.04    2.04 v _256_/ZN (OAI21_X1)
+   0.04    2.08 ^ _296_/ZN (INV_X1)
+   0.01    2.09 v _358_/ZN (NOR2_X1)
+   0.11    2.20 ^ _364_/ZN (AOI221_X2)
+   0.03    2.24 v _397_/ZN (AOI221_X1)
+   0.00    2.24 v u_mbist.u_address.addr[0]$_SDFFE_PN0P_/D (DFF_X1)
+           2.24   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_address.addr[0]$_SDFFE_PN0P_/CK (DFF_X1)
+  -0.05   19.75   library setup time
+          19.75   data required time
+---------------------------------------------------------
+          19.75   data required time
+          -2.24   data arrival time
+---------------------------------------------------------
+          17.52   slack (MET)
+
+
+V11_START_INPUT_PATH_END
+V11_REGISTER_PATH_BEGIN
+Startpoint: u_mbist.u_controller.phase[1]$_SDFFE_PP0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: u_mbist.u_address.addr[4]$_SDFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ u_mbist.u_controller.phase[1]$_SDFFE_PP0P_/CK (DFF_X1)
+   0.11    0.11 ^ u_mbist.u_controller.phase[1]$_SDFFE_PP0P_/Q (DFF_X1)
+   0.04    0.14 ^ _459_/CO (HA_X1)
+   0.02    0.16 v _353_/ZN (INV_X1)
+   0.06    0.22 ^ _354_/ZN (OAI22_X4)
+   0.05    0.27 ^ _453_/S (HA_X1)
+   0.04    0.31 ^ _372_/Z (BUF_X1)
+   0.02    0.32 v _373_/ZN (AOI21_X1)
+   0.04    0.36 ^ _374_/ZN (OAI21_X1)
+   0.05    0.41 ^ _375_/Z (XOR2_X1)
+   0.02    0.42 v _376_/ZN (NAND2_X1)
+   0.07    0.50 ^ _380_/ZN (AOI221_X1)
+   0.00    0.50 ^ u_mbist.u_address.addr[4]$_SDFFE_PN0P_/D (DFF_X1)
+           0.50   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+          19.80 ^ u_mbist.u_address.addr[4]$_SDFFE_PN0P_/CK (DFF_X1)
+  -0.04   19.76   library setup time
+          19.76   data required time
+---------------------------------------------------------
+          19.76   data required time
+          -0.50   data arrival time
+---------------------------------------------------------
+          19.26   slack (MET)
+
+
+V11_REGISTER_PATH_END
+V11_REQUEST_OUTPUT_PATH_BEGIN
+Startpoint: u_mbist.u_controller.phase[0]$_SDFFE_PP0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: req_wdata[1] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ u_mbist.u_controller.phase[0]$_SDFFE_PP0P_/CK (DFF_X1)
+   0.11    0.11 ^ u_mbist.u_controller.phase[0]$_SDFFE_PP0P_/Q (DFF_X1)
+   0.05    0.15 ^ _458_/CO (HA_X1)
+   0.01    0.16 v _343_/ZN (INV_X1)
+   0.08    0.24 ^ _451_/ZN (AOI21_X1)
+   0.04    0.28 ^ _470_/Z (BUF_X1)
+   0.00    0.28 ^ req_wdata[1] (out)
+           0.28   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+  -2.00   17.80   output external delay
+          17.80   data required time
+---------------------------------------------------------
+          17.80   data required time
+          -0.28   data arrival time
+---------------------------------------------------------
+          17.52   slack (MET)
+
+
+V11_REQUEST_OUTPUT_PATH_END
+V11_STATUS_OUTPUT_PATH_BEGIN
+Startpoint: u_mbist.u_controller.state[1]$_DFF_P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: pass (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ u_mbist.u_controller.state[1]$_DFF_P_/CK (DFF_X1)
+   0.10    0.10 ^ u_mbist.u_controller.state[1]$_DFF_P_/Q (DFF_X1)
+   0.04    0.14 ^ _445_/ZN (AND2_X1)
+   0.00    0.14 ^ pass (out)
+           0.14   data arrival time
+
+  20.00   20.00   clock core_clock (rise edge)
+   0.00   20.00   clock network delay (ideal)
+  -0.20   19.80   clock uncertainty
+   0.00   19.80   clock reconvergence pessimism
+  -2.00   17.80   output external delay
+          17.80   data required time
+---------------------------------------------------------
+          17.80   data required time
+          -0.14   data arrival time
+---------------------------------------------------------
+          17.66   slack (MET)
+
+
+V11_STATUS_OUTPUT_PATH_END

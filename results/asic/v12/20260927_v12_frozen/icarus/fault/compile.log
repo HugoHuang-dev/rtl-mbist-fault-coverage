@@ -1,0 +1,2 @@
+COMMAND: C:\iverilog\bin\iverilog.EXE -g2012 -s tb_step05_mbist -o suite.vvp .\results\asic\v12\20260927_v12_frozen\cell_model.v .\results\asic\v12\20260927_v12_frozen\orfs\results\nangate45\mbist_asic_top\base\1_2_yosys.v .\tb\march_transaction_checker.sv .\tb\fault_injector.sv .\tb\faulty_memory.sv .\tb\fault_reference_monitor.sv .\results\asic\v12\20260927_v12_frozen\icarus\fault\tb_step05_mbist.sv
+EXIT_CODE: 0

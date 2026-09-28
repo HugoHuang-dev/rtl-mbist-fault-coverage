@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "basis": "V12 accepted gate-level netlist; V11 SDC; Nangate45 typical Liberty",
+  "frozen_input_sha256": {
+    "1_2_yosys.v": "2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9",
+    "constraint.sdc": "25d0335d58513c8277ee01128db96be66b87af1cec928a72effc459a48bbc494",
+    "NangateOpenCellLibrary_typical.lib": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1"
+  },
+  "area": {
+    "cell_count": 264,
+    "sequential_count": 42,
+    "combinational_count": 222,
+    "total_area_um2": "483.322000",
+    "sequential_area_um2": "189.924000",
+    "combinational_area_um2": "293.398000"
+  },
+  "target_clock_ns": "20.0000",
+  "setup_wns_ns": "17.3953",
+  "critical_path": {
+    "startpoint": "rd_data[7] (input port clocked by core_clock)",
+    "endpoint": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_",
+    "arrival_ns": "2.3656",
+    "required_ns": "19.7609",
+    "slack_ns": "17.3953",
+    "external_input_delay_ns": "2.0000",
+    "controller_data_delay_ns": "0.3656",
+    "function": "read-response first-failure diagnostic capture"
+  },
+  "category_paths": {
+    "register_to_register": {
+      "startpoint": "u_mbist.u_controller.phase[1]$_SDFFE_PP0P_",
+      "endpoint": "u_mbist.u_address.addr[4]$_SDFFE_PN0P_",
+      "arrival_ns": "0.5270",
+      "required_ns": "19.7601",
+      "slack_ns": "19.2331"
+    },
+    "register_to_output": {
+      "startpoint": "u_mbist.u_controller.phase[0]$_SDFFE_PP0P_",
+      "endpoint": "req_wdata[1] (output port clocked by core_clock)",
+      "arrival_ns": "0.2888",
+      "required_ns": "17.8000",
+      "slack_ns": "17.5112"
+    }
+  },
+  "check_setup_diagnostics": 0,
+  "unconstrained_path_group_count": 0,
+  "interconnect_model": "Nangate45 Liberty 5K_hvratio_1_1, top mode; pre-placement",
+  "sta_reports_sha256": {
+    "setup_wns.rpt": "24c272a1ffad0da5e21b4dfb0f292ac3fa14106e43979b19c0ac605a24489984",
+    "setup_top10.rpt": "7475984ef9e00b82135263d23138382cf6e253d1864d223562bed1f6cdfa0ce7",
+    "setup_top10.json": "50eabf3ff3dc3ca06df07dc26c52c7e500d6c3cefc8c22819e2100f7800f106e",
+    "reg_to_reg.rpt": "82c6cf7e132f70dce66db3d2ac9fb9a2bc81969fcb283ee2d61029ce1895cde3",
+    "input_to_reg.rpt": "bf6f05a1f76f728bc365c6b28b377db9a356e84733a3b3dd41abdb75651e7041",
+    "reg_to_output.rpt": "284a2a1524849f326f22cb583e3679a40b4ab87041c224d1af8b695250244edb",
+    "input_to_output.rpt": "f5a05b71b72236dfdea1b7eefa9c4944bfc9eb457ec43e2f4c03f52f84f4050d",
+    "unconstrained_paths.rpt": "88561e2b5e3ba533fcca1f0bf02506089351eb165f1f0b6fc4e19290cfe8f875",
+    "unconstrained_paths.json": "eeba280313236e357f725b9ba6137e7069f1f67ff56a594440544b76aa2a14e7",
+    "check_setup.rpt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "screenshots_sha256": {
+    "01_yosys_synthesis_statistics.png": "509c648e9cf49f76ed83932a433e312de398a6625f8ce6035a9d6b3255465fbc",
+    "02_area_liberty_reconciliation.png": "2a3da09420670dfbddc21d0005531a850931fc04d5be5c37aba336d77df2bed5",
+    "03_critical_setup_path_detailed.png": "1afe9b99ca7c96939027e816e35b5c72c95a80f46af09e5678341d2e4b7f3edc",
+    "04_sta_audit_snapshot.png": "d367f8bd854f84790af004dad9470a2ce68c47775e99a9a4622496e8f2dec3fe",
+    "05_openroad_analysis_conditions.png": "04f9e2a91dfa95d6ab2192f3c97f12700762f6d2a111827869c8d18f07f23cb0",
+    "06_register_to_register_path.png": "51ffe4e919f6e0cdb1352db5da356d85e8dba978dce6ddeec021b348b1371c48",
+    "07_critical_setup_path_compact.png": "e473e0d056be209ec59b909cbf6f2c0f61e6cbbe9d58cddcffe5e0ba68b8c985",
+    "08_register_to_output_path.png": "a34c236a6f802ac212051b8c9b44464cbc34d84988a0bdc88aec745b8fe3a26b"
+  }
+}

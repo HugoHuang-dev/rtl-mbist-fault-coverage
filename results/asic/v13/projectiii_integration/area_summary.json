@@ -1,0 +1,301 @@
+{
+  "status": "PASS",
+  "area_unit": "um^2",
+  "cell_count": 264,
+  "sequential_count": 42,
+  "combinational_count": 222,
+  "total_area_um2": "483.322000",
+  "sequential_area_um2": "189.924000",
+  "combinational_area_um2": "293.398000",
+  "yosys_reported_area_um2": "483.322000",
+  "per_cell": [
+    {
+      "cell": "AND2_X1",
+      "category": "combinational",
+      "count": 24,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "25.536000",
+      "yosys_area_um2": "25.536"
+    },
+    {
+      "cell": "AND2_X2",
+      "category": "combinational",
+      "count": 10,
+      "liberty_area_um2": "1.330000",
+      "recomputed_area_um2": "13.300000",
+      "yosys_area_um2": "13.3"
+    },
+    {
+      "cell": "AND3_X1",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "1.330000",
+      "recomputed_area_um2": "2.660000",
+      "yosys_area_um2": "2.66"
+    },
+    {
+      "cell": "AND4_X1",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "1.596000",
+      "recomputed_area_um2": "1.596000",
+      "yosys_area_um2": "1.596"
+    },
+    {
+      "cell": "AOI211_X2",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "2.394000",
+      "recomputed_area_um2": "4.788000",
+      "yosys_area_um2": "4.788"
+    },
+    {
+      "cell": "AOI21_X1",
+      "category": "combinational",
+      "count": 10,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "10.640000",
+      "yosys_area_um2": "10.64"
+    },
+    {
+      "cell": "AOI21_X2",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "1.862000",
+      "recomputed_area_um2": "3.724000",
+      "yosys_area_um2": "3.724"
+    },
+    {
+      "cell": "AOI221_X1",
+      "category": "combinational",
+      "count": 6,
+      "liberty_area_um2": "1.596000",
+      "recomputed_area_um2": "9.576000",
+      "yosys_area_um2": "9.576"
+    },
+    {
+      "cell": "AOI221_X2",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "2.926000",
+      "recomputed_area_um2": "5.852000",
+      "yosys_area_um2": "5.852"
+    },
+    {
+      "cell": "AOI222_X1",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "2.128000",
+      "recomputed_area_um2": "2.128000",
+      "yosys_area_um2": "2.128"
+    },
+    {
+      "cell": "AOI22_X1",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "1.330000",
+      "recomputed_area_um2": "2.660000",
+      "yosys_area_um2": "2.66"
+    },
+    {
+      "cell": "BUF_X1",
+      "category": "combinational",
+      "count": 20,
+      "liberty_area_um2": "0.798000",
+      "recomputed_area_um2": "15.960000",
+      "yosys_area_um2": "15.96"
+    },
+    {
+      "cell": "BUF_X4",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "1.862000",
+      "recomputed_area_um2": "3.724000",
+      "yosys_area_um2": "3.724"
+    },
+    {
+      "cell": "BUF_X8",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "3.458000",
+      "recomputed_area_um2": "3.458000",
+      "yosys_area_um2": "3.458"
+    },
+    {
+      "cell": "CLKBUF_X1",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "0.798000",
+      "recomputed_area_um2": "0.798000",
+      "yosys_area_um2": "0.798"
+    },
+    {
+      "cell": "CLKBUF_X2",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "1.064000",
+      "yosys_area_um2": "1.064"
+    },
+    {
+      "cell": "DFF_X1",
+      "category": "sequential",
+      "count": 42,
+      "liberty_area_um2": "4.522000",
+      "recomputed_area_um2": "189.924000",
+      "yosys_area_um2": "189.924"
+    },
+    {
+      "cell": "FA_X1",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "4.256000",
+      "recomputed_area_um2": "4.256000",
+      "yosys_area_um2": "4.256"
+    },
+    {
+      "cell": "HA_X1",
+      "category": "combinational",
+      "count": 10,
+      "liberty_area_um2": "2.660000",
+      "recomputed_area_um2": "26.600000",
+      "yosys_area_um2": "26.6"
+    },
+    {
+      "cell": "INV_X1",
+      "category": "combinational",
+      "count": 21,
+      "liberty_area_um2": "0.532000",
+      "recomputed_area_um2": "11.172000",
+      "yosys_area_um2": "11.172"
+    },
+    {
+      "cell": "INV_X2",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "0.798000",
+      "recomputed_area_um2": "1.596000",
+      "yosys_area_um2": "1.596"
+    },
+    {
+      "cell": "MUX2_X1",
+      "category": "combinational",
+      "count": 23,
+      "liberty_area_um2": "1.862000",
+      "recomputed_area_um2": "42.826000",
+      "yosys_area_um2": "42.826"
+    },
+    {
+      "cell": "MUX2_X2",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "2.394000",
+      "recomputed_area_um2": "4.788000",
+      "yosys_area_um2": "4.788"
+    },
+    {
+      "cell": "NAND2_X1",
+      "category": "combinational",
+      "count": 17,
+      "liberty_area_um2": "0.798000",
+      "recomputed_area_um2": "13.566000",
+      "yosys_area_um2": "13.566"
+    },
+    {
+      "cell": "NAND3_X1",
+      "category": "combinational",
+      "count": 3,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "3.192000",
+      "yosys_area_um2": "3.192"
+    },
+    {
+      "cell": "NAND3_X4",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "3.458000",
+      "recomputed_area_um2": "3.458000",
+      "yosys_area_um2": "3.458"
+    },
+    {
+      "cell": "NAND4_X1",
+      "category": "combinational",
+      "count": 8,
+      "liberty_area_um2": "1.330000",
+      "recomputed_area_um2": "10.640000",
+      "yosys_area_um2": "10.64"
+    },
+    {
+      "cell": "NOR2_X1",
+      "category": "combinational",
+      "count": 14,
+      "liberty_area_um2": "0.798000",
+      "recomputed_area_um2": "11.172000",
+      "yosys_area_um2": "11.172"
+    },
+    {
+      "cell": "NOR3_X1",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "1.064000",
+      "yosys_area_um2": "1.064"
+    },
+    {
+      "cell": "NOR4_X1",
+      "category": "combinational",
+      "count": 1,
+      "liberty_area_um2": "1.330000",
+      "recomputed_area_um2": "1.330000",
+      "yosys_area_um2": "1.33"
+    },
+    {
+      "cell": "NOR4_X2",
+      "category": "combinational",
+      "count": 3,
+      "liberty_area_um2": "2.394000",
+      "recomputed_area_um2": "7.182000",
+      "yosys_area_um2": "7.182"
+    },
+    {
+      "cell": "OAI21_X1",
+      "category": "combinational",
+      "count": 10,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "10.640000",
+      "yosys_area_um2": "10.64"
+    },
+    {
+      "cell": "OAI22_X4",
+      "category": "combinational",
+      "count": 2,
+      "liberty_area_um2": "4.522000",
+      "recomputed_area_um2": "9.044000",
+      "yosys_area_um2": "9.044"
+    },
+    {
+      "cell": "OR2_X1",
+      "category": "combinational",
+      "count": 4,
+      "liberty_area_um2": "1.064000",
+      "recomputed_area_um2": "4.256000",
+      "yosys_area_um2": "4.256"
+    },
+    {
+      "cell": "XNOR2_X1",
+      "category": "combinational",
+      "count": 3,
+      "liberty_area_um2": "1.596000",
+      "recomputed_area_um2": "4.788000",
+      "yosys_area_um2": "4.788"
+    },
+    {
+      "cell": "XOR2_X1",
+      "category": "combinational",
+      "count": 9,
+      "liberty_area_um2": "1.596000",
+      "recomputed_area_um2": "14.364000",
+      "yosys_area_um2": "14.364"
+    }
+  ]
+}

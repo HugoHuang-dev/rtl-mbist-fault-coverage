@@ -6,7 +6,7 @@ This revision improved build portability, synchronizer constraints, and board-le
 
 - RESET now uses a two-stage asynchronous-clear, synchronous-release chain followed by one synchronous register for the core. BRAM control is no longer driven directly by asynchronous reset.
 - Reset and KEY0 synchronizers carry `ASYNC_REG`. Exceptions cover only the external key to first-stage D and the external reset to synchronizer CLR. The three interstage paths remain timed.
-- LEDs are static status outputs with no external sampling clock. The XDC explicitly excludes paths to LED ports instead of inventing input/output delays.
+- LEDs are static status outputs with no external sampling clock. The XDC explicitly excludes paths to LED ports; no I/O delays are assigned to them.
 - The request counter clears only on an accepted start. A KEY0 pulse while busy no longer clears it.
 - `INJECT_READ_FAULT=0` is the normal default. With value 1, the board wrapper flips bit 0 of the 72nd read response. It neither reads internal controller phase nor changes BRAM contents.
 
@@ -55,3 +55,5 @@ Source headers retain author, project, file, and module. Unverifiable per-file C
 ## Board acceptance
 
 Software regression, full fault campaign, timing analysis for all four bitstreams, and board testing are complete. The [17 board evidence files](../results/step08/hardware_final/README.md) cover device identification, reset clearing, normal/perturbed LEDs, three normal native ILA runs, and two perturbed runs. Every capture passed a 640-request comparison. Normal runs returned PASS; perturbed runs returned FAIL with M2/address 7/FF→FE. Both modes cleared previous state on the second run.
+
+Software regression, the full fault campaign, and single-case replay records are indexed in the [software review results](../results/reruns/20260926_engineering_review/README.md).

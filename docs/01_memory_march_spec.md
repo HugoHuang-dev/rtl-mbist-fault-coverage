@@ -16,7 +16,7 @@ v1 · 09.02–09.03. This specification fixes the 64×8 RAM interface, March C�
 | Initial contents | Undefined; M0 writes zero to every address before any reads |
 | Simultaneous read/write | Not issued by the controller, so read-first/write-first collision behavior is outside the interface |
 
-The 64×8 array is small; actual Block RAM mapping is determined from Vivado synthesis, not from RTL attributes alone. The controller contains no Xilinx-specific RAM primitive.
+The 64×8 array is small; actual Block RAM mapping is determined from Vivado synthesis. The v8 implementation report checks the `RAM_STYLE` setting and interface read timing. The controller contains no Xilinx-specific RAM primitive.
 
 ## 2. Common RAM interface
 
@@ -73,7 +73,7 @@ The phase boundaries are:
 - M4: `r1(63),w0(63), …,r1(0),w0(0)`; M5 starts at address 0.
 - M5: `r0(0) … r0(63)`; DONE follows comparison of the final response.
 
-No out-of-range address or unintended six-bit wraparound request is allowed. The total is `10N = 640` accepted requests: 320 reads and 320 writes. Clock cycles are counted separately and include start, response waits, idle cycles, and DONE.
+At each phase boundary, the address generator loads the first address of the next phase. No out-of-range address or unintended six-bit wraparound request is allowed. The total is `10N = 640` accepted requests: 320 reads and 320 writes. Clock cycles are counted separately and include start, response waits, idle cycles, and DONE.
 
 Each row of [`march_c_minus_64x8.csv`](../specs/march_c_minus_64x8.csv) represents one RAM request. `seq` runs from 0 to 639; `phase` is M0–M5; `direction` is `up/down`; `address` is decimal; `operation` is `read/write`. Read rows fill `expected_read`; write rows fill `write_data`.
 
@@ -93,3 +93,5 @@ Each row of [`march_c_minus_64x8.csv`](../specs/march_c_minus_64x8.csv) represen
 4. The board XDC specifies pin R4 for `sys_clk` and a 20 ns period. Device mapping and implemented timing are recorded in the [FPGA report](08_fpga_implementation.md).
 
 Background on RAM inference and timing: AMD [Vivado Memory Inference](https://docs.amd.com/r/en-US/ug901-vivado-synthesis/Memory-Inference-Capabilities) and [7 Series Memory Resources, UG473](https://docs.amd.com/v/u/en-US/ug473_7Series_Memory_Resources). The project uses Vivado 2018.3; its synthesis and simulation reports determine the implemented RAM behavior.
+
+The specification freezes the design parameters and reference sequence. RAM, controller, FPGA implementation, and board results are recorded in the v2–v9 acceptance reports.

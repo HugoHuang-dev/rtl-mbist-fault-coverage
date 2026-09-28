@@ -47,3 +47,9 @@ The board wrapper flips bit 0 of the 72nd read response. It changes neither the 
 The [17 board evidence files](../results/step08/hardware_final/README.md) include photos, screenshots, and five native `.ila` captures. The [hardware audit](../results/step08/hardware_final/audit.json) checks every request, one-cycle read response, DONE timing, error count, first diagnostics, and restart clearing. Capture UUID and probe mapping match the released LTX. Released [bitstreams](../releases/20260926_review/README.md) match implementation outputs byte for byte.
 
 The [board simulation summary](../results/reruns/20260926_review_final/step08/simulation/summary.json) also covers reset during a run and start while busy. See the [reproduction guide](reproduce.md), [board procedure](08_board_bringup_steps.md), and [engineering review](09_engineering_review.md).
+
+## Acceptance
+
+v8 synthesis and implementation and v9 normal/controlled-failure board tests are complete. Board reset evidence covers clearing results after completion and restarting. Reset during a run and start while busy are checked in the dual-tool board simulation linked above. Coverage of the four cell-fault models is evaluated in v7.
+
+The initial v8 reports are indexed in the [implementation results](../results/step08/README.md); Vivado project creation and opening are described in the [project entry](../fpga/vivado/README.md).

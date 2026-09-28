@@ -1,0 +1,14 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+unknown 
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef, created 22 layers, 27 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef, created 135 library cells
+V13_INTERCONNECT wire_load_model=5K_hvratio_1_1 mode=top; no placement or SPEF
+V13_CLOCKS 1
+V13_INPUTS 13
+V13_OUTPUTS 54
+V13_REGISTERS 42
+V13_REPORTS_WRITTEN /work/output

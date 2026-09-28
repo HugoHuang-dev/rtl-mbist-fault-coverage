@@ -1,34 +1,29 @@
 # Repository Contents
 
-This repository contains the March C− RTL, independent verification environment, fault campaign, FPGA build scripts, measured reports, and board evidence described in the [project README](README.md).
+This repository contains the shared March C− controller, verification environment, FPGA implementation and board records, and the Nangate45 synthesis experiments described in the [project README](README.md).
 
-| Directory | Contents |
+| Directory or entry | Contents |
 | --- | --- |
-| [rtl/](rtl/README.md) | RAM, controller, address/data generators, and response checker |
-| [tb/](tb/README.md) · [specs/](specs/README.md) | Testbenches, fault models, independent checkers, and frozen request sequence |
-| [scripts/](scripts/README.md) · [sim/](sim/README.md) | Simulation runners, campaign automation, and evidence audits |
-| [fpga/](fpga/README.md) | Board wrapper, pin/timing constraints, and Vivado project/build Tcl |
-| [docs/](docs/README.md) | Version history, design notes, reproduction guide, and board procedure |
-| [results/step06/](results/step06/README.md) · [results/step07/](results/step07/README.md) | All 2,048 target faults, both simulators' raw logs, coverage, and detection phases |
-| [Final implementation](results/reruns/20260926_review_final/README.md) | Utilization, timing, CDC, and board-wrapper simulation |
-| [Final board evidence](results/step08/hardware_final/README.md) | Photos, screenshots, five native ILA captures, and per-transaction audits |
+| [rtl/](rtl/) | Shared controller, address/data generators, response checker, and synchronous RAM |
+| [tb/](tb/) · [specs/](specs/) | Testbenches, independent checkers, fault models, and the frozen 640-request reference sequence |
+| [scripts/](scripts/) · [sim/](sim/) | Simulation runners, fault campaign, coverage evaluation, and hardware-data checks |
+| [fpga/](fpga/) | Board wrapper, pin/timing constraints, and Vivado creation/build scripts |
+| [asic/](asic/) | Controller-only top level, seven-file RTL list, ORFS configuration, SDC, gate-level simulation, and STA scripts |
+| [docs/](docs/) | v1–v13 reports, [development log](docs/DEVLOG.md), and [reproduction guide](docs/reproduce.md) |
+| [v6 campaign](results/step06/README.md) · [v7 coverage](results/step07/README.md) | The 2,048 target faults, both simulators' raw results, coverage, and detection phases |
+| [FPGA implementation](results/reruns/20260926_review_final/README.md) | Utilization, timing, CDC, and board-wrapper simulation |
+| [Board evidence](results/step08/hardware_final/README.md) | Photos, screenshots, five native ILA captures, and transaction checks |
+| [v10 architecture](results/asic/v10/README.md) · [v11 constraints](results/asic/v11/README.md) | RTL regression, Vivado structure views, synthesis configuration, and constraint checks |
+| [v12 netlist](results/asic/v12/README.md) · [v13 evaluation](results/asic/v13/README.md) | Verified standard-cell netlist, functional models, synthesis logs, Liberty/LEF inputs, area, and timing reports |
 | [releases/](releases/README.md) | Normal and perturbed BIT/LTX files, with and without ILA |
-| [evidence/](evidence/README.md) | Source snapshots, historical hashes, and review records |
+| [evidence/](evidence/README.md) | Current source checksums and the two source archives required by historical experiment checks |
 
-Vivado projects and working directories are generated locally. Build caches, checkpoints, simulator intermediates, session journals, and the machine-specific toolchain configuration are excluded. Original experiment logs, source snapshots, reports, and native hardware captures are retained. The portable ILA directory also includes its WDB/WCFG files for reopening.
+The shared controller entry is `rtl/mbist_top.v`. The default board build uses `fpga/board_top.v` with `INJECT_READ_FAULT=0`. The ASIC entry is `asic/rtl/mbist_asic_top.v`; `asic/rtl/asic_rtl.f` defines its synthesis boundary. SRAM is external to that boundary.
 
-Historical manifests describe their original experiment or archive. The repository-wide [SHA256SUMS.txt](SHA256SUMS.txt) checks the files supplied here. Git attributes disable line-ending conversion so that source and raw-log hashes remain stable after cloning.
+Board Vivado projects are generated locally under `.build/<run-id>/`. The maintained [ASIC RTL-view project](asic/vivado/mbist_asic_v10/mbist_asic_v10.xpr) is included with relative source paths. It opens the controller hierarchy in Vivado; Nangate45 synthesis uses ORFS.
 
-Copy [toolchain.example.json](toolchain.example.json) to `toolchain.local.json` and adjust installation paths, or configure the environment variables described in [reproduce.md](docs/reproduce.md). New simulation and build outputs use project-local directories.
+Build caches, checkpoints, simulator executables, session journals, and `toolchain.local.json` are excluded. Original experiment logs, reports, netlists, source snapshots, and native hardware captures are retained. The portable ILA directory includes its WDB/WCFG pair. Git preserves their bytes on checkout; maintained ASIC shell scripts use LF endings.
 
-Run the archived-data checks without a connected board or simulator:
+Git records project revisions. The [current source manifest](evidence/current_source_sha256.txt) covers maintained RTL, constraints, and scripts; experiment-specific manifests identify their original inputs and evidence.
 
-```powershell
-py -3 scripts/audit_step06.py
-py -3 scripts/evaluate_fault_coverage.py
-py -3 scripts/audit_final_hardware.py --self-test
-$env:MBIST_RUN_ID = '20260926_review_final'
-py -3 scripts/audit_board_revision.py
-```
-
-Fresh simulation and implementation commands are in the [reproduction guide](docs/reproduce.md); programming and measurement steps are in the [board procedure](docs/08_board_bringup_steps.md).
+Copy [toolchain.example.json](toolchain.example.json) to `toolchain.local.json` and adjust installation paths, or set environment variables. The [reproduction guide](docs/reproduce.md) gives commands for simulation, synthesis, and STA with new run IDs. Programming and capture instructions are in the [board procedure](docs/08_board_bringup_steps.md).

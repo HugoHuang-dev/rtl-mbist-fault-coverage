@@ -1,0 +1,2 @@
+COMMAND: C:\iverilog\bin\iverilog.EXE -g2012 -s tb_step04_independent -o suite.vvp .\rtl\address_generator.v .\rtl\data_generator.v .\rtl\memory_interface.v .\rtl\response_checker.v .\rtl\march_controller.v .\rtl\mbist_top.v .\tb\march_transaction_checker.sv .\rtl\single_port_sync_ram.v .\results\asic\v10\20260927_icarus_v10\icarus\baseline\sequence\tb_step04_independent.sv
+EXIT_CODE: 0

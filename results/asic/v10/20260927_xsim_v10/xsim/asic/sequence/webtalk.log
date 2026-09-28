@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep 27 18:03:05 2026
+# Process ID: 43968
+# Current directory: ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence
+# Command line: wbtcv.exe -mode batch -source ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+# Log file: ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence/webtalk.log
+# Journal file: ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence\webtalk.jou
+#-----------------------------------------------------------
+source ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 83.473 ; gain = 1.355
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep 27 18:03:11 2026...

@@ -1,0 +1,3 @@
+COMMAND: iverilog -g2012 -Wall -s mbist_asic_top -o results/asic/v10/20260927_icarus_v10/mbist_asic_top.vvp -f asic/rtl/asic_rtl.f
+EXIT_CODE: 0
+DIAGNOSTICS:

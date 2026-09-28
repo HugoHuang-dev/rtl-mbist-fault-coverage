@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep 27 18:02:41 2026
+# Process ID: 9372
+# Current directory: ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault
+# Command line: wbtcv.exe -mode batch -source ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+# Log file: ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault/webtalk.log
+# Journal file: ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault\webtalk.jou
+#-----------------------------------------------------------
+source ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep 27 18:02:43 2026...

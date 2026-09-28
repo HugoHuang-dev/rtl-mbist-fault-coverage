@@ -1,0 +1,5 @@
+Source reports: results/asic/v13/20260927_v13_readout
+Mode: offline area and STA-report reconciliation; no new STA measurement
+Command: py -3 asic/scripts/audit_v13.py prepare .build/asic/v13/20260928_offline_check
+V13_PREPARE_PASS PASS
+Negative checks in temporary copies: changed path slack rejected; changed area total rejected. Original reports unchanged.

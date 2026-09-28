@@ -1,0 +1,3973 @@
+{"checks": [
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_326_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_326_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_326_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_326_/Z",
+      "net": "_124_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.176e-11
+    },
+    {
+      "instance": "_327_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_327_/A2",
+      "net": "_124_",
+      "arrival": 2.337e-09,
+      "slew": 1.176e-11
+    },
+    {
+      "instance": "_327_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_327_/ZN",
+      "net": "_050_",
+      "arrival": 2.366e-09,
+      "capacitance": 1.372e-15,
+      "slew": 5.817e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/D",
+      "net": "_050_",
+      "arrival": 2.366e-09,
+      "slew": 5.817e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[5]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.366e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.911e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_324_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_324_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_324_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_324_/Z",
+      "net": "_123_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.176e-11
+    },
+    {
+      "instance": "_325_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_325_/A2",
+      "net": "_123_",
+      "arrival": 2.337e-09,
+      "slew": 1.176e-11
+    },
+    {
+      "instance": "_325_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_325_/ZN",
+      "net": "_049_",
+      "arrival": 2.366e-09,
+      "capacitance": 1.372e-15,
+      "slew": 5.817e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_/D",
+      "net": "_049_",
+      "arrival": 2.366e-09,
+      "slew": 5.817e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[6]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.366e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.911e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_319_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_319_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_319_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_319_/Z",
+      "net": "_120_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_320_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_320_/A2",
+      "net": "_120_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_320_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_320_/ZN",
+      "net": "_047_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_/D",
+      "net": "_047_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[0]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_316_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_316_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_316_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_316_/Z",
+      "net": "_118_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_317_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_317_/A2",
+      "net": "_118_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_317_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_317_/ZN",
+      "net": "_046_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_/D",
+      "net": "_046_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[1]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_314_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_314_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_314_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_314_/Z",
+      "net": "_117_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_315_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_315_/A2",
+      "net": "_117_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_315_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_315_/ZN",
+      "net": "_045_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_/D",
+      "net": "_045_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[2]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_addr[3]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_312_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_312_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_312_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_312_/Z",
+      "net": "_116_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_313_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_313_/A2",
+      "net": "_116_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_313_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_313_/ZN",
+      "net": "_044_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[3]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[3]$_SDFFE_PP0P_/D",
+      "net": "_044_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[3]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[3]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_addr[4]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_310_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_310_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_310_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_310_/Z",
+      "net": "_115_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_311_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_311_/A2",
+      "net": "_115_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_311_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_311_/ZN",
+      "net": "_043_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[4]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[4]$_SDFFE_PP0P_/D",
+      "net": "_043_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[4]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[4]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_expected[6]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_321_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_321_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_321_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_321_/Z",
+      "net": "_121_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_322_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_322_/A2",
+      "net": "_121_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_322_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_322_/ZN",
+      "net": "_048_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_expected[6]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_expected[6]$_SDFFE_PP0P_/D",
+      "net": "_048_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_expected[6]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_expected[6]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_phase[0]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_308_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_308_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_308_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_308_/Z",
+      "net": "_114_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_309_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_309_/A2",
+      "net": "_114_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_309_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_309_/ZN",
+      "net": "_042_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_phase[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_phase[0]$_SDFFE_PP0P_/D",
+      "net": "_042_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_phase[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_phase[0]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_phase[1]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/A",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_305_",
+      "cell": "BUF_X8",
+      "verilog_src": "",
+      "pin": "_305_/Z",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "capacitance": 2.386e-14,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_306_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_306_/S",
+      "net": "_112_",
+      "arrival": 2.278e-09,
+      "slew": 1.008e-11
+    },
+    {
+      "instance": "_306_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_306_/Z",
+      "net": "_113_",
+      "arrival": 2.337e-09,
+      "capacitance": 1.882e-15,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_307_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_307_/A2",
+      "net": "_113_",
+      "arrival": 2.337e-09,
+      "slew": 1.024e-11
+    },
+    {
+      "instance": "_307_",
+      "cell": "AND2_X2",
+      "verilog_src": "",
+      "pin": "_307_/ZN",
+      "net": "_041_",
+      "arrival": 2.365e-09,
+      "capacitance": 1.372e-15,
+      "slew": 4.999e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_phase[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_phase[1]$_SDFFE_PP0P_/D",
+      "net": "_041_",
+      "arrival": 2.365e-09,
+      "slew": 4.999e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_phase[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_phase[1]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.365e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.878e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.740e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_336_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_336_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_336_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_336_/Z",
+      "net": "_129_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_337_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_337_/A2",
+      "net": "_129_",
+      "arrival": 2.309e-09,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_337_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_337_/ZN",
+      "net": "_055_",
+      "arrival": 2.340e-09,
+      "capacitance": 1.372e-15,
+      "slew": 6.517e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_/D",
+      "net": "_055_",
+      "arrival": 2.340e-09,
+      "slew": 6.517e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[0]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.340e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.939e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[1]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_334_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_334_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_334_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_334_/Z",
+      "net": "_128_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_335_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_335_/A2",
+      "net": "_128_",
+      "arrival": 2.309e-09,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_335_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_335_/ZN",
+      "net": "_054_",
+      "arrival": 2.340e-09,
+      "capacitance": 1.372e-15,
+      "slew": 6.517e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[1]$_SDFFE_PP0P_/D",
+      "net": "_054_",
+      "arrival": 2.340e-09,
+      "slew": 6.517e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[1]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.340e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.939e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[2]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_332_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_332_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_332_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_332_/Z",
+      "net": "_127_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_333_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_333_/A2",
+      "net": "_127_",
+      "arrival": 2.309e-09,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_333_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_333_/ZN",
+      "net": "_053_",
+      "arrival": 2.340e-09,
+      "capacitance": 1.372e-15,
+      "slew": 6.517e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[2]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[2]$_SDFFE_PP0P_/D",
+      "net": "_053_",
+      "arrival": 2.340e-09,
+      "slew": 6.517e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[2]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[2]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.340e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.939e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[3]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_330_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_330_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_330_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_330_/Z",
+      "net": "_126_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_331_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_331_/A2",
+      "net": "_126_",
+      "arrival": 2.309e-09,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_331_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_331_/ZN",
+      "net": "_052_",
+      "arrival": 2.340e-09,
+      "capacitance": 1.372e-15,
+      "slew": 6.517e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[3]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[3]$_SDFFE_PP0P_/D",
+      "net": "_052_",
+      "arrival": 2.340e-09,
+      "slew": 6.517e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[3]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[3]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.340e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.939e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[4]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_328_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_328_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_328_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_328_/Z",
+      "net": "_125_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_329_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_329_/A2",
+      "net": "_125_",
+      "arrival": 2.309e-09,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_329_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_329_/ZN",
+      "net": "_051_",
+      "arrival": 2.340e-09,
+      "capacitance": 1.372e-15,
+      "slew": 6.517e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[4]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[4]$_SDFFE_PP0P_/D",
+      "net": "_051_",
+      "arrival": 2.340e-09,
+      "slew": 6.517e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[4]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[4]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.340e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.939e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_actual[7]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_411_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_411_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_411_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_411_/Z",
+      "net": "_192_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_412_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_412_/A2",
+      "net": "_192_",
+      "arrival": 2.309e-09,
+      "slew": 1.101e-11
+    },
+    {
+      "instance": "_412_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_412_/ZN",
+      "net": "_066_",
+      "arrival": 2.340e-09,
+      "capacitance": 1.372e-15,
+      "slew": 5.744e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[7]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[7]$_SDFFE_PP0P_/D",
+      "net": "_066_",
+      "arrival": 2.340e-09,
+      "slew": 5.744e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_actual[7]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_actual[7]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.340e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.908e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_phase[2]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_407_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_407_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_407_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_407_/Z",
+      "net": "_190_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_408_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_408_/A2",
+      "net": "_190_",
+      "arrival": 2.309e-09,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_408_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_408_/ZN",
+      "net": "_064_",
+      "arrival": 2.339e-09,
+      "capacitance": 1.372e-15,
+      "slew": 6.517e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_phase[2]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_phase[2]$_SDFFE_PP0P_/D",
+      "net": "_064_",
+      "arrival": 2.339e-09,
+      "slew": 6.517e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_phase[2]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_phase[2]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.339e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.939e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.first_fail_addr[5]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/A3",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_304_",
+      "cell": "NAND3_X4",
+      "verilog_src": "",
+      "pin": "_304_/ZN",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "capacitance": 2.647e-14,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_409_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_409_/S",
+      "net": "_111_",
+      "arrival": 2.249e-09,
+      "slew": 2.266e-11
+    },
+    {
+      "instance": "_409_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_409_/Z",
+      "net": "_191_",
+      "arrival": 2.309e-09,
+      "capacitance": 1.204e-15,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_410_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_410_/A2",
+      "net": "_191_",
+      "arrival": 2.309e-09,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_410_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_410_/ZN",
+      "net": "_065_",
+      "arrival": 2.339e-09,
+      "capacitance": 1.372e-15,
+      "slew": 5.742e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[5]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[5]$_SDFFE_PP0P_/D",
+      "net": "_065_",
+      "arrival": 2.339e-09,
+      "slew": 5.742e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.first_fail_addr[5]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.first_fail_addr[5]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.339e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.908e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.742e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.error_count[0]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_299_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_299_/A2",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_299_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_299_/ZN",
+      "net": "_108_",
+      "arrival": 2.256e-09,
+      "capacitance": 6.217e-15,
+      "slew": 1.021e-11
+    },
+    {
+      "instance": "_302_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_302_/S",
+      "net": "_108_",
+      "arrival": 2.256e-09,
+      "slew": 1.021e-11
+    },
+    {
+      "instance": "_302_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_302_/Z",
+      "net": "_110_",
+      "arrival": 2.302e-09,
+      "capacitance": 1.204e-15,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_303_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_303_/A2",
+      "net": "_110_",
+      "arrival": 2.302e-09,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_303_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_303_/ZN",
+      "net": "_040_",
+      "arrival": 2.332e-09,
+      "capacitance": 1.372e-15,
+      "slew": 5.793e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.error_count[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.error_count[0]$_SDFFE_PP0P_/D",
+      "net": "_040_",
+      "arrival": 2.332e-09,
+      "slew": 5.793e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.error_count[0]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.error_count[0]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.332e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.910e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.743e-08
+},
+{
+  "type": "check",
+  "path_group": "core_clock",
+  "path_type": "max",
+  "startpoint": "rd_data[7]",
+  "endpoint": "u_mbist.u_checker.error_count[1]$_SDFFE_PP0P_/D",
+  "source_clock": "core_clock",
+  "source_clock_edge": "rise",
+  "source_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "capacitance": 5.095e-15,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/A4",
+      "net": "rd_data[7]",
+      "arrival": 2.000e-09,
+      "slew": 1.000e-10
+    },
+    {
+      "instance": "_260_",
+      "cell": "NOR4_X1",
+      "verilog_src": "",
+      "pin": "_260_/ZN",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "capacitance": 1.909e-15,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/A1",
+      "net": "_075_",
+      "arrival": 2.104e-09,
+      "slew": 5.092e-11
+    },
+    {
+      "instance": "_262_",
+      "cell": "NAND2_X1",
+      "verilog_src": "",
+      "pin": "_262_/ZN",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "capacitance": 1.217e-15,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/A",
+      "net": "_077_",
+      "arrival": 2.120e-09,
+      "slew": 1.404e-11
+    },
+    {
+      "instance": "_270_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_270_/Z",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "capacitance": 3.313e-15,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/A",
+      "net": "_085_",
+      "arrival": 2.184e-09,
+      "slew": 1.171e-11
+    },
+    {
+      "instance": "_271_",
+      "cell": "BUF_X4",
+      "verilog_src": "",
+      "pin": "_271_/Z",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "capacitance": 2.264e-14,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_299_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_299_/A2",
+      "net": "_086_",
+      "arrival": 2.217e-09,
+      "slew": 8.936e-12
+    },
+    {
+      "instance": "_299_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_299_/ZN",
+      "net": "_108_",
+      "arrival": 2.256e-09,
+      "capacitance": 6.217e-15,
+      "slew": 1.021e-11
+    },
+    {
+      "instance": "_300_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_300_/S",
+      "net": "_108_",
+      "arrival": 2.256e-09,
+      "slew": 1.021e-11
+    },
+    {
+      "instance": "_300_",
+      "cell": "MUX2_X1",
+      "verilog_src": "",
+      "pin": "_300_/Z",
+      "net": "_109_",
+      "arrival": 2.302e-09,
+      "capacitance": 1.204e-15,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_301_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_301_/A2",
+      "net": "_109_",
+      "arrival": 2.302e-09,
+      "slew": 9.457e-12
+    },
+    {
+      "instance": "_301_",
+      "cell": "AND2_X1",
+      "verilog_src": "",
+      "pin": "_301_/ZN",
+      "net": "_039_",
+      "arrival": 2.332e-09,
+      "capacitance": 1.372e-15,
+      "slew": 5.793e-12
+    },
+    {
+      "instance": "u_mbist.u_checker.error_count[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.error_count[1]$_SDFFE_PP0P_/D",
+      "net": "_039_",
+      "arrival": 2.332e-09,
+      "slew": 5.793e-12
+    }
+  ],
+  "target_clock": "core_clock",
+  "target_clock_edge": "rise",
+  "target_clock_path": [
+    {
+      "instance": "",
+      "cell": "mbist_asic_top",
+      "verilog_src": "",
+      "pin": "clk",
+      "arrival": 0.000e+00,
+      "capacitance": 7.218e-14,
+      "slew": 0.000e+00
+    },
+    {
+      "instance": "u_mbist.u_checker.error_count[1]$_SDFFE_PP0P_",
+      "cell": "DFF_X1",
+      "verilog_src": "",
+      "pin": "u_mbist.u_checker.error_count[1]$_SDFFE_PP0P_/CK",
+      "net": "clk",
+      "arrival": 1.844e-14,
+      "slew": 2.254e-14
+    }
+  ],
+  "data_arrival_time": 2.332e-09,
+  "crpr": 0.000e+00,
+  "margin": 3.910e-11,
+  "required_time": 1.976e-08,
+  "slack": 1.743e-08
+}
+]
+}

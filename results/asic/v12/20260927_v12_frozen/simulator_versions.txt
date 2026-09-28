@@ -1,0 +1,4 @@
+Icarus Verilog 11.0 (devel) (s20150603-642-g3bdb50da)
+Vivado Simulator 2018.3
+Yosys 0.68+post
+OpenROAD version string: unknown

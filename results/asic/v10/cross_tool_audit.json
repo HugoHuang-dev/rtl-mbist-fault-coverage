@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "icarus_report": "20260927_icarus_v10/report.json",
+  "xsim_report": "20260927_xsim_v10/report.json",
+  "matching_scenarios": 16,
+  "matching_source_manifests": true,
+  "cases": [
+    "baseline/sequence/sequence",
+    "baseline/fault/none_a7_b2",
+    "baseline/fault/sa0_a7_b2",
+    "baseline/fault/sa1_a7_b2",
+    "baseline/fault/rising_a7_b2",
+    "baseline/fault/falling_a7_b2",
+    "baseline/fault/sa0_a63_b7",
+    "baseline/fault/falling_a0_b0",
+    "asic/sequence/sequence",
+    "asic/fault/none_a7_b2",
+    "asic/fault/sa0_a7_b2",
+    "asic/fault/sa1_a7_b2",
+    "asic/fault/rising_a7_b2",
+    "asic/fault/falling_a7_b2",
+    "asic/fault/sa0_a63_b7",
+    "asic/fault/falling_a0_b0"
+  ]
+}

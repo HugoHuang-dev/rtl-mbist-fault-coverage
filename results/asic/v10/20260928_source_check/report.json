@@ -1,0 +1,719 @@
+{
+  "status": "PASS",
+  "run_id": "20260928_source_check",
+  "tools": [
+    "icarus",
+    "xsim"
+  ],
+  "scenario_count": 32,
+  "results": {
+    "icarus/baseline/sequence/sequence": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ],
+        [
+          2,
+          640,
+          960,
+          1
+        ]
+      ]
+    },
+    "icarus/baseline/fault/none_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ]
+      ],
+      "fault": {
+        "type": "0",
+        "addr": "7",
+        "bit": "2",
+        "activated": "0",
+        "activations": "0",
+        "detected": "0",
+        "errors": "0",
+        "first_phase": "0",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "00"
+      }
+    },
+    "icarus/baseline/fault/sa0_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "icarus/baseline/fault/sa1_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          3
+        ]
+      ],
+      "fault": {
+        "type": "2",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "3",
+        "detected": "1",
+        "errors": "3",
+        "first_phase": "1",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "icarus/baseline/fault/rising_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "3",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "icarus/baseline/fault/falling_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "icarus/baseline/fault/sa0_a63_b7": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "63",
+        "bit": "7",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "63",
+        "first_expected": "ff",
+        "first_actual": "7f"
+      }
+    },
+    "icarus/baseline/fault/falling_a0_b0": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "0",
+        "bit": "0",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "01"
+      }
+    },
+    "icarus/asic/sequence/sequence": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ],
+        [
+          2,
+          640,
+          960,
+          1
+        ]
+      ]
+    },
+    "icarus/asic/fault/none_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ]
+      ],
+      "fault": {
+        "type": "0",
+        "addr": "7",
+        "bit": "2",
+        "activated": "0",
+        "activations": "0",
+        "detected": "0",
+        "errors": "0",
+        "first_phase": "0",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "00"
+      }
+    },
+    "icarus/asic/fault/sa0_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "icarus/asic/fault/sa1_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          3
+        ]
+      ],
+      "fault": {
+        "type": "2",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "3",
+        "detected": "1",
+        "errors": "3",
+        "first_phase": "1",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "icarus/asic/fault/rising_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "3",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "icarus/asic/fault/falling_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "icarus/asic/fault/sa0_a63_b7": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "63",
+        "bit": "7",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "63",
+        "first_expected": "ff",
+        "first_actual": "7f"
+      }
+    },
+    "icarus/asic/fault/falling_a0_b0": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "0",
+        "bit": "0",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "01"
+      }
+    },
+    "xsim/baseline/sequence/sequence": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ],
+        [
+          2,
+          640,
+          960,
+          1
+        ]
+      ]
+    },
+    "xsim/baseline/fault/none_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ]
+      ],
+      "fault": {
+        "type": "0",
+        "addr": "7",
+        "bit": "2",
+        "activated": "0",
+        "activations": "0",
+        "detected": "0",
+        "errors": "0",
+        "first_phase": "0",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "00"
+      }
+    },
+    "xsim/baseline/fault/sa0_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "xsim/baseline/fault/sa1_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          3
+        ]
+      ],
+      "fault": {
+        "type": "2",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "3",
+        "detected": "1",
+        "errors": "3",
+        "first_phase": "1",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "xsim/baseline/fault/rising_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "3",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "xsim/baseline/fault/falling_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "xsim/baseline/fault/sa0_a63_b7": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "63",
+        "bit": "7",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "63",
+        "first_expected": "ff",
+        "first_actual": "7f"
+      }
+    },
+    "xsim/baseline/fault/falling_a0_b0": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "0",
+        "bit": "0",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "01"
+      }
+    },
+    "xsim/asic/sequence/sequence": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ],
+        [
+          2,
+          640,
+          960,
+          1
+        ]
+      ]
+    },
+    "xsim/asic/fault/none_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ]
+      ],
+      "fault": {
+        "type": "0",
+        "addr": "7",
+        "bit": "2",
+        "activated": "0",
+        "activations": "0",
+        "detected": "0",
+        "errors": "0",
+        "first_phase": "0",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "00"
+      }
+    },
+    "xsim/asic/fault/sa0_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "xsim/asic/fault/sa1_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          3
+        ]
+      ],
+      "fault": {
+        "type": "2",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "3",
+        "detected": "1",
+        "errors": "3",
+        "first_phase": "1",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "xsim/asic/fault/rising_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "3",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "xsim/asic/fault/falling_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "xsim/asic/fault/sa0_a63_b7": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "63",
+        "bit": "7",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "63",
+        "first_expected": "ff",
+        "first_actual": "7f"
+      }
+    },
+    "xsim/asic/fault/falling_a0_b0": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "0",
+        "bit": "0",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "01"
+      }
+    }
+  }
+}

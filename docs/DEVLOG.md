@@ -1,8 +1,8 @@
 # Development Log
 
-The entries below record v1–v9 work and acceptance. Board photos and ILA data for v9 were captured on 2026-09-26. Original outputs are under each version's evidence directory.
+The entries below record v1–v13 work and acceptance; the table lists the planned development intervals. Board photos and ILA data for v9 were captured on 2026-09-26. Original outputs are under each version's evidence directory.
 
-| Period | Work |
+| Planned interval | Work |
 | --- | --- |
 | 09.02–09.03 | v1 Memory specification and March C− reference sequence |
 | 09.04–09.06 | v2 Single-port synchronous RAM, independent tests, and tool selection |
@@ -13,10 +13,11 @@ The entries below record v1–v9 work and acceptance. Board photos and ILA data 
 | 09.22–09.23 | v7 Independent fault-coverage evaluation |
 | 09.24–09.25 | v8 Vivado implementation, bitstreams, and ILA configuration |
 | 09.26 | v9 Board capture, audit, and project documentation |
+| 09.27 experiment records | v10–v13 ASIC architecture, configuration, gate-level verification, and synthesis evaluation |
 
 ## v1 · 09.02–09.03 — Memory specification and March C−
 
-Inputs: project plan v1.0; R1's March C− ordering and synchronous-read control; R2's modular organization; Da Vinci V2.1 schematic and official pin list.
+March C− ordering and synchronous-read control follow R1; module organization follows R2. Board constraints are based on the Da Vinci V2.1 schematic and official pin list.
 
 Completed:
 
@@ -32,7 +33,7 @@ The RAM timing and request CSV were fixed here. RAM mapping, fault behavior, and
 
 ## v2 · 09.04–09.05 — Single-port RAM and stand-alone tests
 
-Inputs: v1's 64×8 interface and one-cycle read response; R1 `march_c-/sim_models/memory_model.v`; the net10 RAM examples `top.v` and `blk_mem_gen_0.xci`; AMD UG473 and XPM documentation. The course example is 128×16 with a one-cycle read; its dimensions, FSM, and extra wait state were not copied.
+Basis: the frozen v1 64×8 interface and one-cycle read-response contract, with reference to R1 `march_c-/sim_models/memory_model.v` and AMD UG473/XPM documentation.
 
 Completed `rtl/single_port_sync_ram.v` with synchronous reads/writes, no fault or initial contents, no array reset, and request readiness during normal operation. Writes have no read response. Added `tb/tb_single_port_sync_ram.sv` with an independent shadow RAM. Tests cover addresses 0/63, 64-address sequential access, alternating operations at one address, idle output retention, reset suppression of requests, and data retention. Added a Vivado RAM-only synthesis check.
 
@@ -44,9 +45,9 @@ During implementation, the testbench's planned read count was corrected upward b
 
 XSim became the primary simulator and Icarus the independent cross-check. The original RAM implementation was retained. An assertion at the next rising edge, before NBA updates, was added to check the previous read response. Existing checks one nanosecond after the accepting edge and after a falling-edge address change cover the other two observation points. Together they establish acceptance at `E_k`, output after that edge, and synchronous consumption at `E_{k+1}`.
 
-XSim 2018.3 and Icarus Verilog 11.0 recompiled the same source in separate build directories. Both exited 0 with `RAM_TB_PASS checks=146 reads=70 writes=68`. Logs show `CASE_PASS` for boundary/sparse access, sequential 64-address writes/reads, alternating access and idle retention, and reset write suppression with data retention. Original logs and commands are in `results/step02/`.
+XSim 2018.3 and Icarus Verilog 11.0 recompiled the same source in separate build directories. Both exited 0 with `RAM_TB_PASS checks=146 reads=70 writes=68`. Logs show `CASE_PASS` for boundary/sparse access, sequential 64-address writes/reads, alternating access and idle retention, and reset write suppression with data retention. Original compile/run logs and commands are in `results/step02/`.
 
-The board is marked `XC7A35TFGG484-2I`. Vivado selected `xc7a35tfgg484-2` for device/package/speed and `set_operating_conditions -grade Industrial` for temperature grade; the report says `Device Grade = industrial`. RAM-only synthesis found `RAMB18E1 × 1`, `DOA_REG=0`, `WRITE_MODE_A=NO_CHANGE`, and no errors or warnings. This agrees with post-edge read output and held output on writes. [v2 acceptance](02_ram_verification.md) records the details.
+The board is marked `XC7A35TFGG484-2I`. Vivado selected `xc7a35tfgg484-2` for device/package/speed and `set_operating_conditions -grade Industrial` for temperature grade; the report says `Device Grade = industrial`. RAM-only synthesis found `RAMB18E1 × 1`, `DOA_REG=0`, `WRITE_MODE_A=NO_CHANGE`, and 0 errors, critical warnings, or warnings. This agrees with post-edge read output and held output on writes. [v2 acceptance](02_ram_verification.md) records the details.
 
 ## v2 · 09.06 — Tool version
 
@@ -58,7 +59,7 @@ Inputs: v1's interface and 640-request M0–M5 sequence, continued execution aft
 
 Added `march_controller.v`, `address_generator.v`, `data_generator.v`, `memory_interface.v`, `response_checker.v`, and `mbist_top.v`. The controller waits for `req_ready`, compares reads only at `rd_valid`, completes read-then-write at one address, latches the first error, counts mismatches, and continues through the final M5 comparison. Results hold after DONE and a new run can start.
 
-`tb/tb_mbist_top.sv` checked phase, address, operation, and write data against the v2 RAM. `scripts/check_step03_trace.py` compared every one of the 640 requests from each XSim/Icarus trace with the v1 CSV. `sim/run_step03.ps1` ran both tools in separate build directories; logs contain `MBIST_TB_PASS` and `TRACE_CHECK_PASS`. The fault-free run made 640 requests in 961 cycles, returned PASS, and recorded zero errors. Flipping one M2/address 7 read bit produced FAIL, expected FF/actual FE, one error, and still 640 requests. Start while busy was ignored; DONE held results and allowed a later restart. See `results/step03/README.md`.
+`tb/tb_mbist_top.sv` checked phase, address, operation, and write data against the v2 RAM. `scripts/check_step03_trace.py` compared every one of the 640 requests from each XSim/Icarus trace with the v1 CSV. `sim/run_step03.ps1` ran both tools in separate build directories; logs contain `MBIST_TB_PASS` and `TRACE_CHECK_PASS`. The fault-free run made 640 requests (320 reads, 320 writes) in 961 cycles, returned PASS, and recorded zero errors. Flipping one M2/address 7 read bit produced FAIL, expected FF/actual FE, one error, and still 640 requests. Start while busy was ignored; DONE held results and allowed a later restart. See `results/step03/README.md`.
 
 Windows PowerShell 5.1 redirected one log as UTF-16LE. The trace-check script was changed to detect its BOM so saved logs can be audited directly. The response perturbation checks diagnostics; it is not part of fault-coverage statistics.
 
@@ -86,13 +87,13 @@ The stand-alone `tb_faulty_memory_unit.sv` tests target and other cells, reverse
 
 Added `tb_step06_campaign.sv` and `run_step06.py`, reusing the v4 checker and v5 reference monitor. An experiment-only `experiment_clear` returns faulty RAM and monitor state to unknown between instances within one compiled snapshot; the controller and checker are also reset and starting state checked. Ordinary memory-reset semantics are unchanged, as is production MBIST RTL. Each simulator compiles once; the runner processes batches and bisects a failed batch down to one instance while preserving reasons and logs.
 
-The pilot produced 64 valid tool records. The full campaign produced 4,096 valid records for all 2,048 configurations, with zero field disagreements across tools. All records show activation, detection, first-error diagnostics, and 640 requests; none is invalid. `audit_step06.py` checked manifest uniqueness, counts, raw-log SHA-256, source fingerprints, and pairs. `F1023` replay matched the full results. Existing 28 directed cases were rerun after adding `experiment_clear`; both simulators passed. CSV, JSONL, logs, audit, and hashes are indexed in `results/step06/README.md`.
+The pilot produced 64 valid tool records. The full campaign produced 4,096 valid records for all 2,048 configurations, with zero field disagreements across tools. All records show activation, detection, first-error diagnostics, and 640 requests; none is invalid. `audit_step06.py` checked manifest uniqueness, counts, raw-log SHA-256, source fingerprints, and pairs. `F1023` replay matched the full results. The existing 28 directed cases were rerun to confirm that `experiment_clear` preserved v5 behavior; both simulators passed, and v5 source fingerprints were updated. CSV, JSONL, logs, audit, and hashes are indexed in `results/step06/README.md`.
 
 ## v7 · 09.22–09.23 — Fault coverage evaluation
 
 Added `evaluate_fault_coverage.py` to read the v6 frozen manifest, case results, 64 raw logs, source hashes, tool comparisons, and v1 reference sequence without running simulation or changing RTL. The denominator is 2,048 unique IDs. A detection requires both runs to be valid, activated, detected, and consistent. The script cross-checks log hashes, activation events, checker result, and first-error diagnostics against v6 audit outputs. Altering one CSV detection phase makes the script reject the record.
 
-Each type has 512/512 confirmed detections, giving 2,048/2,048 overall. Unactivated, activated but undetected, invalid/failed, and tool-disagreement counts are zero. First-detection phases: SA1→M1, SA0/Rising TF→M2, Falling TF→M3, constant across addresses and bits; first-error address always equals the injected address. The reference has 640 operations (320 reads, 320 writes); all 4,096 valid records have 640 requests and 960 cycles by the v6 count. v3's 961-cycle count includes the start-sampling edge. Per-type CSV, phase matrix, case evaluation, exceptions, efficiency JSON, and hashes are in `results/step07/README.md` and [v7 evaluation](07_fault_coverage_evaluation.md).
+Each type has 512/512 confirmed detections, giving 2,048/2,048 overall, or 100.00% for each type and the total. Unactivated, activated but undetected, invalid/failed, and tool-disagreement counts are zero. First-detection phases: SA1→M1, SA0/Rising TF→M2, Falling TF→M3, constant across addresses and bits; first-error address always equals the injected address. The reference has 640 operations (320 reads, 320 writes); all 4,096 valid records have 640 requests and 960 cycles by the v6 count. v3's 961-cycle count includes the start-sampling edge. Per-type CSV, phase matrix, case evaluation, exceptions, efficiency JSON, and hashes are in `results/step07/README.md` and [v7 evaluation](07_fault_coverage_evaluation.md).
 
 ## v8 · 09.24–09.25 — Board project and offline implementation
 
@@ -119,13 +120,35 @@ Saved photos of the Da Vinci device marking and connections, and LED states afte
 
 See the [engineering review](09_engineering_review.md) and [board acceptance](../results/step08/hardware_final/README.md).
 
-## 2026-09-27 — Final evidence index
+## 2026-09-27 — Board Evidence Archiving and Acceptance
 
 - Indexed 17 originals captured on 09.26: seven board photos, five interface screenshots, and five native ILA files. File content and names were preserved.
 - Photos show normal DONE/PASS, controlled DONE/FAIL, RESET clearing results, and normal restart. Hardware Manager shows XC7A35T Programmed.
 - Added `audit_final_hardware.py` to compare native ILA CSVs against all 640 v1 requests, one-cycle responses, count, DONE, error count, and first-error fields.
 - Three normal runs returned PASS; two perturbed runs returned FAIL with one error at M2/address 7/FF→FE. The second capture retains the previous result at sample 0 and clears count/diagnostics on the new start. All five runs finish at sample 961.
 - ILA UUID and 18 probe mappings match release LTX files. Six released files match implementation outputs. The combined four-build timing and hardware audit passed.
-- Updated project documentation, report indexes, and SHA-256 manifests.
+- Updated the README, implementation report, board procedure, result indexes, and SHA-256 manifests. v9 board acceptance is complete.
 
 [Final board evidence and audit](../results/step08/hardware_final/README.md)
+
+## v10 — ASIC controller architecture
+
+Added `mbist_asic_top.v` as a pass-through wrapper around the shared controller interface. The synthesis list contains only this wrapper and six shared RTL files. The existing v4/v5 checker, reference CSV, RAM, and fault models are reused. Icarus/XSim ran 32 scenarios across the original and ASIC tops; normal operation, response perturbation, four fault types, and boundary diagnostics agreed. The Vivado RTL project records the seven-file hierarchy and three original screenshots. Vivado 2018.3 does not support `open_elaborated_design` as the batch Tcl command used initially; `synth_design -rtl` succeeded. [Architecture and results](10_asic_architecture.md).
+
+## v11 — Nangate45 configuration and constraints
+
+The v10 synchronous read-response and reset protocol determines the 20 ns clock, 0/2 ns input/output delays, 0.1 ns input transition, and 4 fF load. All 12 non-clock input bits and 54 output bits are constrained; synchronous `rst_n` is not assigned a false path. Moving ORFS work to WSL ext4 resolved Windows-mount `touch -r` permissions. Collection checks use supported `llength` instead of `sizeof_collection`. Preliminary synthesis reports 0 structural problems; nine path groups and per-port constraints passed checks. [Constraint rationale and logs](11_asic_constraints.md).
+
+## v12 — Standard-cell synthesis and netlist verification
+
+Independent synthesis using the frozen v11 configuration produced a 264-cell netlist with 42 DFFs. Final Yosys structural checks report 0 problems. Three canonicalize messages about parameterized modules containing processes are resolved by subsequent `proc` and mapping. Zero-delay cell models come from the same Liberty; XSim's required `timescale` is added only to build copies. All 16 dual-simulator scenarios passed, with 640 requests and 960 checker-counted cycles per run. First-failure diagnostics and continued execution after errors match v10. [Synthesis and gate-level results](12_asic_synthesis.md).
+
+## v13 — Area and synthesis-stage STA
+
+SHA-256 checks identify the verified v12 netlist, v11 SDC, and Nangate45 typical library. Per-cell Yosys and Liberty areas agree with LEF dimensions. The 264 cells total 483.322 µm²: 189.924 µm² sequential and 293.398 µm² combinational. OpenROAD uses the `5K_hvratio_1_1` wire-load model and ideal clock; Setup WNS is +17.3953 ns under 20 ns constraints. The worst path runs from `rd_data[7]` to the first-failure actual-data register; its 2.3656 ns arrival includes 2.0000 ns of external input delay. Because `report_checks -unconstrained` text also lists constrained groups, checks combine JSON path groups with `check_setup`. Both diagnostics and unconstrained-group counts are 0. Eight original screenshots and numerical checks are archived for this version. [Evaluation report](13_synthesis_evaluation.md).
+
+## 2026-09-28 — Project Organization and Regression Checks
+
+Updated the ASIC file index and run instructions, then checked script paths, documentation links, and archived results. Simulation caches are under `.build/asic/`; results are stored by run ID. Commands are in the [reproduction guide](reproduce.md).
+
+XSim/Icarus reran the RTL regression, with all [32 scenarios passing](../results/asic/v10/20260928_source_check/report.json). [Area and timing-data checks](../results/asic/v13/20260928_offline_check/preparation_audit.json) on the original v13 reports matched their results. A fresh STA attempt stopped because Docker was unavailable in WSL; the [run log](../results/asic/v13/20260928_offline_check/sta_attempt.log) is retained. The timing recheck uses existing reports.

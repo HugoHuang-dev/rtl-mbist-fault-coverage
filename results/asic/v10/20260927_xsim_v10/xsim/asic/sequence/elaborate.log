@@ -1,0 +1,29 @@
+COMMAND: C:\Xilinx\Vivado\2018.3\bin\xelab.bat tb_step04_independent -s v10_snapshot
+EXIT_CODE: 0
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_step04_independent -s v10_snapshot 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.march_controller_default
+Compiling module work.address_generator
+Compiling module work.data_generator
+Compiling module work.memory_interface
+Compiling module work.response_checker
+Compiling module work.mbist_top
+Compiling module work.single_port_sync_ram_default
+Compiling module work.march_transaction_checker
+Compiling module work.tb_step04_independent
+Built simulation snapshot v10_snapshot
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep 27 18:03:02 2026...

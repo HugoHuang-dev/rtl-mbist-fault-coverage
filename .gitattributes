@@ -1,5 +1,6 @@
 # Keep exact bytes: source snapshots and raw logs are checked by SHA-256.
 * -text
+/asic/scripts/*.sh text eol=lf
 *.bit binary
 *.ila binary
 *.zip binary

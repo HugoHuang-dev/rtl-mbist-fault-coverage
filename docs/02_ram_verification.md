@@ -7,11 +7,11 @@ v2 · 09.04–09.06. The RAM passed an independent testbench, and Vivado synthes
 - RTL: [`single_port_sync_ram.v`](../rtl/single_port_sync_ram.v). Default configuration: 64×8, six-bit address, one 50 MHz clock. The `ram_style="block"` attribute requests Block RAM inference.
 - Testbench: [`tb_single_port_sync_ram.sv`](../tb/tb_single_port_sync_ram.sv). Its shadow RAM updates only from accepted writes; it does not inspect the DUT array or instantiate MBIST.
 - Primary simulator: Vivado XSim 2018.3. Cross-check: Icarus Verilog 11.0. Each compiles and runs independently from the same source.
-- RAM-only synthesis: Vivado 2018.3. The board package is marked `XC7A35TFGG484-2I`. The 7 Series target uses `xc7a35tfgg484-2` for device, package, and speed grade; `set_operating_conditions -grade Industrial` selects the industrial temperature grade after opening the synthesized design. AMD [UG899](https://docs.amd.com/api/khub/documents/kobHePaH8nZX6Ubq4SnCaQ/content) documents this separate setting.
+- RAM-only synthesis: Vivado 2018.3. The board package is marked `XC7A35TFGG484-2I`. The 7 Series target uses `xc7a35tfgg484-2` for device, package, and speed grade; `set_operating_conditions -grade Industrial` selects the industrial temperature grade after opening the synthesized design. Temperature grade determines subsequent operating-condition analysis; RAM mapping depends on the selected device, package, and speed grade. AMD [UG899](https://docs.amd.com/api/khub/documents/kobHePaH8nZX6Ubq4SnCaQ/content) documents this separate setting.
 
 ## Read-response timing
 
-Outside reset, `req_ready=1`. A request is accepted at rising edge `E_k` when `req_valid && req_ready`. A write updates memory at that edge without asserting `rd_valid`. A read updates `rd_data/rd_valid` by nonblocking assignment after `E_k`; a synchronous consumer samples the response at `E_{k+1}`. Write, idle, and reset cycles do not produce a new read response. `rd_data` retains its last value. Reset clears response validity but neither initializes nor erases RAM contents.
+Outside reset, `req_ready=1`; it is 0 during reset. A request is accepted at rising edge `E_k` when `req_valid && req_ready`. A write updates memory at that edge without asserting `rd_valid`. A read updates `rd_data/rd_valid` by nonblocking assignment after `E_k`; a synchronous consumer samples the response at `E_{k+1}`. Write, idle, and reset cycles do not produce a new read response. `rd_data` retains its last value. Reset clears response validity but neither initializes nor erases RAM contents.
 
 The testbench checks three observation points:
 

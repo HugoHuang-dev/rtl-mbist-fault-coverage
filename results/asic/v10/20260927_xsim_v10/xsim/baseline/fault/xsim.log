@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep 27 18:02:58 2026
+# Process ID: 31120
+# Current directory: ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault
+# Command line: xsim.exe -mode tcl -source {xsim.dir/v10_snapshot/xsim_script.tcl}
+# Log file: ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault/xsim.log
+# Journal file: ./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/v10_snapshot/xsim_script.tcl
+# xsim {v10_snapshot} -testplusarg "FAULT_TYPE=4" -testplusarg "FAULT_ADDR=0" -testplusarg "FAULT_BIT=0" -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+FAULT_ACTIVATE type=4 addr=0 bit=0 count=1
+FAULT_ACTIVATE type=4 addr=0 bit=0 count=2
+CHECKER_PASS run=1 requests=640 cycles=960 errors=2
+FAULT_CASE_RESULT type=4 addr=0 bit=0 activated=1 activations=2 detected=1 errors=2 first_phase=3 first_addr=0 first_expected=00 first_actual=01
+FAULT_MBIST_PASS type=4
+$finish called at time : 19300 ns : File "./results/asic/v10/20260927_xsim_v10/xsim/baseline/fault/tb_step05_mbist.sv" Line 132
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Sep 27 18:03:00 2026...

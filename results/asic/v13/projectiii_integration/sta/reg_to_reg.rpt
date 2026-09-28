@@ -1,0 +1,51 @@
+Startpoint: u_mbist.u_controller.phase[1]$_SDFFE_PP0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: u_mbist.u_address.addr[4]$_SDFFE_PN0P_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                    0.0000    0.0000    0.0000   clock core_clock (rise edge)
+                              0.0000    0.0000   clock network delay (ideal)
+                    0.0000    0.0000    0.0000 ^ u_mbist.u_controller.phase[1]$_SDFFE_PP0P_/CK (DFF_X1)
+     5   14.3495    0.0344    0.1131    0.1131 ^ u_mbist.u_controller.phase[1]$_SDFFE_PP0P_/Q (DFF_X1)
+                                                 u_mbist.phase[1] (net)
+     1    2.0100    0.0094    0.0385    0.1515 ^ _459_/CO (HA_X1)
+                                                 _022_ (net)
+     3   10.5132    0.0121    0.0193    0.1709 v _353_/ZN (INV_X1)
+                                                 _145_ (net)
+     8   28.3970    0.0557    0.0618    0.2326 ^ _354_/ZN (OAI22_X4)
+                                                 u_mbist.addr_down (net)
+     1    1.2844    0.0201    0.0526    0.2852 ^ _453_/S (HA_X1)
+                                                 _012_ (net)
+     4    8.7337    0.0221    0.0430    0.3282 ^ _372_/Z (BUF_X1)
+                                                 _163_ (net)
+     1    1.8681    0.0108    0.0177    0.3459 v _373_/ZN (AOI21_X1)
+                                                 _164_ (net)
+     1    2.6733    0.0225    0.0373    0.3831 ^ _374_/ZN (OAI21_X1)
+                                                 _165_ (net)
+     1    1.9739    0.0227    0.0497    0.4328 ^ _375_/Z (XOR2_X1)
+                                                 _166_ (net)
+     1    1.8612    0.0138    0.0169    0.4497 v _376_/ZN (NAND2_X1)
+                                                 _167_ (net)
+     1    1.4500    0.0396    0.0773    0.5270 ^ _380_/ZN (AOI221_X1)
+                                                 _056_ (net)
+                    0.0396    0.0000    0.5270 ^ u_mbist.u_address.addr[4]$_SDFFE_PN0P_/D (DFF_X1)
+                                        0.5270   data arrival time
+
+                    0.0000   20.0000   20.0000   clock core_clock (rise edge)
+                              0.0000   20.0000   clock network delay (ideal)
+                             -0.2000   19.8000   clock uncertainty
+                              0.0000   19.8000   clock reconvergence pessimism
+                                       19.8000 ^ u_mbist.u_address.addr[4]$_SDFFE_PN0P_/CK (DFF_X1)
+                             -0.0399   19.7601   library setup time
+                                       19.7601   data required time
+-------------------------------------------------------------------------------------
+                                       19.7601   data required time
+                                       -0.5270   data arrival time
+-------------------------------------------------------------------------------------
+                                       19.2331   slack (MET)
+
+

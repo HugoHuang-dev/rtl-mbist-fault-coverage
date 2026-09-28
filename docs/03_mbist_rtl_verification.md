@@ -13,7 +13,7 @@ v3 · 09.07–09.10. With the fault-free RAM attached, the controller completed 
 | `response_checker.v` | Compare only in the wait state when `rd_valid` is asserted; retain first-error fields and error count |
 | `mbist_top.v` | Connect the modules and expose RAM, BUSY/DONE/PASS/FAIL, and diagnostics |
 
-R1 informed the module split, while the handshake and timing follow this project's interface. A mismatch does not terminate the test. The controller permits at most one outstanding read: a request is accepted at `E_k`, RAM outputs update after that edge, and the controller compares at `E_{k+1}`. DONE follows comparison of the M5/address 63 read. `pass = done && !fail`, so an error on the last read cannot produce PASS.
+R1 informed the module split, while the handshake and timing follow this project's interface. Its early-exit error path was not adopted; a mismatch does not terminate the test. The controller permits at most one outstanding read: a request is accepted at `E_k`, RAM outputs update after that edge, and the controller compares at `E_{k+1}`. DONE follows comparison of the M5/address 63 read. `pass = done && !fail`, so an error on the last read cannot produce PASS.
 
 The v4 transaction checker infers phases from external requests and the frozen CSV without inspecting the controller FSM.
 

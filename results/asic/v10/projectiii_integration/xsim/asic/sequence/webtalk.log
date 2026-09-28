@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep 27 22:50:53 2026
+# Process ID: 55292
+# Current directory: C:/Users/32035/Desktop/FPGA/ProjectIII/.build/asic/v10/projectiii_integration/xsim/asic/sequence
+# Command line: wbtcv.exe -mode batch -source C:/Users/32035/Desktop/FPGA/ProjectIII/.build/asic/v10/projectiii_integration/xsim/asic/sequence/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/32035/Desktop/FPGA/ProjectIII/.build/asic/v10/projectiii_integration/xsim/asic/sequence/webtalk.log
+# Journal file: C:/Users/32035/Desktop/FPGA/ProjectIII/.build/asic/v10/projectiii_integration/xsim/asic/sequence\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/32035/Desktop/FPGA/ProjectIII/.build/asic/v10/projectiii_integration/xsim/asic/sequence/xsim.dir/v10_snapshot/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Sep 27 22:50:54 2026...

@@ -28,3 +28,5 @@ For every instance, both tools recorded activation, detection, first-error diagn
 ## Evidence and reproduction
 
 The [v6 evidence index](../results/step06/README.md) contains manifest files, CSV/JSONL results, tool-specific raw logs, build logs, source SHA-256 hashes, audit results, and commands. Run the full campaign with `py -3 scripts/run_step06.py --mode all`, replay one instance with `py -3 scripts/run_step06.py --mode replay --fault-id F1023 --tool both`, and audit with `py -3 scripts/audit_step06.py`. Vivado 2018.3 XSim and Icarus Verilog must be installed and callable. The [reproduction guide](reproduce.md) explains output directories and `MBIST_AUDIT_RUN_ID`; select the same run ID when auditing new results.
+
+Coverage statistics and the denominator definition are documented in the [v7 report](07_fault_coverage_evaluation.md).

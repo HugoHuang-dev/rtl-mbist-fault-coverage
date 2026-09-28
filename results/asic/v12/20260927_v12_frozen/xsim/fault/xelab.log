@@ -1,0 +1,52 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe tb_step05_mbist -s v12_snapshot 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.BUF_X1
+Compiling module work.OAI21_X1
+Compiling module work.NAND2_X1
+Compiling module work.AND2_X1
+Compiling module work.NOR4_X1
+Compiling module work.NOR4_X2
+Compiling module work.NAND4_X1
+Compiling module work.OR2_X1
+Compiling module work.INV_X2
+Compiling module work.INV_X1
+Compiling module work.BUF_X4
+Compiling module work.OAI22_X4
+Compiling module work.MUX2_X1
+Compiling module work.AND4_X1
+Compiling module work.XOR2_X1
+Compiling module work.NOR2_X1
+Compiling module work.NAND3_X1
+Compiling module work.NAND3_X4
+Compiling module work.BUF_X8
+Compiling module work.AND2_X2
+Compiling module work.CLKBUF_X2
+Compiling module work.CLKBUF_X1
+Compiling module work.AND3_X1
+Compiling module work.MUX2_X2
+Compiling module work.AOI21_X2
+Compiling module work.AOI21_X1
+Compiling module work.AOI221_X2
+Compiling module work.AOI221_X1
+Compiling module work.AOI22_X1
+Compiling module work.XNOR2_X1
+Compiling module work.AOI211_X2
+Compiling module work.NOR3_X1
+Compiling module work.AOI222_X1
+Compiling module work.FA_X1
+Compiling module work.HA_X1
+Compiling module work.DFF_X1
+Compiling module work.mbist_asic_top
+Compiling module work.fault_injector
+Compiling module work.faulty_memory
+Compiling module work.march_transaction_checker
+Compiling module work.fault_reference_monitor
+Compiling module work.tb_step05_mbist
+Built simulation snapshot v12_snapshot

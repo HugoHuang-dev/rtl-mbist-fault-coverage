@@ -1,0 +1,5 @@
+COMMAND: C:\iverilog\bin\vvp.exe suite.vvp +FAULT_TYPE=0 +FAULT_ADDR=7 +FAULT_BIT=2
+EXIT_CODE: 0
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+FAULT_CASE_RESULT type=0 addr=7 bit=2 activated=0 activations=0 detected=0 errors=0 first_phase=0 first_addr=0 first_expected=00 first_actual=00
+FAULT_MBIST_PASS type=0

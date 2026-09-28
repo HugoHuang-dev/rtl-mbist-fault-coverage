@@ -1,0 +1,6 @@
+OPENROAD: /OpenROAD-flow-scripts/tools/OpenROAD
+DESIGN_NAME: mbist_asic_top
+PLATFORM: nangate45
+VERILOG_FILES: /work/mbist/rtl/address_generator.v /work/mbist/rtl/data_generator.v /work/mbist/rtl/memory_interface.v /work/mbist/rtl/response_checker.v /work/mbist/rtl/march_controller.v /work/mbist/rtl/mbist_top.v /work/mbist/asic/rtl/mbist_asic_top.v
+SDC_FILE: /work/mbist/asic/config/constraint.sdc
+ABC_CLOCK_PERIOD_IN_PS: 20000

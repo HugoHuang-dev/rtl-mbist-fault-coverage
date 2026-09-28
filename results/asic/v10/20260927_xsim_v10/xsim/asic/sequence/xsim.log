@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# xsim v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep 27 18:03:03 2026
+# Process ID: 38508
+# Current directory: ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence
+# Command line: xsim.exe -mode tcl -source {xsim.dir/v10_snapshot/xsim_script.tcl}
+# Log file: ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence/xsim.log
+# Journal file: ./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/v10_snapshot/xsim_script.tcl
+# xsim {v10_snapshot} -autoloadwcfg -runall
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+run -all
+CHECKER_PASS run=1 requests=640 cycles=960 errors=0
+CHECKER_PASS run=2 requests=640 cycles=960 errors=1
+STEP04_PASS independent_checker_normal_and_diagnostic
+$finish called at time : 38580 ns : File "./results/asic/v10/20260927_xsim_v10/xsim/asic/sequence/tb_step04_independent.sv" Line 85
+exit
+INFO: [Common 17-206] Exiting xsim at Sun Sep 27 18:03:11 2026...

@@ -1,0 +1,32 @@
+Startpoint: u_mbist.u_controller.phase[0]$_SDFFE_PP0P_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: req_wdata[1] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock core_clock (rise edge)
+   0.0000    0.0000   clock network delay (ideal)
+   0.0000    0.0000 ^ u_mbist.u_controller.phase[0]$_SDFFE_PP0P_/CK (DFF_X1)
+   0.1113    0.1113 ^ u_mbist.u_controller.phase[0]$_SDFFE_PP0P_/Q (DFF_X1)
+   0.0492    0.1605 ^ _458_/CO (HA_X1)
+   0.0132    0.1737 v _343_/ZN (INV_X1)
+   0.0770    0.2507 ^ _451_/ZN (AOI21_X1)
+   0.0381    0.2888 ^ _470_/Z (BUF_X1)
+   0.0000    0.2888 ^ req_wdata[1] (out)
+             0.2888   data arrival time
+
+  20.0000   20.0000   clock core_clock (rise edge)
+   0.0000   20.0000   clock network delay (ideal)
+  -0.2000   19.8000   clock uncertainty
+   0.0000   19.8000   clock reconvergence pessimism
+  -2.0000   17.8000   output external delay
+            17.8000   data required time
+-------------------------------------------------------------
+            17.8000   data required time
+            -0.2888   data arrival time
+-------------------------------------------------------------
+            17.5112   slack (MET)
+
+

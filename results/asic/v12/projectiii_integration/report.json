@@ -1,0 +1,467 @@
+{
+  "status": "PASS",
+  "run_id": "projectiii_integration",
+  "structure": {
+    "total_cells": 264,
+    "registers": 42,
+    "cell_types": {
+      "AND2_X1": 24,
+      "AND2_X2": 10,
+      "AND3_X1": 2,
+      "AND4_X1": 1,
+      "AOI211_X2": 2,
+      "AOI21_X1": 10,
+      "AOI21_X2": 2,
+      "AOI221_X1": 6,
+      "AOI221_X2": 2,
+      "AOI222_X1": 1,
+      "AOI22_X1": 2,
+      "BUF_X1": 20,
+      "BUF_X4": 2,
+      "BUF_X8": 1,
+      "CLKBUF_X1": 1,
+      "CLKBUF_X2": 1,
+      "DFF_X1": 42,
+      "FA_X1": 1,
+      "HA_X1": 10,
+      "INV_X1": 21,
+      "INV_X2": 2,
+      "MUX2_X1": 23,
+      "MUX2_X2": 2,
+      "NAND2_X1": 17,
+      "NAND3_X1": 3,
+      "NAND3_X4": 1,
+      "NAND4_X1": 8,
+      "NOR2_X1": 14,
+      "NOR3_X1": 1,
+      "NOR4_X1": 1,
+      "NOR4_X2": 3,
+      "OAI21_X1": 10,
+      "OAI22_X4": 2,
+      "OR2_X1": 4,
+      "XNOR2_X1": 3,
+      "XOR2_X1": 9
+    },
+    "missing_models": [],
+    "synth_check": "0 problems",
+    "netlist_sha256": "2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9",
+    "model_sha256": "62f202ce18b251e751f4c9bfda125e7eef1ce45d96d74d5e3d5c81a06bf4bdfe"
+  },
+  "v11_input_comparison": {
+    "status": "PASS",
+    "v11_toolchain": "results/asic/v11/20260927_v11_frozen/toolchain.txt",
+    "matched_inputs": [
+      "NangateOpenCellLibrary_typical.lib",
+      "asic/config/config.mk",
+      "asic/config/constraint.sdc",
+      "rtl/address_generator.v",
+      "rtl/data_generator.v",
+      "rtl/memory_interface.v",
+      "rtl/response_checker.v",
+      "rtl/march_controller.v",
+      "rtl/mbist_top.v",
+      "asic/rtl/mbist_asic_top.v"
+    ],
+    "comparison": {
+      "NangateOpenCellLibrary_typical.lib": "exact",
+      "asic/config/config.mk": {
+        "v11_to_current": "exact_bytes",
+        "synthesis_to_current": "exact_bytes"
+      },
+      "asic/config/constraint.sdc": {
+        "v11_to_current": "exact_bytes",
+        "synthesis_to_current": "exact_bytes"
+      },
+      "rtl/address_generator.v": {
+        "v11_to_current": "same_body_header_or_line_endings_only",
+        "synthesis_to_current": "same_body_header_or_line_endings_only"
+      },
+      "rtl/data_generator.v": {
+        "v11_to_current": "same_body_header_or_line_endings_only",
+        "synthesis_to_current": "same_body_header_or_line_endings_only"
+      },
+      "rtl/memory_interface.v": {
+        "v11_to_current": "same_body_header_or_line_endings_only",
+        "synthesis_to_current": "same_body_header_or_line_endings_only"
+      },
+      "rtl/response_checker.v": {
+        "v11_to_current": "same_body_header_or_line_endings_only",
+        "synthesis_to_current": "same_body_header_or_line_endings_only"
+      },
+      "rtl/march_controller.v": {
+        "v11_to_current": "same_body_header_or_line_endings_only",
+        "synthesis_to_current": "same_body_header_or_line_endings_only"
+      },
+      "rtl/mbist_top.v": {
+        "v11_to_current": "same_body_header_or_line_endings_only",
+        "synthesis_to_current": "same_body_header_or_line_endings_only"
+      },
+      "asic/rtl/mbist_asic_top.v": {
+        "v11_to_current": "exact_bytes",
+        "synthesis_to_current": "exact_bytes"
+      }
+    },
+    "different_logic": []
+  },
+  "tools": [
+    "icarus",
+    "xsim"
+  ],
+  "results": {
+    "icarus/netlist/sequence/sequence": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ],
+        [
+          2,
+          640,
+          960,
+          1
+        ]
+      ]
+    },
+    "icarus/netlist/fault/none_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ]
+      ],
+      "fault": {
+        "type": "0",
+        "addr": "7",
+        "bit": "2",
+        "activated": "0",
+        "activations": "0",
+        "detected": "0",
+        "errors": "0",
+        "first_phase": "0",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "00"
+      }
+    },
+    "icarus/netlist/fault/sa0_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "icarus/netlist/fault/sa1_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          3
+        ]
+      ],
+      "fault": {
+        "type": "2",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "3",
+        "detected": "1",
+        "errors": "3",
+        "first_phase": "1",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "icarus/netlist/fault/rising_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "3",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "icarus/netlist/fault/falling_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "icarus/netlist/fault/sa0_a63_b7": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "63",
+        "bit": "7",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "63",
+        "first_expected": "ff",
+        "first_actual": "7f"
+      }
+    },
+    "icarus/netlist/fault/falling_a0_b0": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "0",
+        "bit": "0",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "01"
+      }
+    },
+    "xsim/netlist/sequence/sequence": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ],
+        [
+          2,
+          640,
+          960,
+          1
+        ]
+      ]
+    },
+    "xsim/netlist/fault/none_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          0
+        ]
+      ],
+      "fault": {
+        "type": "0",
+        "addr": "7",
+        "bit": "2",
+        "activated": "0",
+        "activations": "0",
+        "detected": "0",
+        "errors": "0",
+        "first_phase": "0",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "00"
+      }
+    },
+    "xsim/netlist/fault/sa0_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "xsim/netlist/fault/sa1_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          3
+        ]
+      ],
+      "fault": {
+        "type": "2",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "3",
+        "detected": "1",
+        "errors": "3",
+        "first_phase": "1",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "xsim/netlist/fault/rising_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "3",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "7",
+        "first_expected": "ff",
+        "first_actual": "fb"
+      }
+    },
+    "xsim/netlist/fault/falling_a7_b2": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "7",
+        "bit": "2",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "7",
+        "first_expected": "00",
+        "first_actual": "04"
+      }
+    },
+    "xsim/netlist/fault/sa0_a63_b7": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "1",
+        "addr": "63",
+        "bit": "7",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "2",
+        "first_addr": "63",
+        "first_expected": "ff",
+        "first_actual": "7f"
+      }
+    },
+    "xsim/netlist/fault/falling_a0_b0": {
+      "checker": [
+        [
+          1,
+          640,
+          960,
+          2
+        ]
+      ],
+      "fault": {
+        "type": "4",
+        "addr": "0",
+        "bit": "0",
+        "activated": "1",
+        "activations": "2",
+        "detected": "1",
+        "errors": "2",
+        "first_phase": "3",
+        "first_addr": "0",
+        "first_expected": "00",
+        "first_actual": "01"
+      }
+    }
+  },
+  "scenario_count": 16
+}

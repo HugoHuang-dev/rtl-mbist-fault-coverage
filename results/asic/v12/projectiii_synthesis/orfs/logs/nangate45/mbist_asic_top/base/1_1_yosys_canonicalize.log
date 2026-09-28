@@ -1,0 +1,38 @@
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Using ABC speed script.
+Extracting clock period from SDC file: /work/output/results/nangate45/mbist_asic_top/base/clock_period.txt
+Setting clock period to 20000
+1. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+2. Executing Liberty frontend: /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+3. Executing Verilog-2005 frontend: /work/mbist/rtl/address_generator.v
+4. Executing Verilog-2005 frontend: /work/mbist/rtl/data_generator.v
+5. Executing Verilog-2005 frontend: /work/mbist/rtl/memory_interface.v
+6. Executing Verilog-2005 frontend: /work/mbist/rtl/response_checker.v
+7. Executing Verilog-2005 frontend: /work/mbist/rtl/march_controller.v
+8. Executing Verilog-2005 frontend: /work/mbist/rtl/mbist_top.v
+9. Executing Verilog-2005 frontend: /work/mbist/asic/rtl/mbist_asic_top.v
+10. Executing Verilog-2005 frontend: /OpenROAD-flow-scripts/flow/platforms/nangate45/cells_clkgate.v
+11. Executing HIERARCHY pass (managing design hierarchy).
+12. Executing AST frontend in derive mode using pre-parsed AST for module `\mbist_asic_top'.
+12.1. Analyzing design hierarchy..
+12.2. Executing AST frontend in derive mode using pre-parsed AST for module `\mbist_top'.
+12.3. Analyzing design hierarchy..
+12.4. Executing AST frontend in derive mode using pre-parsed AST for module `\response_checker'.
+12.5. Executing AST frontend in derive mode using pre-parsed AST for module `\memory_interface'.
+12.6. Executing AST frontend in derive mode using pre-parsed AST for module `\data_generator'.
+12.7. Executing AST frontend in derive mode using pre-parsed AST for module `\address_generator'.
+12.8. Executing AST frontend in derive mode using pre-parsed AST for module `\march_controller'.
+12.9. Analyzing design hierarchy..
+12.10. Analyzing design hierarchy..
+13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Warning: Ignoring module $paramod\address_generator\ADDR_WIDTH=s32'00000000000000000000000000000110 because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod$3d4e26239e60f9f86a6c44d5fb5d895becc96e02\response_checker because it contains processes (run 'proc' command first).
+Warning: Ignoring module $paramod\march_controller\ADDR_WIDTH=s32'00000000000000000000000000000110 because it contains processes (run 'proc' command first).
+14. Executing RTLIL backend.
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: cd8fe38a5d, time: 0.19s, user: 0.08s, system: 0.04s, MEM: 43.50 MB peak
+Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 67% 4x read_liberty (0 sec), 21% 16x read_verilog (0 sec), ...
+Elapsed time: 0:00.20[h:]min:sec. CPU time: user 0.09 sys 0.05 (69%). Peak memory: 47100KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_1_yosys_canonicalize    .rtlil          0             45 995a1de3c9011ac01b03

@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Sep 27 19:26:28 2026
+# Process ID: 13888
+# Current directory: .
+# Command line: vivado.exe -mode batch -source asic/scripts/validate_v10_vivado_view.tcl -log results/asic/v10/vivado_view/elaboration.log -journal results/asic/v10/vivado_view/elaboration.jou
+# Log file: ./results/asic/v10/vivado_view/elaboration.log
+# Journal file: .\results/asic/v10/vivado_view/elaboration.jou
+#-----------------------------------------------------------
+source asic/scripts/validate_v10_vivado_view.tcl
+# set root [file normalize [file join [file dirname [info script]] .. ..]]
+# set xpr [file join $root asic vivado mbist_asic_v10 mbist_asic_v10.xpr]
+# open_project $xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is './asic/vivado/mbist_asic_v10'
+Scanning sources...
+Finished scanning sources
+# if {[get_property top [get_filesets sources_1]] ne "mbist_asic_top"} {
+#     error "Wrong V10 RTL top"
+# }
+# synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tfgg484-2
+Top: mbist_asic_top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 365.660 ; gain = 98.055
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mbist_asic_top' [./asic/rtl/mbist_asic_top.v:5]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mbist_top' [./rtl/mbist_top.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'march_controller' [./rtl/march_controller.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter ISSUE bound to: 3'b001 
+	Parameter WAIT_READ bound to: 3'b010 
+	Parameter WRITE_AFTER_READ bound to: 3'b011 
+	Parameter DONE bound to: 3'b100 
+	Parameter LAST_ADDR bound to: 6'b111111 
+INFO: [Synth 8-6155] done synthesizing module 'march_controller' (1#1) [./rtl/march_controller.v:3]
+INFO: [Synth 8-6157] synthesizing module 'address_generator' [./rtl/address_generator.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'address_generator' (2#1) [./rtl/address_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'data_generator' [./rtl/data_generator.v:3]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'data_generator' (3#1) [./rtl/data_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'memory_interface' [./rtl/memory_interface.v:5]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'memory_interface' (4#1) [./rtl/memory_interface.v:5]
+INFO: [Synth 8-6157] synthesizing module 'response_checker' [./rtl/response_checker.v:3]
+	Parameter ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'response_checker' (5#1) [./rtl/response_checker.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mbist_top' (6#1) [./rtl/mbist_top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mbist_asic_top' (7#1) [./asic/rtl/mbist_asic_top.v:5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 421.535 ; gain = 153.930
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 421.535 ; gain = 153.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 421.535 ; gain = 153.930
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tfgg484-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 741.457 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 741.457 ; gain = 473.852
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 741.457 ; gain = 473.852
+# puts "V10_VIEW_ELABORATION_PASS top=[get_property top [get_filesets sources_1]]"
+V10_VIEW_ELABORATION_PASS top=mbist_asic_top
+# close_design
+# close_project
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 19:26:39 2026...
