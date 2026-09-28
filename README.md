@@ -102,6 +102,14 @@ Three normal board runs returned PASS, and two runs with a controlled read-respo
 
 The v12 netlist passed normal and directed fault regressions using zero-delay standard-cell functional models, completing 640 requests per run. v13 area is the sum of Liberty cell instance areas. STA uses the `5K_hvratio_1_1` wire-load model and ideal clocks, providing a pre-placement estimate. Raw reports and path analysis are in the [v13 evaluation](docs/13_synthesis_evaluation.md).
 
+## Reflections
+
+One useful lesson came from the FPGA reset path. The first implementation met the clock constraint, but Vivado still reported a BRAM asynchronous-control warning. Revising the reset synchronization removed the warning; later CDC checks prompted a further refinement of the release path. This made reset behavior an explicit part of my verification work, alongside the March sequence and transaction counts.
+
+I kept the transaction checker independent of the controller FSM so that it could catch mistakes in the implementation without relying on the same state transitions. Testing it against deliberately modified RTL helped establish which errors were observable at the interface. I also chose to continue testing after a mismatch while retaining the first failure, allowing each run to check the complete sequence and still provide a useful diagnostic.
+
+For the ASIC extension, I preserved that interface and verified the mapped netlist before evaluating area and timing. The next improvement I would prioritize is broader testing of memory backpressure and response latency. I would then compare the current timing estimates with placement-and-routing results, using constraints derived from a specific SRAM interface.
+
 ## Reproduction and project index
 
 | Directory | Contents |
