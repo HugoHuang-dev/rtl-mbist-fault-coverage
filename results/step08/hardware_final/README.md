@@ -58,7 +58,7 @@ Photos, screenshots, and native ILA files retain their original content and file
 | [16_fault_ila_round2.ila](captures/16_fault_ila_round2.ila) | Native perturbed ILA round 2, no reset |
 | [17_fault_ila_board_leds.jpg](photos/17_fault_ila_board_leds.jpg) | Perturbed ILA build: DONE/FAIL |
 
-[`file_manifest.json`](file_manifest.json) records SHA-256 for the 17 original files; [`SHA256.txt`](SHA256.txt) also includes extracted data and reports. From the project root:
+[`file_manifest.json`](file_manifest.json) lists the 17 original files. From the project root:
 
 ```powershell
 py -3 scripts/audit_final_hardware.py --self-test

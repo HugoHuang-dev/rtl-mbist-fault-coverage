@@ -2,7 +2,6 @@
 
 import argparse
 import csv
-import hashlib
 import json
 import re
 import shutil
@@ -26,10 +25,6 @@ CASES = (
 )
 CHECKER = re.compile(r"CHECKER_PASS run=(\d+) requests=(\d+) cycles=(\d+) errors=(\d+)")
 FAULT = re.compile(r"^FAULT_CASE_RESULT .+$", re.MULTILINE)
-
-
-def digest(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def sources() -> list[Path]:
@@ -172,13 +167,6 @@ def main() -> None:
     run_dir.mkdir(parents=True, exist_ok=False)
     oracle_text = oracle()
     (run_dir / "oracle.hex").write_text(oracle_text, encoding="ascii")
-    used = rtl + [FILELIST, ROOT / "specs/march_c_minus_64x8.csv",
-                  TB / "tb_step04_independent.sv", TB / "tb_step05_mbist.sv",
-                  TB / "march_transaction_checker.sv", ROOT / "rtl/single_port_sync_ram.v",
-                  *(TB / name for name in ("fault_injector.sv", "faulty_memory.sv",
-                                            "fault_reference_monitor.sv")), Path(__file__)]
-    manifest = {path.relative_to(ROOT).as_posix(): digest(path) for path in used}
-    (run_dir / "sources_sha256.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     selected = ("icarus", "xsim") if args.tool == "both" else (args.tool,)
     executables = {}
     if "icarus" in selected:

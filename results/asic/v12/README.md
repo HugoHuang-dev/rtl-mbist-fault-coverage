@@ -10,7 +10,7 @@ Acceptance run: [`20260927_v12_frozen/`](20260927_v12_frozen/report.json). The [
 | [`cell_model.v`](20260927_v12_frozen/cell_model.v), [`cell_model_generation.log`](20260927_v12_frozen/cell_model_generation.log) | Zero-delay functional model generated from the same Liberty, with command log |
 | [`icarus/`](20260927_v12_frozen/icarus/sequence/sequence.log), [`xsim/`](20260927_v12_frozen/xsim/sequence/sequence.log) | Compilation, elaboration, and per-scenario raw checker logs, including simulation copies |
 | [`report.json`](20260927_v12_frozen/report.json), [`oracle.hex`](20260927_v12_frozen/oracle.hex) | Machine-readable results and transaction oracle from the frozen CSV |
-| [`toolchain.txt`](20260927_v12_frozen/toolchain.txt), [`sources_sha256.json`](20260927_v12_frozen/sources_sha256.json), [`input_snapshot/`](20260927_v12_frozen/input_snapshot/config.mk) | Versions and SHA-256 for tools, Liberty, RTL, configuration, netlist, models, and test inputs |
-| [`input_comparison.json`](20260927_v12_frozen/input_comparison.json), [`simulator_versions.txt`](20260927_v12_frozen/simulator_versions.txt) | V11/V12 frozen-input consistency and simulator versions |
+| [`toolchain.txt`](20260927_v12_frozen/toolchain.txt), [`input_snapshot/`](20260927_v12_frozen/input_snapshot/config.mk) | Versions and snapshots for tools, Liberty, RTL, configuration, netlist, models, and test inputs |
+| [`simulator_versions.txt`](20260927_v12_frozen/simulator_versions.txt) | Simulator versions |
 
 Reproduction commands, the timescale compatibility issue, structure-review criteria, and functional-verification scope are in [`docs/12_asic_synthesis.md`](../../../docs/12_asic_synthesis.md).

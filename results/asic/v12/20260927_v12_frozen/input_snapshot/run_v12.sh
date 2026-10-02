@@ -8,7 +8,7 @@ project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 orfs_root="${ORFS_ROOT:-$HOME/OpenROAD-flow-scripts}"
 work_host="$HOME/mbist-asic-work/v12/$run_id"
 out="$project_root/results/asic/v12/$run_id"
-image='openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f'
+image="${ORFS_IMAGE:?Set ORFS_IMAGE to the installed ORFS toolchain image}"
 liberty="$orfs_root/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib"
 test -f "$orfs_root/flow/Makefile"
 test -f "$liberty"
@@ -53,12 +53,6 @@ cp "$project_root/asic/scripts/run_v12.sh" "$project_root/asic/scripts/run_v12.p
   printf 'ORFS_IMAGE %s\n' "$image"
   printf 'SYNTH_COMMAND make DESIGN_CONFIG=/work/mbist/asic/config/config.mk WORK_HOME=/work/output synth\n'
   printf 'MODEL_COMMAND yosys -Q -T -p "read_liberty -ignore_miss_func /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib; write_verilog -noattr /work/output/nangate45_functional.v"\n'
-  sha256sum "$liberty" "$project_root/asic/config/config.mk" "$project_root/asic/config/constraint.sdc"
-  while IFS= read -r relative; do
-    [[ -z "$relative" || "$relative" == \#* ]] && continue
-    sha256sum "$project_root/$relative"
-  done < "$project_root/asic/rtl/asic_rtl.f"
-  sha256sum "$out/orfs/results/nangate45/mbist_asic_top/base/1_2_yosys.v" "$out/cell_model.v"
 } > "$out/toolchain.txt"
 printf 'V12 synthesis archived: %s\n' "$out"
 printf 'Next: py -3 asic/scripts/run_v12.py --run-id %s\n' "$run_id"

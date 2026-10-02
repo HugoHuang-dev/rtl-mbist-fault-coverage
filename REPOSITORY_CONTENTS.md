@@ -16,7 +16,7 @@ This repository contains the shared March C− controller, verification environm
 | [v10 architecture](results/asic/v10/README.md) · [v11 constraints](results/asic/v11/README.md) | RTL regression, Vivado structure views, synthesis configuration, and constraint checks |
 | [v12 netlist](results/asic/v12/README.md) · [v13 evaluation](results/asic/v13/README.md) | Verified standard-cell netlist, functional models, synthesis logs, Liberty/LEF inputs, area, and timing reports |
 | [releases/](releases/README.md) | Normal and perturbed BIT/LTX files, with and without ILA |
-| [evidence/](evidence/README.md) | Current source checksums and the two source archives required by historical experiment checks |
+| [evidence/](evidence/README.md) | The two source archives required by historical experiment checks |
 
 The shared controller entry is `rtl/mbist_top.v`. The default board build uses `fpga/board_top.v` with `INJECT_READ_FAULT=0`. The ASIC entry is `asic/rtl/mbist_asic_top.v`; `asic/rtl/asic_rtl.f` defines its synthesis boundary. SRAM is external to that boundary.
 
@@ -24,6 +24,6 @@ Board Vivado projects are generated locally under `.build/<run-id>/`. The mainta
 
 Build caches, checkpoints, simulator executables, session journals, and `toolchain.local.json` are excluded. Original experiment logs, reports, netlists, source snapshots, and native hardware captures are retained. The portable ILA directory includes its WDB/WCFG pair. Git preserves their bytes on checkout; maintained ASIC shell scripts use LF endings.
 
-Git records project revisions. The [current source manifest](evidence/current_source_sha256.txt) covers maintained RTL, constraints, and scripts; experiment-specific manifests identify their original inputs and evidence.
+Git records project revisions.
 
 Copy [toolchain.example.json](toolchain.example.json) to `toolchain.local.json` and adjust installation paths, or set environment variables. The [reproduction guide](docs/reproduce.md) gives commands for simulation, synthesis, and STA with new run IDs. Programming and capture instructions are in the [board procedure](docs/08_board_bringup_steps.md).

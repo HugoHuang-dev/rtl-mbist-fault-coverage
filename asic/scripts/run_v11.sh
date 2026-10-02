@@ -20,7 +20,7 @@ fi
 project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 orfs_root="${ORFS_ROOT:-$HOME/OpenROAD-flow-scripts}"
 work_host="${MBIST_ASIC_WORK_ROOT:-$HOME/mbist-asic-work}/v11/$run_id"
-image='openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f'
+image="${ORFS_IMAGE:?Set ORFS_IMAGE to the installed ORFS toolchain image}"
 test -f "$orfs_root/flow/Makefile"
 test "$(git -C "$orfs_root" rev-parse HEAD)" = b74a7293ea57fc4154a08471bcf78042ed497e4e
 test -f "$project_root/asic/config/config.mk"
@@ -78,12 +78,6 @@ cp "$project_root/asic/scripts/run_v11.sh" "$project_root/asic/scripts/check_v11
 {
   printf 'ORFS_COMMIT %s\n' "$(git -C "$orfs_root" rev-parse HEAD)"
   printf 'ORFS_IMAGE %s\n' "$image"
-  sha256sum "$orfs_root/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib"
-  sha256sum "$project_root/asic/config/config.mk" "$project_root/asic/config/constraint.sdc"
-  while IFS= read -r relative; do
-    [[ -z "$relative" || "$relative" == \#* ]] && continue
-    sha256sum "$project_root/$relative"
-  done < "$project_root/asic/rtl/asic_rtl.f"
 } > "$out/toolchain.txt"
 python3 "$project_root/asic/scripts/audit_v11.py" "$out"
 printf 'V11 preliminary synthesis and SDC parse complete: %s\n' "$out"

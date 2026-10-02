@@ -1,5 +1,4 @@
 """Create a portable ILA copy, preserving samples and the original capture."""
-import hashlib
 import json
 import re
 from zipfile import ZipFile, ZIP_DEFLATED
@@ -23,9 +22,7 @@ def main():
                     raise ValueError("Expected exactly one waveform database reference")
                 after = text.encode("utf-8")
             destination.writestr(name, after)
-            entries.append({"entry": name, "changed": before != after,
-                            "original_sha256": hashlib.sha256(before).hexdigest(),
-                            "portable_sha256": hashlib.sha256(after).hexdigest()})
+            entries.append({"entry": name, "changed": before != after})
     if [row["entry"] for row in entries if row["changed"]] != ["hw_ila_data_1.wcfg"]:
         raise ValueError("Unexpected capture changes")
     with ZipFile(target) as reopened:
@@ -37,8 +34,6 @@ def main():
         view = view.replace('path="hw_ila_data_1.wdb"', 'path="portable_capture.wdb"')
         (out / "portable_capture.wcfg").write_text(view, encoding="utf-8")
     report = {"original": original.relative_to(ROOT).as_posix(),
-              "original_sha256": hashlib.sha256(original.read_bytes()).hexdigest(),
-              "portable_sha256": hashlib.sha256(target.read_bytes()).hexdigest(),
               "entries": entries}
     (out / "conversion.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print("PORTABLE_ILA_COPY_PASS samples_unchanged=true original_unchanged=true")

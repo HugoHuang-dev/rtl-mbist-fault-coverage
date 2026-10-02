@@ -8,7 +8,7 @@ The fault set contains v5's SA0, SA1, Rising TF, and Falling TF models, across 6
 
 `scripts/run_step06.py` builds an Icarus image and an XSim snapshot once per tool, then normally runs 64 instances per simulator process. Before each instance, the testbench asserts `experiment_clear` to return faulty RAM cells, read responses, and reference-model state to their uninitialized state. It then resets the controller and checker and verifies that activation counts, responses, and DONE are clear. An ordinary `rst_n` reset continues to preserve memory contents. The production `rtl/` controller was not modified. The v4 checker verifies the complete March sequence; the v5 reference monitor verifies read values and activation events.
 
-The runner retains every simulator-process log. Each structured record carries `raw_log` and `raw_log_sha256` to locate and verify it. If a batch fails, times out, or lacks a required marker, the runner bisects it to an individual case and records invalid cases with reasons. `simulation_status` describes record validity; `outcome` distinguishes `activated_detected`, `activated_escape`, `not_activated`, and `invalid`. Detection without activation evidence is invalid. v7 defines the coverage denominator.
+The runner retains every simulator-process log. Each structured record carries `raw_log` to locate it. If a batch fails, times out, or lacks a required marker, the runner bisects it to an individual case and records invalid cases with reasons. `simulation_status` describes record validity; `outcome` distinguishes `activated_detected`, `activated_escape`, `not_activated`, and `invalid`. Detection without activation evidence is invalid. v7 defines the coverage denominator.
 
 ## Results
 
@@ -23,10 +23,10 @@ The runner retains every simulator-process log. Each structured record carries `
 | Requests per instance | 640 |
 | Cycles per instance | 960, using this testbench's DONE observation interval |
 
-For every instance, both tools recorded activation, detection, first-error diagnostics, all 640 requests, and normal termination. `scripts/audit_step06.py` independently checks the manifest, record count, tool pairs, log hashes, and raw markers. A single-case replay also matched the full-run result.
+For every instance, both tools recorded activation, detection, first-error diagnostics, all 640 requests, and normal termination. `scripts/audit_step06.py` independently checks the manifest, record count, tool pairs, and raw markers. A single-case replay also matched the full-run result.
 
 ## Evidence and reproduction
 
-The [v6 evidence index](../results/step06/README.md) contains manifest files, CSV/JSONL results, tool-specific raw logs, build logs, source SHA-256 hashes, audit results, and commands. Run the full campaign with `py -3 scripts/run_step06.py --mode all`, replay one instance with `py -3 scripts/run_step06.py --mode replay --fault-id F1023 --tool both`, and audit with `py -3 scripts/audit_step06.py`. Vivado 2018.3 XSim and Icarus Verilog must be installed and callable. The [reproduction guide](reproduce.md) explains output directories and `MBIST_AUDIT_RUN_ID`; select the same run ID when auditing new results.
+The [v6 evidence index](../results/step06/README.md) contains manifest files, CSV/JSONL results, tool-specific raw logs, build logs, audit results, and commands. Run the full campaign with `py -3 scripts/run_step06.py --mode all`, replay one instance with `py -3 scripts/run_step06.py --mode replay --fault-id F1023 --tool both`, and audit with `py -3 scripts/audit_step06.py`. Vivado 2018.3 XSim and Icarus Verilog must be installed and callable. The [reproduction guide](reproduce.md) explains output directories and `MBIST_AUDIT_RUN_ID`; select the same run ID when auditing new results.
 
 Coverage statistics and the denominator definition are documented in the [v7 report](07_fault_coverage_evaluation.md).

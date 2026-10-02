@@ -2,7 +2,7 @@
 
 This page archives the first normal capture. [Final board acceptance](../hardware_final/README.md) includes normal and perturbed runs, reset, and restart.
 
-v9 · 2026-09-26. Photos are ordered by capture sequence; `sha256_manifest.txt` lists file hashes. LED states and ILA analysis are described in the [board observation](hardware_observation.md).
+v9 · 2026-09-26. Photos are ordered by capture sequence. LED states and ILA analysis are described in the [board observation](hardware_observation.md).
 
 ## Board photos
 

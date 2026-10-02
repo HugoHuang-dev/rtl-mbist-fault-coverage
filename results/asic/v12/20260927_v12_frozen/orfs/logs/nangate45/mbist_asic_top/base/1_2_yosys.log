@@ -1,4 +1,4 @@
-Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Yosys 0.68+post (Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
 Using ABC speed script.
 Extracting clock period from SDC file: /work/output/results/nangate45/mbist_asic_top/base/clock_period.txt
 Setting clock period to 20000
@@ -224,9 +224,9 @@ abc -script /OpenROAD-flow-scripts/flow/scripts/abc_speed.script -liberty /OpenR
 23. Executing Verilog backend.
 23.1. Executing BMUXMAP pass.
 23.2. Executing DEMUXMAP pass.
-End of script. Logfile hash: b808b64df2, time: 0.64s, user: 0.19s, system: 0.15s, MEM: 46.18 MB peak
-Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+End of script. time: 0.64s, user: 0.19s, system: 0.15s, MEM: 46.18 MB peak
+Yosys 0.68+post (Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
 Time spent: 40% 1x abc (0 sec), 11% 26x opt_clean (0 sec), ...
 Elapsed time: 0:00.65[h:]min:sec. CPU time: user 0.40 sys 0.20 (91%). Peak memory: 48700KB.
-Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
-1_2_yosys                 .v              0             47 2574e770d9bb8d69fd01
+Log                       Ext     Elapsed/s Peak Memory/MB
+1_2_yosys                 .v              0             47

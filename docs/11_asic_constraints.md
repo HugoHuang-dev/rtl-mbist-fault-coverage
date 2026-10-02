@@ -8,7 +8,7 @@ Status: configuration and constraint checks passed. Building on the verified [V1
 
 `ABC_CLOCK_PERIOD_IN_PS=20000` is set explicitly to match the SDC's `20.0 ns`. The current ORFS Makefile extracts a clock-period value from SDC into this variable, whose unit name is ps. The explicit assignment removes ambiguity between `20` and `20000`. The acceptance log confirms Yosys/ABC used `-D 20000`.
 
-The platform uses `NangateOpenCellLibrary_typical.lib` from ORFS commit `b74a7293ea57fc4154a08471bcf78042ed497e4e`. Liberty nominal conditions are 25 °C, 1.10 V, and process 1.00; time and capacitance units are ns and fF. The pinned image from the reproduction guide is `openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f`. Library, RTL, and configuration fingerprints are in the [frozen toolchain record](../results/asic/v11/20260927_v11_frozen/toolchain.txt) and [automated audit](../results/asic/v11/20260927_v11_frozen/audit.json).
+The platform uses `NangateOpenCellLibrary_typical.lib` from ORFS commit `b74a7293ea57fc4154a08471bcf78042ed497e4e`. Liberty nominal conditions are 25 °C, 1.10 V, and process 1.00; time and capacitance units are ns and fF. The Docker image must be selected with `ORFS_IMAGE`, as described in the reproduction guide. Library, RTL, and configuration records are in the [frozen toolchain record](../results/asic/v11/20260927_v11_frozen/toolchain.txt) and [automated audit](../results/asic/v11/20260927_v11_frozen/audit.json).
 
 ## External interface timing assumptions
 
@@ -53,6 +53,6 @@ From the project root in Ubuntu WSL:
 bash asic/scripts/run_v11.sh NEW_RUN_ID
 ```
 
-The script defaults to ORFS at `~/OpenROAD-flow-scripts`; `ORFS_ROOT` can select another checkout of the same commit. The image digest is pinned in the script. Use a new run ID. It calls `make DESIGN_CONFIG=/work/mbist/asic/config/config.mk WORK_HOME=/work/output synth`, then runs the dedicated constraint check and automated audit. `results/asic/v11/NEW_RUN_ID/` contains toolchain fingerprints, input snapshots, ORFS logs/reports/preliminary netlist, constraint checks, and audit JSON.
+The script defaults to ORFS at `~/OpenROAD-flow-scripts`; `ORFS_ROOT` can select another checkout of the same commit. The script requires `ORFS_IMAGE` to select the Docker image. Use a new run ID. It calls `make DESIGN_CONFIG=/work/mbist/asic/config/config.mk WORK_HOME=/work/output synth`, then runs the dedicated constraint check and automated audit. `results/asic/v11/NEW_RUN_ID/` contains toolchain records, input snapshots, ORFS logs/reports/preliminary netlist, constraint checks, and audit JSON.
 
 Acceptance: ORFS identifies the controller and Nangate45 correctly; the 20 ns clock and interface constraints are read; synchronous reset remains timed; structure checks pass; principal path categories can be reported; and no ports are unintentionally unconstrained. V11 is complete. The numerical budgets require review once actual SRAM/SoC integration conditions are known. V12 verifies the synthesized netlist's function.

@@ -7,7 +7,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from run_v10 import (CASES, ROOT, TB, checked_result, digest, execute, oracle,
+from run_v10 import (CASES, ROOT, TB, checked_result, execute, oracle,
                      testbench, tool_path)
 
 
@@ -32,37 +32,8 @@ def structure(run_dir: Path, netlist: Path, model: Path) -> dict:
         raise RuntimeError(f"Cell inventory changed from V11 baseline: {cells}")
     result = {"total_cells": sum(cells.values()), "registers": cells["DFF_X1"],
               "cell_types": dict(sorted(cells.items())), "missing_models": missing,
-              "synth_check": "0 problems", "netlist_sha256": digest(netlist),
-              "model_sha256": digest(model)}
+              "synth_check": "0 problems"}
     (run_dir / "structure.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-    return result
-
-
-def compare_v11_inputs(run_dir: Path) -> dict:
-    base = ROOT / "results/asic/v11/20260927_v11_frozen/toolchain.txt"
-    def hashes(path: Path) -> dict[str, str]:
-        found = {}
-        for line in path.read_text(encoding="utf-8").splitlines():
-            match = re.fullmatch(r"([0-9a-f]{64})\s+(.+)", line)
-            if match:
-                name = match[2].replace("\\", "/")
-                key = name.split("mbist-fault-coverage/", 1)[-1]
-                if key == name:
-                    key = Path(name).name
-                found[key] = match[1]
-        return found
-    prior, current = hashes(base), hashes(run_dir / "toolchain.txt")
-    names = ["NangateOpenCellLibrary_typical.lib", "asic/config/config.mk",
-             "asic/config/constraint.sdc", *("rtl/" + name for name in
-             ("address_generator.v", "data_generator.v", "memory_interface.v",
-              "response_checker.v", "march_controller.v", "mbist_top.v")),
-             "asic/rtl/mbist_asic_top.v"]
-    different = [name for name in names if not prior.get(name) or prior[name] != current.get(name)]
-    result = {"v11_toolchain": str(base.relative_to(ROOT)).replace("\\", "/"),
-              "matched_inputs": names, "different": different, "status": "PASS" if not different else "FAIL"}
-    (run_dir / "input_comparison.json").write_text(json.dumps(result, indent=2), encoding="utf-8")
-    if different:
-        raise RuntimeError(f"V11/V12 frozen input mismatch: {different}")
     return result
 
 
@@ -121,8 +92,11 @@ def main() -> None:
     model = run_dir / "cell_model.v"
     if not netlist.is_file() or not model.is_file():
         parser.error("Run asic/scripts/run_v12.sh in WSL first")
+    from source_provenance import verify_source_body
+    for name in (ROOT / "asic/rtl/asic_rtl.f").read_text().splitlines():
+        if name.strip() and not name.lstrip().startswith("#"):
+            verify_source_body(name.strip())
     inventory = structure(run_dir, netlist, model)
-    comparison = compare_v11_inputs(run_dir)
     frozen = {}
     for tool, run in (("icarus", "20260927_icarus_v10"),
                       ("xsim", "20260927_xsim_v10")):
@@ -132,18 +106,6 @@ def main() -> None:
         frozen[tool] = report["results"]
     oracle_text = oracle()
     (run_dir / "oracle.hex").write_text(oracle_text, encoding="ascii")
-    used = [ROOT / "asic/rtl/asic_rtl.f", ROOT / "asic/config/config.mk",
-            ROOT / "asic/config/constraint.sdc", ROOT / "specs/march_c_minus_64x8.csv",
-            TB / "tb_step04_independent.sv", TB / "tb_step05_mbist.sv",
-            TB / "march_transaction_checker.sv", ROOT / "rtl/single_port_sync_ram.v",
-            *(TB / name for name in ("fault_injector.sv", "faulty_memory.sv",
-                                       "fault_reference_monitor.sv")),
-            ROOT / "asic/scripts/run_v12.py", ROOT / "asic/scripts/run_v12.sh",
-            ROOT / "asic/scripts/run_v10.py", netlist, model]
-    used.extend(ROOT / line.strip() for line in (ROOT / "asic/rtl/asic_rtl.f").read_text().splitlines()
-                if line.strip() and not line.lstrip().startswith("#"))
-    manifest = {str(path.relative_to(ROOT)).replace("\\", "/"): digest(path) for path in used}
-    (run_dir / "sources_sha256.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     selected = ("icarus", "xsim") if args.tool == "both" else (args.tool,)
     executables = {}
     if "icarus" in selected:
@@ -155,7 +117,6 @@ def main() -> None:
             executables[name] = tool_path(name, base + "\\" + name + ".bat")
     results = {}
     summary = {"status": "FAIL", "run_id": args.run_id, "structure": inventory,
-               "v11_input_comparison": comparison,
                "tools": list(selected), "results": results}
     try:
         for tool in selected:

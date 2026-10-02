@@ -9,14 +9,12 @@
 """Audit Step 6 artifacts without rerunning simulations or computing coverage."""
 
 import csv
-import hashlib
 import json
 import re
 from collections import Counter
 from pathlib import Path
 from project_config import audit_dir
-
-from frozen_source import verify_step6_source_fingerprints
+from frozen_source import verify_step6_source_bodies
 
 
 PROJECT = Path(__file__).resolve().parents[1]
@@ -52,11 +50,9 @@ def check_mode(mode: str, expected: int, manifest: dict[str, dict]) -> dict:
         if log_path not in logs:
             raw = log_path.read_bytes()
             logs[log_path] = {
-                "hash": hashlib.sha256(raw).hexdigest().upper(),
                 "content": raw.decode("utf-8", "replace"),
             }
         log = logs[log_path]
-        assert row["raw_log_sha256"] == log["hash"]
         numeric_id = int(row["fault_id"][1:])
         assert re.search(rf"^CASE_BEGIN id={numeric_id}\b", log["content"], re.MULTILINE)
         if row["simulation_status"] == "valid":
@@ -72,7 +68,7 @@ def check_mode(mode: str, expected: int, manifest: dict[str, dict]) -> dict:
 
 
 def main() -> None:
-    source_count = verify_step6_source_fingerprints(RESULTS / "source_sha256.txt")
+    verify_step6_source_bodies(RESULTS)
     items = rows(RESULTS / "fault_manifest.csv")
     assert len(items) == 2048
     manifest = {row["fault_id"]: row for row in items}
@@ -91,7 +87,6 @@ def main() -> None:
     pilot = rows(RESULTS / "pilot_manifest.csv")
     assert len(pilot) == 32 and len({row["fault_id"] for row in pilot}) == 32
     report = {
-        "source_fingerprints_checked": source_count,
         "manifest_instances": len(items),
         "pilot": check_mode("pilot", 32, manifest),
         "full": check_mode("full", 2048, manifest),

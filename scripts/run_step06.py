@@ -10,7 +10,6 @@
 
 import argparse
 import csv
-import hashlib
 import json
 import re
 import subprocess
@@ -46,7 +45,6 @@ FIELDS = (
     "activated", "activation_count", "detected", "error_count", "first_fail_addr",
     "first_fail_stage", "first_fail_expected", "first_fail_actual", "request_count",
     "cycles", "simulation_status", "outcome", "reason", "attempts", "raw_log",
-    "raw_log_sha256",
 )
 COMPARE_FIELDS = (
     "activated", "activation_count", "detected", "error_count", "first_fail_addr",
@@ -59,11 +57,7 @@ def relative(path: Path) -> str:
     return path.relative_to(PROJECT).as_posix()
 
 
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest().upper()
-
-
-def save_hashes() -> None:
+def save_snapshot() -> None:
     files = [PROJECT / "specs" / "march_c_minus_64x8.csv",
              RESULTS / "fault_manifest.csv", RESULTS / "campaign.hex",
              RESULTS / "pilot_manifest.csv", RESULTS / "oracle.hex",
@@ -76,8 +70,6 @@ def save_hashes() -> None:
     with ZipFile(RESULTS / "source_snapshot.zip", "w", ZIP_DEFLATED) as snapshot:
         for path in files:
             snapshot.write(path, relative(path))
-    (RESULTS / "source_sha256.txt").write_text(
-        "".join(f"{sha256(path)}  {relative(path)}\n" for path in files), encoding="utf-8")
 
 
 def run_command(args: list[str], cwd: Path, log: Path, timeout: float) -> tuple[int, str]:
@@ -146,8 +138,7 @@ def blank_record(manifest: dict, tool: str, attempts: int, log: Path) -> dict:
     row = {key: "" for key in FIELDS}
     row.update({key: manifest[key] for key in (
         "fault_id", "fault_type", "fault_name", "fault_addr", "fault_bit")})
-    row.update(tool=tool, attempts=attempts, raw_log=relative(log),
-               raw_log_sha256=sha256(log))
+    row.update(tool=tool, attempts=attempts, raw_log=relative(log))
     return row
 
 
@@ -346,7 +337,7 @@ def main() -> None:
                                            f"{row['fault_id']} {row['tool']}")
                 print(f"REPLAY_MATCH_FULL fault_id={rows[0]['fault_id']} tools={len(tools)}",
                       flush=True)
-    save_hashes()
+    save_snapshot()
     print("STEP06_CAMPAIGN_PASS", flush=True)
 
 

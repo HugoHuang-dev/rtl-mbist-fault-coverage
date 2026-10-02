@@ -8,7 +8,6 @@
 # -----------------------------------------------------------------------------
 """Run the board wrapper's short functional regression on XSim and Icarus."""
 
-import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -72,9 +71,6 @@ def main() -> None:
                 "busy_start": "ignored", "active_reset": "pass"}
     (OUT / "summary.json").write_text(json.dumps(results, indent=2) + "\n",
                                        encoding="utf-8")
-    (OUT / "source_sha256.txt").write_text("".join(
-        f"{hashlib.sha256(path.read_bytes()).hexdigest().upper()}  "
-        f"{path.relative_to(ROOT).as_posix()}\n" for path in SOURCES), encoding="utf-8")
     print("STEP08_BOARD_SIM_PASS tools=2 rounds_per_tool=6 requests_per_round=640")
 
 

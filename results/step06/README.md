@@ -20,12 +20,11 @@ py -3 scripts/run_step06.py --mode replay --fault-id F1023 --tool both
 | `pilot/`, `full/` | Per-instance CSV/JSONL and cross-tool `consistency.csv`, `summary.json` |
 | `raw/pilot/`, `raw/full/` | Raw simulator logs by tool and batch, referenced by each CSV row's `raw_log` |
 | `build/` | Icarus compilation and XSim compilation/elaboration logs |
-| `source_sha256.txt` | Hashes of specification, manifest, scripts, RTL, and verification sources |
-| `audit.json` | Manifest, structured-result, raw-log hash, and tool-pair audit |
+| `audit.json` | Manifest, structured-result, raw-log, and tool-pair audit |
 | `replay/F1023/`, `raw/replay/F1023/` | Example single-case replay results and raw logs |
 
-Each `raw_results.csv` or `raw_results.jsonl` row contains `fault_id`, `fault_type`, `fault_addr`, `fault_bit`, `activated`, `detected`, `first_fail_addr`, `first_fail_stage`, `request_count`, and `simulation_status`. Additional fields record activation/error counts, first-failure expected/actual values, cycles, outcome, reason, attempt count, and raw-log SHA-256. Records with `simulation_status=invalid` retain a `reason`. `not_activated` denotes a valid run without fault activation; `activated_escape` denotes a valid run in which the fault activated but was not detected. They are counted separately and remain in the target set. `detected_without_activation` is invalid.
+Each `raw_results.csv` or `raw_results.jsonl` row contains `fault_id`, `fault_type`, `fault_addr`, `fault_bit`, `activated`, `detected`, `first_fail_addr`, `first_fail_stage`, `request_count`, and `simulation_status`. Additional fields record activation/error counts, first-failure expected/actual values, cycles, outcome, reason, attempt count, and raw-log path. Records with `simulation_status=invalid` retain a `reason`. `not_activated` denotes a valid run without fault activation; `activated_escape` denotes a valid run in which the fault activated but was not detected. They are counted separately and remain in the target set. `detected_without_activation` is invalid.
 
-The pilot's 64 tool records and the full campaign's 4,096 records are valid. All 2,048 tool pairs agree field by field; every full record is `activated_detected` with 640 requests. Coverage is calculated separately in v7. Since one batch log covers several instances, several rows may cite the same log and hash. Use `CASE_BEGIN id=` and `CASE_RESULT id=` to locate an instance.
+The pilot's 64 tool records and the full campaign's 4,096 records are valid. All 2,048 tool pairs agree field by field; every full record is `activated_detected` with 640 requests. Coverage is calculated separately in v7. Since one batch log covers several instances, several rows may cite the same log. Use `CASE_BEGIN id=` and `CASE_RESULT id=` to locate an instance.
 
 New runs are written to `results/reruns/<run-id>/step06/`; this directory retains the original campaign. See the [reproduction guide](../../docs/reproduce.md) for tool configuration.

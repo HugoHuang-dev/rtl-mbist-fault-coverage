@@ -1,4 +1,4 @@
-Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Yosys 0.68+post (Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
 Using ABC speed script.
 Extracting clock period from SDC file: /work/output/results/nangate45/mbist_asic_top/base/clock_period.txt
 Setting clock period to 20000
@@ -30,9 +30,9 @@ Warning: Ignoring module $paramod$3d4e26239e60f9f86a6c44d5fb5d895becc96e02\respo
 Warning: Ignoring module $paramod\march_controller\ADDR_WIDTH=s32'00000000000000000000000000000110 because it contains processes (run 'proc' command first).
 14. Executing RTLIL backend.
 Warnings: 3 unique messages, 3 total
-End of script. Logfile hash: cd8fe38a5d, time: 0.17s, user: 0.07s, system: 0.03s, MEM: 43.64 MB peak
-Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+End of script. time: 0.17s, user: 0.07s, system: 0.03s, MEM: 43.64 MB peak
+Yosys 0.68+post (Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
 Time spent: 63% 4x read_liberty (0 sec), 25% 16x read_verilog (0 sec), ...
 Elapsed time: 0:00.18[h:]min:sec. CPU time: user 0.08 sys 0.04 (68%). Peak memory: 47264KB.
-Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
-1_1_yosys_canonicalize    .rtlil          0             46 5517a260f28f416c27cc
+Log                       Ext     Elapsed/s Peak Memory/MB
+1_1_yosys_canonicalize    .rtlil          0             46

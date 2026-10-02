@@ -1,6 +1,5 @@
 """Audit V11 ORFS source selection and effective post-synthesis SDC."""
 
-import hashlib
 import json
 import re
 import sys
@@ -17,10 +16,6 @@ PATH_SECTIONS = (
     "VALID_INPUT_PATH", "START_INPUT_PATH", "REGISTER_PATH",
     "REQUEST_OUTPUT_PATH", "STATUS_OUTPUT_PATH",
 )
-
-
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def require(condition: bool, message: str) -> None:
@@ -115,17 +110,10 @@ def main() -> None:
         require("Startpoint:" in content and "Endpoint:" in content and "slack (MET)" in content,
                 f"No constrained path in {name}")
 
-    snapshot = run / "input_snapshot"
-    hashes = {p.relative_to(run).as_posix(): sha256(p) for p in
-              (snapshot / "config.mk", snapshot / "constraint.sdc", snapshot / "asic_rtl.f",
-               snapshot / "run_v11.sh", snapshot / "check_v11.tcl", snapshot / "audit_v11.py",
-               stage / "1_synth.sdc", stage / "1_2_yosys.v",
-               reports / "synth_check.txt", run / "constraint_check.log")}
     result = {"status": "PASS", "top": "mbist_asic_top", "platform": "nangate45",
               "clock_ns": 20.0, "input_bits_constrained": 12,
               "output_bits_constrained": 54, "timing_exceptions": 0,
-              "audited_path_groups": list(PATH_SECTIONS), "files_sha256": hashes,
-              "rtl_sha256": {name: sha256(project / name) for name in EXPECTED_RTL}}
+              "audited_path_groups": list(PATH_SECTIONS)}
     (run / "audit.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print("V11_AUDIT_PASS 12 input bits, 54 output bits, 9 path sections")
 

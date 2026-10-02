@@ -120,7 +120,7 @@ For the ASIC extension, I preserved that interface and verified the mapped netli
 | `asic/` | ASIC top level, ORFS/SDC configuration, simulation and STA scripts, RTL viewing project |
 | `docs/` | Version reports, development log, and reproduction commands |
 | `results/` | Original logs, reports, and captures organized by version and run ID |
-| [evidence/](evidence/README.md) | Current source checksums and historical source required to reproduce experiments |
+| [evidence/](evidence/README.md) | Historical source required to reproduce experiments |
 
 The [repository contents](REPOSITORY_CONTENTS.md) describe the source, retained evidence, and generated files. Copy [toolchain.example.json](toolchain.example.json) to `toolchain.local.json` and adjust installation paths, or set the tool environment variables described in the [reproduction guide](docs/reproduce.md).
 

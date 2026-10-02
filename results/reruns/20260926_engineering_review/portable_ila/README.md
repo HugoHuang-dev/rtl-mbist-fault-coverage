@@ -2,7 +2,7 @@
 
 `march_c_minus_64x8_portable.ila` changes only the internal WCFG reference to the WDB filename in the same directory. The original remains under `results/step08/hardware/ila_capture/`.
 
-[`conversion.json`](conversion.json) records original/copy SHA-256 hashes and checks ZIP members. WDB, CSV, VCD, LTX, and DMP bytes are identical; only the WCFG path changes. Vivado 2018.3 imported the copy using `read_hw_ila_data`. The separate WDB/WCFG files also opened; see the [log](reopen.log).
+[`conversion.json`](conversion.json) checks ZIP members. WDB, CSV, VCD, LTX, and DMP bytes are identical; only the WCFG path changes. Vivado 2018.3 imported the copy using `read_hw_ila_data`. The separate WDB/WCFG files also opened; see the [log](reopen.log).
 
 An independent waveform viewer showed an object-name resolution message for `u_mbist/phase`; phase values were checked in native ILA/CSV. Neither original nor copy could re-export CSV through offline batch mode; the existing CSV was extracted directly from the archive and checked byte for byte.
 

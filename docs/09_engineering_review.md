@@ -50,7 +50,7 @@ Simulation and implementation use project-local `.build/<run-id>/`; new records 
 
 Original ILA files are unchanged. A [portable copy](../results/reruns/20260926_engineering_review/portable_ila/README.md) adjusts only the WCFG database reference; WDB, CSV, VCD, LTX, and DMP are byte-for-byte identical to the originals.
 
-Source headers retain author, project, file, and module. Unverifiable per-file Created/Revised and Editor fields were removed. Earlier source and documentation snapshots are retained separately; current source hashes are in the [SHA-256 manifest](../evidence/current_source_sha256.txt).
+Source headers retain author, project, file, and module. Unverifiable per-file Created/Revised and Editor fields were removed. Earlier source and documentation snapshots are retained separately.
 
 ## Board acceptance
 

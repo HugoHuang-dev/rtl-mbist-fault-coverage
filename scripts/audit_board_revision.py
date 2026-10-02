@@ -1,5 +1,4 @@
 """Audit routed builds, board regression, and matching archived hardware captures."""
-import hashlib
 import json
 import re
 from project_config import ROOT, result_dir
@@ -66,7 +65,6 @@ def main():
                 raise ValueError("MUT BRAM mapping differs")
         builds[variant] = {**timing(timing_path), **utilization(folder / (
             "utilization.rpt" if debug else "implemented_utilization.rpt")),
-            "bitstream_sha256": hashlib.sha256(bit.read_bytes()).hexdigest(),
             "cdc_debug_ip_warning_paths": len(problems)}
     hardware_status = "not_evaluated_for_this_build"
     hardware = None

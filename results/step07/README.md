@@ -6,7 +6,7 @@ v7 · 09.22–09.23. This directory contains coverage totals, the first-detectio
 py -3 scripts/evaluate_fault_coverage.py
 ```
 
-The script reads the frozen v6 manifest, full per-instance CSV, 64 batch logs, source hashes, audit records, and v1 reference sequence. It neither starts a simulator nor changes RTL.
+The script reads the frozen v6 manifest, full per-instance CSV, 64 batch logs, audit records, and v1 reference sequence. It neither starts a simulator nor changes RTL.
 
 | File | Contents |
 | --- | --- |
@@ -16,7 +16,6 @@ The script reads the frozen v6 manifest, full per-instance CSV, 64 batch logs, s
 | `exceptions.csv` | Instances without agreement on detection; header only in this run |
 | `efficiency.json` | Theoretical operations, measured requests/cycles, and count definition |
 | `summary.json` | Machine-readable audit and statistics |
-| `source_sha256.txt` | Hashes of the analysis script and key inputs |
 | `evaluation.log` | Final independent evaluation pass marker and totals |
 
 The [method and scope](../../docs/07_fault_coverage_evaluation.md) explain the result: 2,048 unique faults, 4,096 tool records, 2,048 confirmed detections, and zero unactivated, missed, invalid, or disagreement cases. Coverage is counted by unique `fault_id`.

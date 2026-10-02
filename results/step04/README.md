@@ -15,6 +15,5 @@ The script uses XSim/Vivado 2018.3 and Icarus. It generates single-change RTL va
 | `{engine}_{variant}_compile.log` | Independent compile log per case |
 | `xsim_{variant}_elaborate.log` | XSim elaboration log |
 | `{engine}_{variant}_run.log` | Checker log: two `CHECKER_PASS` markers for baseline, matching `CHECKER_FAIL code` and fatal for a faulty variant |
-| `source_sha256.txt` | Fingerprints of the frozen CSV, generated oracle, checker, script, and production RTL |
 
 Acceptance requires 14 report rows: two `baseline` rows with `dut_outcome=accepted`, 12 variant rows with `dut_outcome=rejected`, and `regression_status=PASS` throughout. A mismatch writes `regression_status=FAIL` and returns nonzero. `sim_exit` retains the simulator exit code; case classification comes from logged error codes and pass markers. Each reported category corresponds to the log's `CHECKER_FAIL` number.

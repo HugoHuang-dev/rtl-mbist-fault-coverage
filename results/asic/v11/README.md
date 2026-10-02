@@ -9,7 +9,7 @@ Acceptance run: [`20260927_v11_frozen/`](20260927_v11_frozen/audit.json). The [a
 | [`constraint_check.log`](20260927_v11_frozen/constraint_check.log) | OpenROAD `check_setup`, port counts, and nine path groups |
 | [`1_synth.sdc`](20260927_v11_frozen/orfs/results/nangate45/mbist_asic_top/base/1_synth.sdc) | Constraints expanded by the tool for individual ports |
 | [`synth_check.txt`](20260927_v11_frozen/orfs/reports/nangate45/mbist_asic_top/base/synth_check.txt) | Yosys structural check: 0 problems |
-| [`toolchain.txt`](20260927_v11_frozen/toolchain.txt) | ORFS commit, image digest, and Liberty/RTL/configuration SHA-256 |
+| [`toolchain.txt`](20260927_v11_frozen/toolchain.txt) | ORFS commit and tool environment |
 | [`input_snapshot/`](20260927_v11_frozen/input_snapshot/config.mk) | Run-specific configuration, SDC, file list, and three check-script snapshots |
 
 Original failure logs retain the [Windows-mount timestamp error](20260927_v11_prelim/synth_validation.log) and [unsupported collection command](20260927_v11_ext4/synth_validation.log). `20260927_v11_frozen` is the historical acceptance record. The [ProjectIII configuration and constraint run](projectiii_integration/audit.json) validates the relocated seven-file list, synthesis, and SDC entry points.

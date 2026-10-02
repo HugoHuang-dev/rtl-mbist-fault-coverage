@@ -29,7 +29,7 @@ py -3 scripts/run_step06.py --mode replay --fault-id F0123
 
 Outputs are written under `results/reruns/local_check_01/step02` through `step07`, with builds under `.build/local_check_01/`. `--mode all` runs the pilot and full campaign after one compilation per simulator. Each single-case replay compiles independently and compares against the full campaign with the same ID.
 
-Without `MBIST_AUDIT_RUN_ID`, v6/v7 audits still read the original `results/step06`. Historical source fingerprints are checked against the original snapshot; current RTL/testbench bodies are checked separately for consistency. New experiments record their own source snapshots and exact byte hashes.
+Without `MBIST_AUDIT_RUN_ID`, v6/v7 audits still read the original `results/step06`. Current RTL/testbench bodies are checked against the original snapshot for consistency. New experiments record their own source snapshots.
 
 ## Board simulation and builds
 
@@ -68,7 +68,7 @@ The hardware audit checks five ILA captures, 640 requests per run, read response
 
 ## ASIC tool environment and entry points
 
-v10–v13 use Python 3.10+, Vivado/XSim 2018.3, and Icarus 11.0 (devel). Synthesis and STA run through Docker in WSL2 / Ubuntu 24.04. ORFS is pinned to commit `b74a7293ea57fc4154a08471bcf78042ed497e4e`, and the image is `openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f`. Yosys reports `0.68+post`; OpenROAD's version string is `unknown`, so the image digest identifies the build. Liberty is Nangate45 typical / 25 °C / 1.10 V.
+v10–v13 use Python 3.10+, Vivado/XSim 2018.3, and Icarus 11.0 (devel). Synthesis and STA run through Docker in WSL2 / Ubuntu 24.04. ORFS is pinned to commit `b74a7293ea57fc4154a08471bcf78042ed497e4e`, and the Docker image must be selected through `ORFS_IMAGE`. Yosys reports `0.68+post`; OpenROAD's version string is `unknown`. Liberty is Nangate45 typical / 25 °C / 1.10 V.
 
 In WSL, `ORFS_ROOT` defaults to `~/OpenROAD-flow-scripts` and must select a checkout of that commit. The environment uses the prebuilt image for Yosys/OpenROAD. `MBIST_ASIC_WORK_ROOT` defaults to `~/mbist-asic-work`, providing an ext4 build directory for v11/v12 to avoid timestamp permissions on Windows mounts. Run all commands below from the project root with new run IDs.
 
@@ -88,6 +88,7 @@ Ubuntu WSL:
 
 ```bash
 export ORFS_ROOT="$HOME/OpenROAD-flow-scripts"
+export ORFS_IMAGE="<local ORFS image name or ID>"
 bash asic/scripts/run_v11.sh constraints_check_01
 bash asic/scripts/run_v12.sh synthesis_check_01
 bash asic/scripts/run_v13.sh sta_check_01

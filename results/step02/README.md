@@ -52,9 +52,3 @@ Pop-Location
 ```
 
 Acceptance requires exit code 0, exactly one `RAM_TB_PASS` and no `FATAL` in each run log, and `primitive=RAMB18E1 DOA_REG=0` in synthesis. `$finish` alone only indicates that simulation ended.
-
-## Source SHA-256 at acceptance
-
-- `rtl/single_port_sync_ram.v`: `B60138AA0EB8A06110E1824E7C48B3828DCAF1815CB5A86E3B70DB6ED362E4A4`
-- `tb/tb_single_port_sync_ram.sv`: `6A21A26113E4B193E1010D0360D953EA7F3401685F038F25C6CC01C3D10346D8`
-- `fpga/check_ram_inference.tcl`: `13DBEF3543288B7FE1CB1160789FD117FC542991333BE8BAE265A71A3BD145EB`

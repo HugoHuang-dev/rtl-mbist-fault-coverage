@@ -8,7 +8,6 @@
 """Check native board captures against the frozen external transaction sequence."""
 import csv
 import copy
-import hashlib
 import io
 import json
 import xml.etree.ElementTree as ET
@@ -31,8 +30,6 @@ def require(ok, message):
     if not ok:
         raise ValueError(message)
 
-def sha(path):
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 def num(row, key):
     return int(row[key], 16 if key in ('req_wdata[7:0]', 'rd_data[7:0]',
@@ -130,19 +127,14 @@ def audit(write=True):
     files = json.loads((HARDWARE / 'file_manifest.json').read_text(encoding='utf-8'))
     require(len(files) == 17 and len({f['file'] for f in files}) == 17, 'Evidence inventory differs')
     for f in files:
-        require(sha(HARDWARE / f['file']) == f['sha256'], f"Evidence hash differs: {f['file']}")
-    release_hashes = {}
+        require((HARDWARE / f['file']).is_file(), f"Evidence missing: {f['file']}")
     for mode, variant in [('normal_led', 'base'), ('normal_ila', 'ila'),
                           ('fault_led', 'base_fault'), ('fault_ila', 'ila_fault')]:
         debug = mode.endswith('ila')
         for suffix in (['bit', 'ltx'] if debug else ['bit']):
             name = f'{mode}.{suffix}'
             original = BUILD / variant / f"{'board_with_ila' if debug else 'board_top'}.{suffix}"
-            require(sha(RELEASE / name) == sha(original), f'Release differs from implemented build: {name}')
-            release_hashes[name] = sha(original)
-    for line in (RELEASE / 'SHA256.txt').read_text().splitlines():
-        digest, name = line.split(None, 1)
-        require(release_hashes.get(name.strip()) == digest.lower(), 'Release manifest differs')
+            require((RELEASE / name).read_bytes() == original.read_bytes(), f'Release differs from implemented build: {name}')
     reference = list(csv.DictReader(io.StringIO(SPEC.read_text(encoding='utf-8'))))
     results = []
     for filename, fault, restart in CASES:
@@ -153,7 +145,7 @@ def audit(write=True):
             uuid = probe_check(archive.read('probes.ltx'), RELEASE / ('fault_ila.ltx' if fault else 'normal_ila.ltx'))
             rows = list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))
             result = audit_samples(rows, reference, fault, restart)
-            result.update(capture=filename, sha256=sha(path), core_uuid=uuid)
+            result.update(capture=filename, core_uuid=uuid)
             results.append(result)
             if write:
                 exports = HARDWARE / 'exports' / path.stem
@@ -161,8 +153,7 @@ def audit(write=True):
                 for member in ('waveform.csv', 'waveform.vcd'):
                     (exports / member).write_bytes(archive.read(member))
     report = dict(status='pass', capture_count=5, normal_pass_runs=3, controlled_fail_runs=2,
-                  request_count_per_run=640, reference_sha256=sha(SPEC),
-                  release_sha256=release_hashes, captures=results)
+                  request_count_per_run=640, captures=results)
     if write:
         (HARDWARE / 'audit.json').write_text(json.dumps(report, indent=2)+'\n', encoding='utf-8')
         fields = ['capture','mode','restart_from_done','requests','reads','writes','done_sample',

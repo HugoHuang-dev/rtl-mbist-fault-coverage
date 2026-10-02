@@ -1,11 +1,6 @@
 {
   "status": "PASS",
   "basis": "V12 accepted gate-level netlist; V11 SDC; Nangate45 typical Liberty",
-  "frozen_input_sha256": {
-    "1_2_yosys.v": "2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9",
-    "constraint.sdc": "25d0335d58513c8277ee01128db96be66b87af1cec928a72effc459a48bbc494",
-    "NangateOpenCellLibrary_typical.lib": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1"
-  },
   "area": {
     "cell_count": 264,
     "sequential_count": 42,
@@ -45,18 +40,5 @@
   "check_setup_diagnostics": 0,
   "unconstrained_path_group_count": 0,
   "interconnect_model": "Nangate45 Liberty 5K_hvratio_1_1, top mode; pre-placement",
-  "sta_reports_sha256": {
-    "setup_wns.rpt": "24c272a1ffad0da5e21b4dfb0f292ac3fa14106e43979b19c0ac605a24489984",
-    "setup_top10.rpt": "7475984ef9e00b82135263d23138382cf6e253d1864d223562bed1f6cdfa0ce7",
-    "setup_top10.json": "50eabf3ff3dc3ca06df07dc26c52c7e500d6c3cefc8c22819e2100f7800f106e",
-    "reg_to_reg.rpt": "82c6cf7e132f70dce66db3d2ac9fb9a2bc81969fcb283ee2d61029ce1895cde3",
-    "input_to_reg.rpt": "bf6f05a1f76f728bc365c6b28b377db9a356e84733a3b3dd41abdb75651e7041",
-    "reg_to_output.rpt": "284a2a1524849f326f22cb583e3679a40b4ab87041c224d1af8b695250244edb",
-    "input_to_output.rpt": "f5a05b71b72236dfdea1b7eefa9c4944bfc9eb457ec43e2f4c03f52f84f4050d",
-    "unconstrained_paths.rpt": "88561e2b5e3ba533fcca1f0bf02506089351eb165f1f0b6fc4e19290cfe8f875",
-    "unconstrained_paths.json": "eeba280313236e357f725b9ba6137e7069f1f67ff56a594440544b76aa2a14e7",
-    "check_setup.rpt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-  },
-  "screenshots_sha256": {},
   "screenshot_status": "not_part_of_this_rerun"
 }

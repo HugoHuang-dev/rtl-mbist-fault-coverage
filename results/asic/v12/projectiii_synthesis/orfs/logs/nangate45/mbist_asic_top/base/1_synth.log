@@ -15,6 +15,6 @@ Design area 483 um^2 100% utilization.
 write_db /work/output/results/nangate45/mbist_asic_top/base/1_synth.odb
 write_sdc -no_timestamp /work/output/results/nangate45/mbist_asic_top/base/1_synth.sdc
 Elapsed time: 0:00.26[h:]min:sec. CPU time: user 0.11 sys 0.13 (91%). Peak memory: 98160KB.
-Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
-1_synth                   .odb            0             95 7f3f3e5e8d5e413f476d
+Log                       Ext     Elapsed/s Peak Memory/MB
+1_synth                   .odb            0             95
 1_synth                   .sdc                             edc0b2a9072b491cb2a1

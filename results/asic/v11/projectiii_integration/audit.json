@@ -16,26 +16,5 @@
     "REGISTER_PATH",
     "REQUEST_OUTPUT_PATH",
     "STATUS_OUTPUT_PATH"
-  ],
-  "files_sha256": {
-    "input_snapshot/config.mk": "9fd54dddac2180e42d57b91ae061c4fa86f6f9c7b94306099759b3f468ab7926",
-    "input_snapshot/constraint.sdc": "25d0335d58513c8277ee01128db96be66b87af1cec928a72effc459a48bbc494",
-    "input_snapshot/asic_rtl.f": "5bcde12f4502baaee2f9d635418f1bc3a8f3a232cba94f404c32d51449a66c5c",
-    "input_snapshot/run_v11.sh": "ec2e6d2399436390d9e2121c506384eb160d09c91f628b8c1b1ccd13a9ac7b16",
-    "input_snapshot/check_v11.tcl": "f02f8fb43ae94a2a99b5b2b107e5eb263d149849d264ab0b03349c5f0586a5f3",
-    "input_snapshot/audit_v11.py": "568cf7a1b84b55436023a6b0ce068c89615fab2442020127083d4bce429fe589",
-    "orfs/results/nangate45/mbist_asic_top/base/1_synth.sdc": "1c16366a2d7895f6907a2a0fa56aa029b5c3d57821511e034fea6fdd5f05c683",
-    "orfs/results/nangate45/mbist_asic_top/base/1_2_yosys.v": "2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9",
-    "orfs/reports/nangate45/mbist_asic_top/base/synth_check.txt": "af4e02f57dc43715669c413900dd883bc56bd0a80fbcc08870c2e3b9d33a46f1",
-    "constraint_check.log": "4341a80e51b9fee003d3ff7dd6b2b4b79327b226b90bd0c0ee6480ac8a5f3f62"
-  },
-  "rtl_sha256": {
-    "rtl/address_generator.v": "44a02b22308cf178ece50e065b47ea757415bc62c1f33fda8165d2cb1b2b84cc",
-    "rtl/data_generator.v": "4b7ee05cd6269c53e3348ab642ca0ae4460753fe3c1a1cc569ab8a1e6924ef0e",
-    "rtl/memory_interface.v": "d770ca91812ad53b162c7b4fb4951b20ff93e96d175f7301042e68b4cddbee17",
-    "rtl/response_checker.v": "34f91786f85ee93daa8d2cea2e5a25d4c9e4e274ca961b8b1630dd549f437852",
-    "rtl/march_controller.v": "b267edc84e7568d2eb7109924728536aca8885709f614a8f0fba3558581dee7e",
-    "rtl/mbist_top.v": "5c90803cbe200469f4705fa59d34799fa9b250d64773dd035c6bc21f6d255d8c",
-    "asic/rtl/mbist_asic_top.v": "b98589cd8f816a9f16ae6bf6522889226f1eafaddb6cce7377bae15f0de0d70b"
-  }
+  ]
 }

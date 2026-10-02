@@ -43,26 +43,7 @@
       "XOR2_X1": 9
     },
     "missing_models": [],
-    "synth_check": "0 problems",
-    "netlist_sha256": "2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9",
-    "model_sha256": "62f202ce18b251e751f4c9bfda125e7eef1ce45d96d74d5e3d5c81a06bf4bdfe"
-  },
-  "v11_input_comparison": {
-    "v11_toolchain": "results/asic/v11/20260927_v11_frozen/toolchain.txt",
-    "matched_inputs": [
-      "NangateOpenCellLibrary_typical.lib",
-      "asic/config/config.mk",
-      "asic/config/constraint.sdc",
-      "rtl/address_generator.v",
-      "rtl/data_generator.v",
-      "rtl/memory_interface.v",
-      "rtl/response_checker.v",
-      "rtl/march_controller.v",
-      "rtl/mbist_top.v",
-      "asic/rtl/mbist_asic_top.v"
-    ],
-    "different": [],
-    "status": "PASS"
+    "synth_check": "0 problems"
   },
   "tools": [
     "icarus",

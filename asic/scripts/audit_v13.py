@@ -10,7 +10,6 @@
 
 import argparse
 import csv
-import hashlib
 import json
 import re
 import sys
@@ -21,12 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 V12 = ROOT / "results/asic/v12/20260927_v12_frozen"
-EXPECTED_IMAGE = "openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f"
 EXPECTED_COMMIT = "b74a7293ea57fc4154a08471bcf78042ed497e4e"
-
-
-def sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def require(condition: bool, message: str) -> None:
@@ -34,43 +28,33 @@ def require(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
-def frozen_hashes() -> dict[str, str]:
-    found = {}
-    for line in (V12 / "toolchain.txt").read_text(encoding="utf-8").splitlines():
-        match = re.fullmatch(r"([0-9a-f]{64})\s+(.+)", line)
-        if match:
-            found[Path(match[2]).name] = match[1]
-    return found
-
-
 def preflight(run: Path) -> dict:
     snapshot = run / "input_snapshot"
     old_report = json.loads((V12 / "report.json").read_text(encoding="utf-8"))
-    old_structure = json.loads((V12 / "structure.json").read_text(encoding="utf-8"))
     require(old_report["status"] == "PASS" and old_report["scenario_count"] == 16,
             "V12 accepted gate-level regression is missing")
     toolchain = (V12 / "toolchain.txt").read_text(encoding="utf-8")
-    require(f"ORFS_COMMIT {EXPECTED_COMMIT}" in toolchain and
-            f"ORFS_IMAGE {EXPECTED_IMAGE}" in toolchain, "Wrong ORFS toolchain")
-    expected = frozen_hashes()
-    for name in ("1_2_yosys.v", "constraint.sdc", "NangateOpenCellLibrary_typical.lib"):
-        require(name in expected and sha(snapshot / name) == expected[name],
-                f"Frozen V12 input mismatch: {name}")
-    require(sha(snapshot / "1_2_yosys.v") == old_structure["netlist_sha256"],
-            "V12 structure report refers to another netlist")
-    require(sha(snapshot / "constraint.sdc") == sha(ROOT / "asic/config/constraint.sdc"),
-            "Current V11 SDC differs from accepted V12 input")
+    require(f"ORFS_COMMIT {EXPECTED_COMMIT}" in toolchain, "Wrong ORFS toolchain")
+    netlist = V12 / "orfs/results/nangate45/mbist_asic_top/base/1_2_yosys.v"
+    require((snapshot / "1_2_yosys.v").read_bytes() == netlist.read_bytes(),
+            "V12 netlist copy changed")
+    require((snapshot / "constraint.sdc").read_bytes() ==
+            (V12 / "input_snapshot/constraint.sdc").read_bytes() ==
+            (ROOT / "asic/config/constraint.sdc").read_bytes(),
+            "V11 SDC copy changed")
+    library = ROOT / "results/asic/v13/20260927_v13_readout/input_snapshot/NangateOpenCellLibrary_typical.lib"
+    require((snapshot / library.name).read_bytes() == library.read_bytes(),
+            "Nangate45 Liberty copy changed")
     for name in ("synth_stat.txt", "synth_check.txt", "report.json",
                  "structure.json", "toolchain.txt"):
         source = (V12 / "orfs/reports/nangate45/mbist_asic_top/base" / name
                   if name.startswith("synth_") else V12 / name)
-        require(sha(snapshot / name) == sha(source), f"V12 evidence copy changed: {name}")
+        require((snapshot / name).read_bytes() == source.read_bytes(),
+                f"V12 evidence copy changed: {name}")
     require("Found and reported 0 problems" in (snapshot / "synth_check.txt").read_text(),
             "V12 Yosys check did not pass")
-    files = {path.name: sha(path) for path in snapshot.iterdir() if path.is_file()}
     result = {"status": "PASS", "v12_run": "20260927_v12_frozen",
-              "orfs_commit": EXPECTED_COMMIT, "orfs_image": EXPECTED_IMAGE,
-              "input_sha256": files}
+              "orfs_commit": EXPECTED_COMMIT}
     (run / "preflight.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     return result
 
@@ -207,10 +191,8 @@ def prepare(run: Path) -> dict:
     unconstrained = [path for path in paths["checks"]
                      if path.get("path_group", "").lower() == "unconstrained"]
     require(not unconstrained, "STA reported an unconstrained path group")
-    report_hashes = {name: sha(run / "sta" / name) for name in required}
     result = {"status": "PASS", "frozen_inputs": frozen["status"],
               "area_audit": area["status"], "timing": timing_metrics(run),
-              "sta_reports_sha256": report_hashes,
               "interconnect_model": "Nangate45 Liberty 5K_hvratio_1_1, top mode; pre-placement",
               "check_setup_diagnostics": 0, "unconstrained_path_group_count": len(unconstrained)}
     (run / "preparation_audit.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

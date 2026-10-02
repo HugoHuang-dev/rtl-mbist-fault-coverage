@@ -4,15 +4,6 @@
   "normal_pass_runs": 3,
   "controlled_fail_runs": 2,
   "request_count_per_run": 640,
-  "reference_sha256": "c23b52f26ccad42ca485af0fb77da0f170c0f8467bf9b80712ecd4be1a659b31",
-  "release_sha256": {
-    "normal_led.bit": "d238a145e158c19f5223666da9cbbe738bcbedc67e8d4bec248c90e7c40e04f0",
-    "normal_ila.bit": "340bef37c1727c545f7cb0faec84b24eb90de968ca46da57f63f7b9161ff62eb",
-    "normal_ila.ltx": "c91967198271e7b5db0a0b1a29246a47a2c10ad3311eceaa88fed2d3a8d4a849",
-    "fault_led.bit": "2d3dd4f2e066041ab4a3e1f51cf46f631d9083a1aa674173fe6e8e2a246e9863",
-    "fault_ila.bit": "b5c1fdc62ead97312b88efbc59c6cc391e910c272170dc99d5c70a38c07b9f07",
-    "fault_ila.ltx": "c91967198271e7b5db0a0b1a29246a47a2c10ad3311eceaa88fed2d3a8d4a849"
-  },
   "captures": [
     {
       "status": "pass",
@@ -38,7 +29,6 @@
       "final_error_count": 0,
       "mismatches": [],
       "capture": "08_normal_ila_round1.ila",
-      "sha256": "7488ba60ed992348b0af774efe7c5ee13d93d2a8b0c1899a9decba5ed7d741a6",
       "core_uuid": "c30a833047ba52038dbc7e3e3214d902"
     },
     {
@@ -65,7 +55,6 @@
       "final_error_count": 0,
       "mismatches": [],
       "capture": "10_normal_ila_round2.ila",
-      "sha256": "b153e41e7265932356ca8f9c0d9f6a231ebefa67a21b36f2e3c0ef1a559dabeb",
       "core_uuid": "c30a833047ba52038dbc7e3e3214d902"
     },
     {
@@ -92,7 +81,6 @@
       "final_error_count": 0,
       "mismatches": [],
       "capture": "11_normal_ila_after_reset.ila",
-      "sha256": "bbe957a67181a868dd206405812245d52755c5affcddbbf997f1cf5d74f7581b",
       "core_uuid": "c30a833047ba52038dbc7e3e3214d902"
     },
     {
@@ -128,7 +116,6 @@
         }
       ],
       "capture": "15_fault_ila_round1.ila",
-      "sha256": "600b5674ab0b8d6e3f270f4619391e0b132ec55a15ef50a1bf8372023690f31c",
       "core_uuid": "c30a833047ba52038dbc7e3e3214d902"
     },
     {
@@ -164,7 +151,6 @@
         }
       ],
       "capture": "16_fault_ila_round2.ila",
-      "sha256": "3d3ede6486858e79e3b4347651abd6a82843005fabe8a021d6873372e6b9b6f7",
       "core_uuid": "c30a833047ba52038dbc7e3e3214d902"
     }
   ]

@@ -8,7 +8,6 @@
 # -----------------------------------------------------------------------------
 """Audit offline Step 8 build artifacts without claiming hardware validation."""
 
-import hashlib
 import json
 import re
 from pathlib import Path
@@ -99,16 +98,6 @@ def main() -> None:
     }
     (OUT / "summary.json").write_text(json.dumps(summary, indent=2) + "\n",
                                        encoding="utf-8")
-    # Historical reports stay associated with their historical source snapshot.
-    # Current board revisions are audited by audit_board_revision.py.
-    from zipfile import ZipFile
-    original_manifest = ROOT / "evidence/step08_source_sha256_before_headers.txt"
-    with ZipFile(ROOT / "evidence/frozen_source_before_headers.zip") as archive:
-        for line in original_manifest.read_text(encoding="utf-8").splitlines():
-            expected, name = line.split("  ", 1)
-            if name in archive.namelist():
-                require(hashlib.sha256(archive.read(name)).hexdigest().upper() == expected,
-                        f"historical source differs: {name}")
     print(f"STEP08_OFFLINE_AUDIT_PASS controller_lut={summary['controller_only']['lut']} "
           f"base_lut={summary['base_complete_system']['lut']} "
           f"base_wns={base_wns:.3f} ila_wns={ila_wns:.3f} hardware=not_evaluated")

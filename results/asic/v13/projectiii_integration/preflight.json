@@ -1,20 +1,5 @@
 {
   "status": "PASS",
   "v12_run": "20260927_v12_frozen",
-  "orfs_commit": "b74a7293ea57fc4154a08471bcf78042ed497e4e",
-  "orfs_image": "openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f",
-  "input_sha256": {
-    "1_2_yosys.v": "2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9",
-    "audit_v13.py": "88e8d66365512a7e275f9e568c8a68931f4c97f02c0ec76cb4e7e1e1edf43091",
-    "constraint.sdc": "25d0335d58513c8277ee01128db96be66b87af1cec928a72effc459a48bbc494",
-    "NangateOpenCellLibrary.macro.mod.lef": "a43aea339f12a57a63497783e508ba16f3da2dc056d3247dec7d99707c2dedef",
-    "NangateOpenCellLibrary_typical.lib": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1",
-    "report.json": "bae23b29a35d850b85f0c64974951be4ef887a62bb6eb04f681e5828a4ebd9c4",
-    "report_v13.tcl": "57f9ea826661aed29e8edcc3d705a39eeebe525b1053f93d9d74756acb5c53e6",
-    "run_v13.sh": "d4631a3a25ec05cb6465941b9362dca898da964eebdc6f8ed940bb8952b6e3b3",
-    "structure.json": "159a4d548d3ab0224530d18cd846dc6eeb1ccd4f18602452c3418e9807e5e397",
-    "synth_check.txt": "af4e02f57dc43715669c413900dd883bc56bd0a80fbcc08870c2e3b9d33a46f1",
-    "synth_stat.txt": "8e77d5b1cf47d5f929560b89b7806ccbb4207b8ccd88ae8f90598369cdc86e2e",
-    "toolchain.txt": "1c3b2770f0f61fc012a2d2890fb8761c68ba16fd1002659de8cbbdbb7413c3cf"
-  }
+  "orfs_commit": "b74a7293ea57fc4154a08471bcf78042ed497e4e"
 }

@@ -3,7 +3,6 @@
   "icarus_report": "20260927_icarus_v10/report.json",
   "xsim_report": "20260927_xsim_v10/report.json",
   "matching_scenarios": 16,
-  "matching_source_manifests": true,
   "cases": [
     "baseline/sequence/sequence",
     "baseline/fault/none_a7_b2",

@@ -2,103 +2,86 @@
   {
     "source_name": "01_hardware_manager_programmed.png",
     "file": "screenshots/01_hardware_manager_programmed.png",
-    "sha256": "f87e11aafb8921cd56b1a1fae8a1d546ba62293b1f9aea9623e4c24a378da28c",
     "bytes": 42612
   },
   {
     "source_name": "02_board_connections.jpg",
     "file": "photos/02_board_connections.jpg",
-    "sha256": "bbdf7020ed3ee2e71c17a8c6523322188971953b03b97a808d71e258b1ec55bb",
     "bytes": 6210735
   },
   {
     "source_name": "03_normal_after_reset.jpg",
     "file": "photos/03_normal_after_reset.jpg",
-    "sha256": "1180be325bb1f5e2b511c1dee65df5f1d3868f143faee87ae3ef3e011dd5a42f",
     "bytes": 6913614
   },
   {
     "source_name": "04_normal_first_pass.jpg",
     "file": "photos/04_normal_first_pass.jpg",
-    "sha256": "42bde1ac384c3a804fc823cc8d08d0d8a7113b1f566696d05d29014f5404219d",
     "bytes": 3162212
   },
   {
     "source_name": "05_normal_reset_clears_result.jpg",
     "file": "photos/05_normal_reset_clears_result.jpg",
-    "sha256": "7ac8d625d385564e297edf1898b0071064e1cb8caca83a31ed81a369b8dab47c",
     "bytes": 6336105
   },
   {
     "source_name": "06_normal_pass_after_reset.jpg",
     "file": "photos/06_normal_pass_after_reset.jpg",
-    "sha256": "ee05ceeef5ece64cd6199e8c98b24b075645cc41af842ca6a75deff15d252535",
     "bytes": 6489053
   },
   {
     "source_name": "07_normal_ila_round1_done.png",
     "file": "screenshots/07_normal_ila_round1_done.png",
-    "sha256": "7f8cdfd5ab2a8b480c959381b21ef5e3800ef00441f0175608a2298aaf95d99f",
     "bytes": 84672
   },
   {
     "source_name": "08_normal_ila_round1.ila",
     "file": "captures/08_normal_ila_round1.ila",
-    "sha256": "7488ba60ed992348b0af774efe7c5ee13d93d2a8b0c1899a9decba5ed7d741a6",
     "bytes": 29735
   },
   {
     "source_name": "09_normal_ila_round2_done.png",
     "file": "screenshots/09_normal_ila_round2_done.png",
-    "sha256": "67f5afd28df9102ce18a4f70486078528cc9025ac1033889036689f249b962d7",
     "bytes": 85228
   },
   {
     "source_name": "10_normal_ila_round2.ila",
     "file": "captures/10_normal_ila_round2.ila",
-    "sha256": "b153e41e7265932356ca8f9c0d9f6a231ebefa67a21b36f2e3c0ef1a559dabeb",
     "bytes": 30054
   },
   {
     "source_name": "11_normal_ila_after_reset.ila",
     "file": "captures/11_normal_ila_after_reset.ila",
-    "sha256": "bbe957a67181a868dd206405812245d52755c5affcddbbf997f1cf5d74f7581b",
     "bytes": 29734
   },
   {
     "source_name": "12_fault_led_done_fail.jpg",
     "file": "photos/12_fault_led_done_fail.jpg",
-    "sha256": "32c238cb6dd17582347a7343363b74eabc6212abf37e9c05a6946571d76b9689",
     "bytes": 6434706
   },
   {
     "source_name": "13_fault_ila_first_error.png",
     "file": "screenshots/13_fault_ila_first_error.png",
-    "sha256": "58e38c6b6c863953164081c8e598032d3beaeb1cf042b181307754d602174a72",
     "bytes": 71201
   },
   {
     "source_name": "14_fault_ila_done_640.png",
     "file": "screenshots/14_fault_ila_done_640.png",
-    "sha256": "b2a83a56e2f547a8ca32b46ac9bb60fb702c9f76db00d70b6078be36b740f5ce",
     "bytes": 82562
   },
   {
     "source_name": "15_fault_ila_round1.ila",
     "file": "captures/15_fault_ila_round1.ila",
-    "sha256": "600b5674ab0b8d6e3f270f4619391e0b132ec55a15ef50a1bf8372023690f31c",
     "bytes": 30051
   },
   {
     "source_name": "16_fault_ila_round2.ila",
     "file": "captures/16_fault_ila_round2.ila",
-    "sha256": "3d3ede6486858e79e3b4347651abd6a82843005fabe8a021d6873372e6b9b6f7",
     "bytes": 30149
   },
   {
     "source_name": "17_fault_ila_board_leds.jpg",
     "file": "photos/17_fault_ila_board_leds.jpg",
-    "sha256": "c99fa3d06674d11c37c2b7156f311afb65bbed4e93baf3217ffc6ea25fe18d73",
     "bytes": 7179502
   }
 ]

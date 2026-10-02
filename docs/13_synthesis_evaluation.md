@@ -4,7 +4,7 @@ Status: PASS; the Phase I synthesis-evaluation baseline is frozen. Area and timi
 
 ## V13.1 Frozen evaluation inputs
 
-The netlist is `1_2_yosys.v` from V12 run `20260927_v12_frozen`, SHA-256 `2ee12dd24b206979675817e3d92ddb97ead0b489f32ffcbacda1627bce2656c9`. Constraints are V11's `constraint.sdc`, SHA-256 `25d0335d58513c8277ee01128db96be66b87af1cec928a72effc459a48bbc494`. Nangate45 typical Liberty has SHA-256 `8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1`. The [preflight audit](../results/asic/v13/20260927_v13_readout/preflight.json) checks these fingerprints, the V12 16/16 gate-level results, and the structure report. ORFS commit is `b74a7293ea57fc4154a08471bcf78042ed497e4e`; the container is pinned to `openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f`. OpenROAD `-version` reports `unknown` in this image, so the image digest and ORFS commit identify the tool environment.
+The netlist is `1_2_yosys.v` from V12 run `20260927_v12_frozen`. Constraints are V11's `constraint.sdc`. The Liberty library is Nangate45 typical. The [preflight audit](../results/asic/v13/20260927_v13_readout/preflight.json) checks the V12 16/16 gate-level results and the structure report. ORFS commit is `b74a7293ea57fc4154a08471bcf78042ed497e4e`; the container is selected through required `ORFS_IMAGE`. OpenROAD `-version` reports `unknown` in this image.
 
 The target clock is 20 ns, with setup/hold uncertainty of 0.2/0.1 ns. Non-clock input min/max delays are 0/2 ns and input transition is 0.1 ns. Output min/max delays are 0/2 ns, with 4 fF load. Active-low `rst_n` is synchronous and remains timed. Nangate45 conditions are typical, 25 °C, 1.10 V, process 1.00; time and load units are ns and fF. SRAM is external to the controller, and interface budgets must be confirmed during actual SRAM/SoC integration.
 
@@ -51,7 +51,7 @@ The [register-to-register report](../results/asic/v13/20260927_v13_readout/sta/r
 
 ## V13.4 Checks, debugging, and conclusions
 
-[`audit_v13.py`](../asic/scripts/audit_v13.py) checks frozen inputs, per-cell area, the relationship between WNS and critical-path times, and constraint-check results. The original experiment's [`final_audit.json`](../results/asic/v13/20260927_v13_readout/final_audit.json) retains its numerical and screenshot checks. `04_sta_audit_snapshot.png` shows the report-generation interface; conclusions use original timing reports and numerical reconciliation.
+[`audit_v13.py`](../asic/scripts/audit_v13.py) checks frozen inputs, per-cell area, the relationship between WNS and critical-path times, and constraint-check results. The original experiment's [`final_audit.json`](../results/asic/v13/20260927_v13_readout/final_audit.json) retains its numerical and screenshot checks. Conclusions use original timing reports and numerical reconciliation.
 
 During implementation, `report_checks -unconstrained` text was found to include constrained paths. The check therefore combines JSON path groups with an empty `check_setup.rpt`. Area checks also reconcile individual Liberty areas with LEF dimensions. Investigation and rechecks are recorded in [`DEVLOG.md`](DEVLOG.md).
 

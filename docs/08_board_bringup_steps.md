@@ -48,7 +48,7 @@ This build changes one read response in wrapper logic to exercise FAIL and diagn
 
 ## Archive and audit
 
-Save native `.ila` data, completion and first-error screenshots, and photos of the corresponding LED states. Filenames and checksums for the archived set are in the [evidence index](../results/step08/hardware_final/README.md).
+Save native `.ila` data, completion and first-error screenshots, and photos of the corresponding LED states. Filenames for the archived set are in the [evidence index](../results/step08/hardware_final/README.md).
 
 From the project root:
 

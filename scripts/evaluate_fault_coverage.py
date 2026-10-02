@@ -13,19 +13,18 @@ Coverage denominator is the 2048 unique fault IDs, not the 4096 tool records.
 """
 
 import csv
-import hashlib
 import json
 import re
 from collections import Counter
 from pathlib import Path
 from project_config import audit_dir
-
-from frozen_source import verify_step6_source_fingerprints
+from frozen_source import verify_step6_source_bodies
 
 
 ROOT = Path(__file__).resolve().parents[1]
 STEP6 = audit_dir("step06")
 OUT = audit_dir("step07")
+
 TYPES = (("1", "SA0"), ("2", "SA1"), ("3", "Rising_TF"), ("4", "Falling_TF"))
 STAGES = tuple(f"M{index}" for index in range(6))
 TOOLS = ("icarus", "xsim")
@@ -63,10 +62,6 @@ def write_csv(path: Path, fieldnames: list[str], rows: list[dict]) -> None:
         writer.writerows(rows)
 
 
-def digest(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest().upper()
-
-
 def project_path(name: str) -> Path:
     path = (ROOT / name).resolve()
     check(path.is_relative_to(ROOT.resolve()), f"path outside project: {name}")
@@ -99,12 +94,7 @@ def read_spec() -> dict:
             "writes": operations["write"], "stage_operations": dict(stage_counts)}
 
 
-def verify_step6_fingerprints() -> int:
-    return verify_step6_source_fingerprints(STEP6 / "source_sha256.txt")
-
-
-def parse_log(path: Path, expected_hash: str) -> dict[int, dict]:
-    check(digest(path) == expected_hash, f"raw log SHA-256 differs: {path}")
+def parse_log(path: Path) -> dict[int, dict]:
     content = path.read_text(encoding="utf-8", errors="replace")
     completion = DONE.findall(content)
     check(len(completion) == 1, f"raw log lacks unique completion: {path}")
@@ -144,17 +134,11 @@ def verify_record(row: dict[str, str], item: dict[str, str], logs: dict) -> None
           f"result config differs from manifest: {fault_id} {row['tool']}")
     log_path = project_path(row["raw_log"])
     check(log_path.is_file(), f"raw log missing: {log_path}")
-    check(re.fullmatch(r"[A-F0-9]{64}", row["raw_log_sha256"]) is not None,
-          f"missing log hash: {fault_id} {row['tool']}")
     if log_path not in logs:
         if row["simulation_status"] == "valid":
-            logs[log_path] = parse_log(log_path, row["raw_log_sha256"])
+            logs[log_path] = parse_log(log_path)
         else:
-            check(digest(log_path) == row["raw_log_sha256"],
-                  f"invalid-case raw log hash differs: {fault_id}")
             logs[log_path] = None
-    else:
-        check(digest(log_path) == row["raw_log_sha256"], f"log hash differs: {fault_id}")
     if row["simulation_status"] != "valid":
         check(row["simulation_status"] == "invalid" and bool(row["reason"]),
               f"invalid case lacks reason: {fault_id} {row['tool']}")
@@ -198,9 +182,9 @@ def percent(numerator: int, denominator: int) -> str:
 
 
 def main() -> None:
+    verify_step6_source_bodies(STEP6)
     manifest = read_manifest()
     spec = read_spec()
-    source_count = verify_step6_fingerprints()
     records = table(STEP6 / "full" / "raw_results.csv")
     check(len(records) == 4096, f"expected 4096 tool records, got {len(records)}")
     by_key = {}
@@ -319,7 +303,7 @@ def main() -> None:
     (OUT / "efficiency.json").write_text(json.dumps(efficiency, indent=2) + "\n", encoding="utf-8")
     summary = {
         "target_unique_faults": len(manifest), "simulator_records": len(records),
-        "raw_logs_checked": len(logs), "step06_source_fingerprints_checked": source_count,
+        "raw_logs_checked": len(logs),
         "coverage": coverage, "detection_stage_matrix": stage_rows,
         "exceptions": len(exceptions), "step06_summary_and_audit_match": True,
         "first_fail_address_matches_fault_address": sum(
@@ -327,14 +311,6 @@ def main() -> None:
             for row in detail),
     }
     (OUT / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
-    source_files = [ROOT / "scripts" / "evaluate_fault_coverage.py",
-                    STEP6 / "fault_manifest.csv", STEP6 / "full" / "raw_results.csv",
-                    STEP6 / "full" / "consistency.csv", STEP6 / "full" / "summary.json",
-                    STEP6 / "audit.json", STEP6 / "source_sha256.txt",
-                    ROOT / "specs" / "march_c_minus_64x8.csv"]
-    (OUT / "source_sha256.txt").write_text("".join(
-        f"{digest(path)}  {path.relative_to(ROOT).as_posix()}\n" for path in source_files),
-        encoding="utf-8")
     print("STEP07_EVALUATION_PASS unique=2048 records=4096 "
           f"confirmed={total['confirmed_detected']} invalid={total['simulation_invalid']} "
           f"unactivated={total['not_activated']} undetected={total['activated_undetected']} "

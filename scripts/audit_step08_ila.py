@@ -12,7 +12,6 @@
 from __future__ import annotations
 
 import csv
-import hashlib
 import io
 import json
 import zipfile
@@ -30,14 +29,6 @@ SPEC = ROOT / "specs" / "march_c_minus_64x8.csv"
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise AssertionError(message)
-
-
-def sha256(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as stream:
-        for block in iter(lambda: stream.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
 
 
 def number(row: dict[str, str], field: str) -> int:
@@ -125,8 +116,6 @@ def main() -> None:
     summary = {
         "status": "pass",
         "capture": str(CAPTURE.relative_to(ROOT)).replace("\\", "/"),
-        "capture_sha256": sha256(CAPTURE),
-        "frozen_spec_sha256": sha256(SPEC),
         "sample_count": len(samples),
         "trigger_sample": 0,
         "request_count": len(requests),
@@ -149,14 +138,6 @@ def main() -> None:
     }
     (HARDWARE / "ila_audit.json").write_text(
         json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
-    )
-    evidence_files = sorted(
-        path for path in HARDWARE.rglob("*")
-        if path.is_file() and path.name not in {"sha256_manifest.txt", "ila_audit.json"}
-    )
-    (HARDWARE / "sha256_manifest.txt").write_text(
-        "".join(f"{sha256(path)}  {path.relative_to(HARDWARE).as_posix()}\n" for path in evidence_files),
-        encoding="utf-8",
     )
     print(
         f"STEP08_HARDWARE_ILA_AUDIT_PASS samples={len(samples)} requests={len(requests)} "

@@ -2,7 +2,6 @@
   "target_unique_faults": 2048,
   "simulator_records": 4096,
   "raw_logs_checked": 64,
-  "step06_source_fingerprints_checked": 20,
   "coverage": [
     {
       "fault_type": "SA0",

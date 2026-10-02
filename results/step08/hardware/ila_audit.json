@@ -1,8 +1,6 @@
 {
   "status": "pass",
   "capture": "results/step08/hardware/ila_capture/2026-09-26_march_c_minus_64x8_full_run.ila",
-  "capture_sha256": "230b2d5d79facf0c6b9df0e8f37be3198965cac455f3870adc8535eae622fec7",
-  "frozen_spec_sha256": "c23b52f26ccad42ca485af0fb77da0f170c0f8467bf9b80712ecd4be1a659b31",
   "sample_count": 1024,
   "trigger_sample": 0,
   "request_count": 640,

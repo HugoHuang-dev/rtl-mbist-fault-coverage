@@ -11,4 +11,4 @@ The normal and perturbed LED/ILA builds passed board tests, dual-simulator verif
 
 The perturbed build flips bit 0 of the 72nd read response in each run, producing M2/address 7/FF→FE. Board tests measured one error and all 640 requests. This mode exercises the logic diagnostic path.
 
-Keep each `.bit/.ltx` pair together. See [file hashes](SHA256.txt), the [implementation/simulation audit](../../results/reruns/20260926_review_final/step08/revision_audit.json), and the [engineering review](../../docs/09_engineering_review.md). The initial board build remains in the parent directory.
+Keep each `.bit/.ltx` pair together. See the [implementation/simulation audit](../../results/reruns/20260926_review_final/step08/revision_audit.json), and the [engineering review](../../docs/09_engineering_review.md). The initial board build remains in the parent directory.

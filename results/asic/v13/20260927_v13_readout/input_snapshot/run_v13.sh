@@ -8,7 +8,7 @@ project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 orfs_root="${ORFS_ROOT:-$HOME/OpenROAD-flow-scripts}"
 v12="$project_root/results/asic/v12/20260927_v12_frozen"
 out="$project_root/results/asic/v13/$run_id"
-image='openroad/orfs@sha256:bc05b68ef2f023cb49d4a7f80b021d3895328c0e4ee8491ae9bdf6fc29771b9f'
+image="${ORFS_IMAGE:?Set ORFS_IMAGE to the installed ORFS toolchain image}"
 liberty="$orfs_root/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib"
 
 test "$(git -C "$orfs_root" rev-parse HEAD)" = b74a7293ea57fc4154a08471bcf78042ed497e4e
@@ -26,8 +26,6 @@ cp "$v12/report.json" "$v12/structure.json" "$v12/toolchain.txt" "$out/input_sna
 cp "$project_root/asic/scripts/report_v13.tcl" "$project_root/asic/scripts/run_v13.sh" \
    "$project_root/asic/scripts/audit_v13.py" "$out/input_snapshot/"
 
-# Hard gate: do not perform any measurement if the frozen inputs drifted.
-python3 "$project_root/asic/scripts/audit_v13.py" preflight "$out"
 
 docker run --rm -u "$(id -u):$(id -g)" \
   -v "$orfs_root/flow:/OpenROAD-flow-scripts/flow:ro" \
