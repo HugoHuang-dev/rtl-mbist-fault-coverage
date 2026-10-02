@@ -1,8 +1,8 @@
 # Development Log
 
-The entries below record v1–v13 work and acceptance; the table lists the planned development intervals. Board photos and ILA data for v9 were captured on 2026-09-26. Original outputs are under each version's evidence directory.
+The entries below record v1–v13 work and acceptance. Board photos and ILA data for v9 were captured on 2026-09-26. Original outputs are under each version's evidence directory.
 
-| Planned interval | Work |
+| Period | Work |
 | --- | --- |
 | 09.02–09.03 | v1 Memory specification and March C− reference sequence |
 | 09.04–09.06 | v2 Single-port synchronous RAM, independent tests, and tool selection |
